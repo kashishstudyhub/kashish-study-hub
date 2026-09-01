@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 5 - Matrices</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        .topic {
+            background-color: white;
+            margin: 15px auto;
+            padding: 15px;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background-color: #673AB7;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #512DA8;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #ede7f6;
+            border-radius: 7px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Unit 5: Matrices</h1>
+
+
+    <div class="topic">
+        <button onclick="showNotes('rank')">
+            Rank of Matrix
+        </button>
+
+        <div id="rank" class="notes">
+            <h3>Rank of Matrix</h3>
+
+            <p>
+                The rank of a matrix is the maximum number
+                of linearly independent rows or columns.
+            </p>
+
+            <p>
+                Rank can be found using elementary row
+                or column operations.
+            </p>
+
+            <p>
+                Rank(A) = number of non-zero rows
+                in echelon form.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('linear')">
+            System of Linear Equations
+        </button>
+
+        <div id="linear" class="notes">
+            <h3>System of Linear Equations</h3>
+
+            <p>
+                A system of linear equations can be written
+                in matrix form as:
+            </p>
+
+            <p>
+                AX = B
+            </p>
+
+            <p>
+                where A is the coefficient matrix,
+                X is the variable matrix and B is the
+                constant matrix.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('consistency')">
+            Consistency of Linear Equations
+        </button>
+
+        <div id="consistency" class="notes">
+            <h3>Consistency</h3>
+
+            <p>
+                For the system AX = B:
+            </p>
+
+            <p>
+                The system is consistent if:
+            </p>
+
+            <p>
+                Rank(A) = Rank([A|B])
+            </p>
+
+            <p>
+                If Rank(A) ≠ Rank([A|B]), the system
+                is inconsistent.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('eigenvalue')">
+            Eigenvalues
+        </button>
+
+        <div id="eigenvalue" class="notes">
+            <h3>Eigenvalues</h3>
+
+            <p>
+                If A is a square matrix and X is a non-zero
+                vector such that:
+            </p>
+
+            <p>
+                AX = λX
+            </p>
+
+            <p>
+                then λ is called an eigenvalue of matrix A.
+            </p>
+
+            <p>
+                Eigenvalues are obtained from:
+            </p>
+
+            <p>
+                |A - λI| = 0
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('eigenvector')">
+            Eigenvectors
+        </button>
+
+        <div id="eigenvector" class="notes">
+            <h3>Eigenvectors</h3>
+
+            <p>
+                A non-zero vector X satisfying:
+            </p>
+
+            <p>
+                AX = λX
+            </p>
+
+            <p>
+                is called an eigenvector corresponding
+                to eigenvalue λ.
+            </p>
+
+            <p>
+                After finding λ, substitute it into:
+            </p>
+
+            <p>
+                (A - λI)X = 0
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('diagonal')">
+            Diagonalization of Matrix
+        </button>
+
+        <div id="diagonal" class="notes">
+            <h3>Diagonalization</h3>
+
+            <p>
+                A square matrix A is diagonalizable if it can
+                be written as:
+            </p>
+
+            <p>
+                A = PDP⁻¹
+            </p>
+
+            <p>
+                Here D is a diagonal matrix containing
+                eigenvalues and P contains corresponding
+                eigenvectors.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('cayley')">
+            Cayley-Hamilton Theorem
+        </button>
+
+        <div id="cayley" class="notes">
+            <h3>Cayley-Hamilton Theorem</h3>
+
+            <p>
+                According to the Cayley-Hamilton theorem,
+                every square matrix satisfies its own
+                characteristic equation.
+            </p>
+
+            <p>
+                If the characteristic equation is:
+            </p>
+
+            <p>
+                p(λ) = 0
+            </p>
+
+            <p>
+                then:
+            </p>
+
+            <p>
+                p(A) = 0
+            </p>
+
+            <p>
+                This theorem can be used to find higher
+                powers and inverse of a matrix.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            } else {
+                notes.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

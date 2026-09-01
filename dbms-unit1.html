@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DBMS Unit 1 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#315f8c;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e4eef8;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#315f8c;
+    font-size:40px;
+    margin:0 0 10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:88%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.card h2{
+    color:#315f8c;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+}
+
+.card h3{
+    color:#4276a7;
+}
+
+.toc a{
+    display:block;
+    color:#315f8c;
+    text-decoration:none;
+    margin:8px 0;
+    font-weight:500;
+}
+
+.note{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:15px;
+    margin:20px 0;
+}
+
+.example{
+    background:#eef5ff;
+    border-left:5px solid #315f8c;
+    padding:15px;
+    margin:20px 0;
+}
+
+.diagram{
+    background:#fafafa;
+    border:1px dashed #777;
+    padding:20px;
+    text-align:center;
+    margin:20px 0;
+    font-weight:bold;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e4eef8;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #315f8c;
+    padding:15px;
+    margin:10px 0;
+}
+
+.answer{
+    background:#f0f8f0;
+    padding:15px;
+    margin:10px 0 20px;
+}
+
+.back{
+    display:inline-block;
+    background:#315f8c;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:7px;
+    margin:10px 5px 30px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .card{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<div class="logo">
+📚 Kashish Study Hub
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</nav>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1>🗄️ DBMS – Unit 1</h1>
+
+<p>
+DBMS Concepts & Architecture
+</p>
+
+<p>
+Complete Notes • Examples • ER Modeling • Exam Questions
+</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="card toc" id="topics">
+
+<h2>📑 Unit 1 Contents</h2>
+
+<a href="#database">1. Database Approach</a>
+<a href="#filesystem">2. Traditional File System</a>
+<a href="#comparison">3. File System vs DBMS</a>
+<a href="#datamodel">4. Data Models</a>
+<a href="#schema">5. Schema</a>
+<a href="#instance">6. Instance</a>
+<a href="#architecture">7. DBMS Architecture</a>
+<a href="#independence">8. Data Independence</a>
+<a href="#languages">9. Database Languages</a>
+<a href="#dba">10. DBA and Database Designer</a>
+<a href="#er">11. ER Model</a>
+<a href="#entities">12. Entities</a>
+<a href="#attributes">13. Attributes</a>
+<a href="#relationship">14. Relationships</a>
+<a href="#erd">15. ER Diagram</a>
+<a href="#generalization">16. Generalization</a>
+<a href="#specialization">17. Specialization</a>
+<a href="#aggregation">18. Aggregation</a>
+<a href="#conversion">19. ER Diagram to Relational Tables</a>
+<a href="#questions">20. Important Questions</a>
+<a href="#revision">21. Quick Revision</a>
+
+</section>
+
+
+<!-- DATABASE APPROACH -->
+
+<section class="card" id="database">
+
+<h2>1. Database Approach</h2>
+
+<p>
+The database approach is a method of managing data in which related
+data is stored in a centralized or logically integrated database and
+is managed by a Database Management System (DBMS).
+</p>
+
+<h3>Main Features</h3>
+
+<ul>
+<li>Data is centrally managed.</li>
+<li>Multiple applications can share data.</li>
+<li>Data redundancy can be controlled.</li>
+<li>Data security can be implemented.</li>
+<li>Integrity constraints can be applied.</li>
+<li>Backup and recovery mechanisms can be provided.</li>
+</ul>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+In a college database, student information can be used by the
+admission, examination and library systems instead of maintaining
+completely separate copies of the same information.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FILE SYSTEM -->
+
+<section class="card" id="filesystem">
+
+<h2>2. Traditional File System</h2>
+
+<p>
+In a traditional file-processing system, data is generally stored
+and managed in separate files by individual applications.
+</p>
+
+<h3>Problems of Traditional File Systems</h3>
+
+<ul>
+<li>Data redundancy</li>
+<li>Data inconsistency</li>
+<li>Difficult data sharing</li>
+<li>Limited centralized security</li>
+<li>Program-data dependence</li>
+<li>Difficult concurrent access management</li>
+<li>Backup and recovery challenges</li>
+</ul>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="card" id="comparison">
+
+<h2>3. Traditional File System vs DBMS</h2>
+
+<table>
+
+<tr>
+<th>Traditional File System</th>
+<th>DBMS</th>
+</tr>
+
+<tr>
+<td>Data is maintained in separate files.</td>
+<td>Data is managed through a database system.</td>
+</tr>
+
+<tr>
+<td>Data redundancy may be high.</td>
+<td>Redundancy can be controlled through database design.</td>
+</tr>
+
+<tr>
+<td>Data sharing is more difficult.</td>
+<td>Authorized users can share database data.</td>
+</tr>
+
+<tr>
+<td>Security may depend heavily on applications.</td>
+<td>DBMS provides access-control mechanisms.</td>
+</tr>
+
+<tr>
+<td>Relationships may need application-level handling.</td>
+<td>Relationships can be represented in the database.</td>
+</tr>
+
+<tr>
+<td>Recovery may require separate mechanisms.</td>
+<td>DBMS can provide recovery facilities.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- DATA MODELS -->
+
+<section class="card" id="datamodel">
+
+<h2>4. Data Models</h2>
+
+<p>
+A data model is a collection of concepts used to describe the
+structure of a database, relationships among data and constraints.
+</p>
+
+<h3>Types of Data Models</h3>
+
+<h3>1. Hierarchical Model</h3>
+
+<p>
+Data is organized in a tree-like structure using parent-child
+relationships.
+</p>
+
+<div class="diagram">
+University<br>
+↓<br>
+Department<br>
+↓<br>
+Student
+</div>
+
+<h3>2. Network Model</h3>
+
+<p>
+The network model represents data using records connected through
+relationships. It can represent more complex connections than a
+simple tree.
+</p>
+
+<h3>3. Relational Model</h3>
+
+<p>
+Data is represented using relations, commonly called tables.
+Tables contain rows and columns.
+</p>
+
+<h3>4. Object-Oriented Model</h3>
+
+<p>
+Data is represented as objects containing data and associated
+behavior.
+</p>
+
+</section>
+
+
+<!-- SCHEMA -->
+
+<section class="card" id="schema">
+
+<h2>5. Schema</h2>
+
+<p>
+A database schema is the overall logical design or structure of a
+database.
+</p>
+
+<p>
+It describes tables, attributes, relationships and constraints.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<pre>
+STUDENT(
+    RollNo,
+    Name,
+    Course,
+    Marks
+)
+</pre>
+
+<p>
+The structure above represents a possible schema for a Student
+relation.
+</p>
+
+</div>
+
+<div class="note">
+
+<strong>Remember:</strong>
+
+<p>
+Schema = Structure/design of the database.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- INSTANCE -->
+
+<section class="card" id="instance">
+
+<h2>6. Database Instance</h2>
+
+<p>
+A database instance is the actual collection of data stored in the
+database at a particular moment in time.
+</p>
+
+<h3>Example</h3>
+
+<table>
+
+<tr>
+<th>RollNo</th>
+<th>Name</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>85</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Priya</td>
+<td>90</td>
+</tr>
+
+</table>
+
+<p>
+The structure of this table is part of the schema, while the actual
+rows currently stored are part of the instance.
+</p>
+
+<div class="note">
+
+<strong>Easy Trick:</strong>
+
+<p>
+Schema = design<br>
+Instance = data at a particular time
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ARCHITECTURE -->
+
+<section class="card" id="architecture">
+
+<h2>7. DBMS Architecture</h2>
+
+<p>
+The three-level architecture separates user views from the logical
+database structure and physical storage details.
+</p>
+
+<h3>Three Levels</h3>
+
+<table>
+
+<tr>
+<th>Level</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>External Level</td>
+<td>Describes the database view presented to a particular user or
+application.</td>
+</tr>
+
+<tr>
+<td>Conceptual Level</td>
+<td>Describes the overall logical structure of the database.</td>
+</tr>
+
+<tr>
+<td>Internal Level</td>
+<td>Describes physical storage of data.</td>
+</tr>
+
+</table>
+
+<div class="diagram">
+
+External Level<br>
+↓<br>
+Conceptual Level<br>
+↓<br>
+Internal Level<br>
+↓<br>
+Physical Storage
+
+</div>
+
+</section>
+
+
+<!-- DATA INDEPENDENCE -->
+
+<section class="card" id="independence">
+
+<h2>8. Data Independence</h2>
+
+<p>
+Data independence is the ability to change the schema at one level
+without requiring changes at the next higher level.
+</p>
+
+<h3>1. Physical Data Independence</h3>
+
+<p>
+Changes to physical storage should not require changes to the
+conceptual schema.
+</p>
+
+<p>
+<strong>Example:</strong> Changing storage organization or indexes
+without changing the logical database design.
+</p>
+
+<h3>2. Logical Data Independence</h3>
+
+<p>
+Changes to the conceptual schema should have minimal impact on
+external views or application programs.
+</p>
+
+<p>
+<strong>Example:</strong> Adding a new attribute to the logical
+database without unnecessarily changing existing user views.
+</p>
+
+</section>
+
+
+<!-- LANGUAGES -->
+
+<section class="card" id="languages">
+
+<h2>9. Database Languages</h2>
+
+<table>
+
+<tr>
+<th>Language</th>
+<th>Purpose</th>
+<th>Examples</th>
+</tr>
+
+<tr>
+<td>DDL</td>
+<td>Defines database structures.</td>
+<td>CREATE, ALTER, DROP</td>
+</tr>
+
+<tr>
+<td>DML</td>
+<td>Manipulates stored data.</td>
+<td>INSERT, UPDATE, DELETE</td>
+</tr>
+
+<tr>
+<td>DQL</td>
+<td>Retrieves data.</td>
+<td>SELECT</td>
+</tr>
+
+<tr>
+<td>DCL</td>
+<td>Controls access privileges.</td>
+<td>GRANT, REVOKE</td>
+</tr>
+
+<tr>
+<td>TCL</td>
+<td>Controls transactions.</td>
+<td>COMMIT, ROLLBACK</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- DBA -->
+
+<section class="card" id="dba">
+
+<h2>10. DBA and Database Designer</h2>
+
+<h3>Database Administrator – DBA</h3>
+
+<p>
+A Database Administrator is responsible for administration and
+management of the database system.
+</p>
+
+<h3>Major Responsibilities</h3>
+
+<ul>
+<li>Database security</li>
+<li>User authorization</li>
+<li>Backup and recovery</li>
+<li>Performance monitoring</li>
+<li>Storage management</li>
+<li>Database maintenance</li>
+</ul>
+
+<h3>Database Designer</h3>
+
+<p>
+A database designer designs the structure of the database based on
+the requirements of an organization.
+</p>
+
+<h3>Major Responsibilities</h3>
+
+<ul>
+<li>Identify entities.</li>
+<li>Identify attributes.</li>
+<li>Identify relationships.</li>
+<li>Design database schema.</li>
+<li>Define appropriate constraints.</li>
+</ul>
+
+</section>
+
+
+<!-- ER MODEL -->
+
+<section class="card" id="er">
+
+<h2>11. ER Model</h2>
+
+<p>
+ER stands for <strong>Entity-Relationship</strong>.
+The ER model is a conceptual data model used to represent entities,
+attributes and relationships.
+</p>
+
+<h3>Main Components</h3>
+
+<ul>
+<li>Entities</li>
+<li>Attributes</li>
+<li>Relationships</li>
+</ul>
+
+</section>
+
+
+<!-- ENTITIES -->
+
+<section class="card" id="entities">
+
+<h2>12. Entities</h2>
+
+<p>
+An entity is a distinguishable real-world object about which data
+can be stored.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+<li>Student</li>
+<li>Teacher</li>
+<li>Course</li>
+<li>Employee</li>
+<li>Department</li>
+</ul>
+
+<h3>Entity Set</h3>
+
+<p>
+An entity set is a collection of similar entities.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+All students of a college together can form a Student entity set.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ATTRIBUTES -->
+
+<section class="card" id="attributes">
+
+<h2>13. Attributes</h2>
+
+<p>
+An attribute is a property that describes an entity.
+</p>
+
+<h3>Example</h3>
+
+<p>
+For a Student entity:
+</p>
+
+<ul>
+<li>RollNo</li>
+<li>Name</li>
+<li>Age</li>
+<li>Course</li>
+<li>Address</li>
+</ul>
+
+<h3>Types of Attributes</h3>
+
+<table>
+
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>Simple Attribute</td>
+<td>Cannot be meaningfully divided further.</td>
+</tr>
+
+<tr>
+<td>Composite Attribute</td>
+<td>Can be divided into smaller components.</td>
+</tr>
+
+<tr>
+<td>Single-Valued Attribute</td>
+<td>Normally has one value for an entity.</td>
+</tr>
+
+<tr>
+<td>Multi-Valued Attribute</td>
+<td>Can have multiple values.</td>
+</tr>
+
+<tr>
+<td>Derived Attribute</td>
+<td>Can be calculated from other attributes.</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+DateOfBirth can be used to derive Age.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- RELATIONSHIP -->
+
+<section class="card" id="relationship">
+
+<h2>14. Relationships</h2>
+
+<p>
+A relationship represents an association between entities.
+</p>
+
+<h3>Example</h3>
+
+<div class="diagram">
+
+STUDENT<br>
+↓<br>
+ENROLLS<br>
+↓<br>
+COURSE
+
+</div>
+
+<p>
+Here, Student and Course are entities and Enrolls is the relationship.
+</p>
+
+<h3>Cardinality</h3>
+
+<table>
+
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>One-to-One (1:1)</td>
+<td>One entity is associated with one entity.</td>
+</tr>
+
+<tr>
+<td>One-to-Many (1:N)</td>
+<td>One entity can be associated with many entities.</td>
+</tr>
+
+<tr>
+<td>Many-to-One (N:1)</td>
+<td>Many entities can be associated with one entity.</td>
+</tr>
+
+<tr>
+<td>Many-to-Many (M:N)</td>
+<td>Many entities can be associated with many entities.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- ER DIAGRAM -->
+
+<section class="card" id="erd">
+
+<h2>15. ER Diagram</h2>
+
+<p>
+An ER diagram is a graphical representation of entities, attributes
+and relationships.
+</p>
+
+<table>
+
+<tr>
+<th>Symbol</th>
+<th>Represents</th>
+</tr>
+
+<tr>
+<td>Rectangle</td>
+<td>Entity</td>
+</tr>
+
+<tr>
+<td>Oval</td>
+<td>Attribute</td>
+</tr>
+
+<tr>
+<td>Diamond</td>
+<td>Relationship</td>
+</tr>
+
+<tr>
+<td>Lines</td>
+<td>Connections</td>
+</tr>
+
+</table>
+
+<div class="diagram">
+
+[ STUDENT ] —— ◇ ENROLLS ◇ —— [ COURSE ]
+
+</div>
+
+<div class="note">
+
+<strong>Exam Tip:</strong>
+
+<p>
+Practice drawing ER diagrams neatly. Clearly label entities,
+attributes and relationships.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- GENERALIZATION -->
+
+<section class="card" id="generalization">
+
+<h2>16. Generalization</h2>
+
+<p>
+Generalization is a bottom-up approach in which common properties
+of multiple lower-level entity types are combined into a higher-level
+entity type.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<pre>
+        EMPLOYEE
+        /      \
+       /        \
+  TEACHER     ENGINEER
+</pre>
+
+<p>
+Teacher and Engineer may have common properties such as EmployeeID
+and Name. These common properties can be represented in a higher-level
+Employee entity.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SPECIALIZATION -->
+
+<section class="card" id="specialization">
+
+<h2>17. Specialization</h2>
+
+<p>
+Specialization is a top-down approach in which a higher-level entity
+is divided into more specific lower-level entity types.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<pre>
+        EMPLOYEE
+        /      \
+       /        \
+  MANAGER     ENGINEER
+</pre>
+
+<p>
+Employee can be specialized into Manager and Engineer according to
+their specific characteristics.
+</p>
+
+</div>
+
+<div class="note">
+
+<strong>Difference:</strong>
+
+<p>
+Generalization = Bottom-up<br>
+Specialization = Top-down
+</p>
+
+</div>
+
+</section>
+
+
+<!-- AGGREGATION -->
+
+<section class="card" id="aggregation">
+
+<h2>18. Aggregation</h2>
+
+<p>
+Aggregation is an abstraction mechanism used to treat a relationship
+set and its participating entities as a higher-level entity so that
+it can participate in another relationship.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+Suppose an Employee works on a Project and a Manager monitors that
+work relationship. The "works on" relationship can be treated as a
+higher-level object when representing the monitoring relationship.
+</p>
+
+</div>
+
+<div class="note">
+
+<strong>Easy Definition:</strong>
+
+<p>
+Aggregation allows a relationship involving entities to be treated
+as a higher-level unit for another relationship.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONVERSION -->
+
+<section class="card" id="conversion">
+
+<h2>19. Converting ER Diagram to Relational Tables</h2>
+
+<p>
+An ER model can be transformed into relational tables for
+implementation in a relational database.
+</p>
+
+<h3>Rule 1 – Strong Entity</h3>
+
+<p>
+Create one relation for each strong entity. Include its simple
+attributes and choose an appropriate primary key.
+</p>
+
+<div class="example">
+
+<pre>
+STUDENT
+----------------
+RollNo  PK
+Name
+Course
+</pre>
+
+</div>
+
+
+<h3>Rule 2 – Composite Attributes</h3>
+
+<p>
+Break a composite attribute into its component attributes.
+</p>
+
+<div class="example">
+
+<p>
+Address → HouseNo, Street, City
+</p>
+
+</div>
+
+
+<h3>Rule 3 – Multi-Valued Attributes</h3>
+
+<p>
+A separate relation is generally created for a multi-valued
+attribute, along with the primary key of the original entity.
+</p>
+
+
+<h3>Rule 4 – One-to-One Relationship</h3>
+
+<p>
+For a 1:1 relationship, a foreign key can generally be placed in one
+of the participating relations, preferably where it best represents
+the relationship and participation constraints.
+</p>
+
+
+<h3>Rule 5 – One-to-Many Relationship</h3>
+
+<p>
+For a 1:N relationship, the primary key of the "one" side is usually
+included as a foreign key in the relation representing the "many"
+side.
+</p>
+
+<div class="example">
+
+<pre>
+DEPARTMENT
+-----------
+DeptID PK
+Name
+
+STUDENT
+-----------
+RollNo PK
+Name
+DeptID FK
+</pre>
+
+</div>
+
+
+<h3>Rule 6 – Many-to-Many Relationship</h3>
+
+<p>
+For an M:N relationship, create a separate relation containing the
+primary keys of the participating entities as foreign keys. Together
+they commonly form a composite primary key.
+</p>
+
+<div class="example">
+
+<pre>
+STUDENT
+-----------
+RollNo PK
+Name
+
+COURSE
+-----------
+CourseID PK
+CourseName
+
+ENROLLMENT
+-----------
+RollNo FK
+CourseID FK
+</pre>
+
+</div>
+
+<div class="note">
+
+<strong>Important:</strong>
+
+<p>
+The exact conversion can depend on participation, cardinality and
+other constraints, so always check the ER diagram carefully.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="card" id="questions">
+
+<h2>20. Important Exam Questions</h2>
+
+<h3>⭐ 2 Marks</h3>
+
+<div class="question">
+1. Define DBMS.
+</div>
+
+<div class="question">
+2. What is a database schema?
+</div>
+
+<div class="question">
+3. What is a database instance?
+</div>
+
+<div class="question">
+4. Define data independence.
+</div>
+
+<div class="question">
+5. What is an entity?
+</div>
+
+<div class="question">
+6. What is an attribute?
+</div>
+
+<div class="question">
+7. What is an ER diagram?
+</div>
+
+<div class="question">
+8. Define generalization.
+</div>
+
+<div class="question">
+9. Define specialization.
+</div>
+
+<div class="question">
+10. What is aggregation?
+</div>
+
+
+<h3>⭐⭐ 5 Marks</h3>
+
+<div class="question">
+1. Compare traditional file systems and DBMS.
+</div>
+
+<div class="question">
+2. Explain schema and instance with examples.
+</div>
+
+<div class="question">
+3. Explain the three-level architecture of DBMS.
+</div>
+
+<div class="question">
+4. Explain physical and logical data independence.
+</div>
+
+<div class="question">
+5. Explain different types of data models.
+</div>
+
+<div class="question">
+6. Explain different types of attributes in the ER model.
+</div

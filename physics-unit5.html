@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Physics Unit 5 - Electrostatics in Vacuum</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0;
+        }
+
+        .topic {
+            max-width: 800px;
+            margin: 15px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1976d2;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #1565c0;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .important {
+            background-color: #fff3e0;
+            padding: 12px;
+            border-left: 5px solid #fb8c00;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>⚡ Unit 5: Electrostatics in Vacuum</h1>
+
+
+<!-- Electric Charge -->
+<div class="topic">
+    <button onclick="showNotes('charge')">
+        1. Electric Charge
+    </button>
+
+    <div id="charge" class="notes">
+        <h3>Electric Charge</h3>
+
+        <p>
+            Electric charge is a fundamental property of matter
+            responsible for electrical interactions.
+        </p>
+
+        <ul>
+            <li>Positive charge</li>
+            <li>Negative charge</li>
+        </ul>
+
+        <p class="formula">
+            Coulomb's Law:
+            F = (1 / 4πε₀) × (q₁q₂ / r²)
+        </p>
+    </div>
+</div>
+
+
+<!-- Electric Field -->
+<div class="topic">
+    <button onclick="showNotes('field')">
+        2. Electric Field
+    </button>
+
+    <div id="field" class="notes">
+        <h3>Electric Field</h3>
+
+        <p>
+            Electric field at a point is the force experienced
+            per unit positive test charge placed at that point.
+        </p>
+
+        <p class="formula">
+            E = F / q
+        </p>
+
+        <p class="formula">
+            Point Charge:
+            E = (1 / 4πε₀) × (q / r²)
+        </p>
+    </div>
+</div>
+
+
+<!-- Electric Field Due to Charge -->
+<div class="topic">
+    <button onclick="showNotes('distribution')">
+        3. Electric Field Due to Charge Distributions
+    </button>
+
+    <div id="distribution" class="notes">
+        <h3>Charge Distributions</h3>
+
+        <p>
+            Electric fields can be calculated for different
+            continuous charge distributions using integration.
+        </p>
+
+        <ul>
+            <li>Line charge</li>
+            <li>Surface charge</li>
+            <li>Volume charge</li>
+        </ul>
+
+        <p class="formula">
+            dq = λ dl
+        </p>
+
+        <p class="formula">
+            dq = σ dA
+        </p>
+
+        <p class="formula">
+            dq = ρ dV
+        </p>
+    </div>
+</div>
+
+
+<!-- Electric Potential -->
+<div class="topic">
+    <button onclick="showNotes('potential')">
+        4. Electric Potential
+    </button>
+
+    <div id="potential" class="notes">
+        <h3>Electric Potential</h3>
+
+        <p>
+            Electric potential at a point is the work done per
+            unit positive test charge in bringing it from infinity
+            to that point.
+        </p>
+
+        <p class="formula">
+            V = W / q
+        </p>
+
+        <p class="formula">
+            Point Charge:
+            V = (1 / 4πε₀) × (q / r)
+        </p>
+    </div>
+</div>
+
+
+<!-- Potential and Field -->
+<div class="topic">
+    <button onclick="showNotes('relation')">
+        5. Relation Between Electric Field and Potential
+    </button>
+
+    <div id="relation" class="notes">
+        <h3>Electric Field-Potential Relation</h3>
+
+        <p>
+            The electric field is related to the spatial
+            variation of electric potential.
+        </p>
+
+        <p class="formula">
+            E = −∇V
+        </p>
+
+        <p>
+            In one dimension:
+        </p>
+
+        <p class="formula">
+            E = −dV/dx
+        </p>
+    </div>
+</div>
+
+
+<!-- Divergence -->
+<div class="topic">
+    <button onclick="showNotes('divergence')">
+        6. Divergence of Electric Field
+    </button>
+
+    <div id="divergence" class="notes">
+        <h3>Divergence</h3>
+
+        <p>
+            Divergence measures the net outward flux density
+            of a vector field around a point.
+        </p>
+
+        <p class="formula">
+            ∇ · E = ρ / ε₀
+        </p>
+
+        <p>
+            This is the differential form of Gauss's law
+            in vacuum.
+        </p>
+    </div>
+</div>
+
+
+<!-- Curl -->
+<div class="topic">
+    <button onclick="showNotes('curl')">
+        7. Curl of Electric Field
+    </button>
+
+    <div id="curl" class="notes">
+        <h3>Curl</h3>
+
+        <p>
+            Curl describes the local rotational tendency of
+            a vector field.
+        </p>
+
+        <p class="formula">
+            ∇ × E = 0
+        </p>
+
+        <p>
+            For electrostatic fields, the curl of the electric
+            field is zero.
+        </p>
+    </div>
+</div>
+
+
+<!-- Gauss Law -->
+<div class="topic">
+    <button onclick="showNotes('gauss')">
+        8. Gauss's Law
+    </button>
+
+    <div id="gauss" class="notes">
+        <h3>Gauss's Law</h3>
+
+        <p>
+            The total electric flux through a closed surface
+            equals the enclosed charge divided by ε₀.
+        </p>
+
+        <p class="formula">
+            ∮ E · dA = Q<sub>enclosed</sub> / ε₀
+        </p>
+
+        <p>
+            Gauss's law is particularly useful for highly
+            symmetric charge distributions.
+        </p>
+    </div>
+</div>
+
+
+<!-- Poisson -->
+<div class="topic">
+    <button onclick="showNotes('poisson')">
+        9. Poisson's Equation
+    </button>
+
+    <div id="poisson" class="notes">
+        <h3>Poisson's Equation</h3>
+
+        <p>
+            Poisson's equation relates electric potential
+            to volume charge density.
+        </p>
+
+        <p class="formula">
+            ∇²V = −ρ / ε₀
+        </p>
+
+        <p>
+            It is used to determine potential when the charge
+            distribution is known.
+        </p>
+    </div>
+</div>
+
+
+<!-- Laplace -->
+<div class="topic">
+    <button onclick="showNotes('laplace')">
+        10. Laplace's Equation
+    </button>
+
+    <div id="laplace" class="notes">
+        <h3>Laplace's Equation</h3>
+
+        <p>
+            In a charge-free region, ρ = 0. Therefore,
+            Poisson's equation reduces to Laplace's equation.
+        </p>
+
+        <p class="formula">
+            ∇²V = 0
+        </p>
+
+        <div class="important">
+            Laplace's equation is applicable in regions
+            where there is no volume charge density.
+        </div>
+    </div>
+</div>
+
+
+<!-- Boundary Conditions -->
+<div class="topic">
+    <button onclick="showNotes('boundary')">
+        11. Boundary Conditions
+    </button>
+
+    <div id="boundary" class="notes">
+        <h3>Electrostatic Boundary Conditions</h3>
+
+        <p>
+            Boundary conditions specify how the electric field
+            and potential behave at interfaces between regions.
+        </p>
+
+        <ul>
+            <li>
+                Tangential component of electrostatic E is continuous.
+            </li>
+
+            <li>
+                Potential is continuous across an ideal interface
+                under ordinary electrostatic conditions.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Uniqueness -->
+<div class="topic">
+    <button onclick="showNotes('uniqueness')">
+        12. Uniqueness Theorem
+    </button>
+
+    <div id="uniqueness" class="notes">
+        <h3>Uniqueness Theorem</h3>
+
+        <p>
+            The uniqueness theorem states that a solution of
+            Poisson's or Laplace's equation is uniquely determined
+            when appropriate boundary conditions are specified.
+        </p>
+
+        <div class="important">
+            This theorem is important because it allows us to
+            verify that a proposed electrostatic solution is the
+            unique solution satisfying the given conditions.
+        </div>
+    </div>
+</div>
+
+
+<!-- Quick Revision -->
+<div class="topic">
+    <button onclick="showNotes('revision')">
+        13. Quick Revision - Important Equations
+    </button>
+
+    <div id="revision" class="notes">
+
+        <p class="formula">
+            Coulomb's Law:
+            F = (1 / 4πε₀)(q₁q₂/r²)
+        </p>
+
+        <p class="formula">
+            Electric Field:
+            E = −∇V
+        </p>
+
+        <p class="formula">
+            Gauss's Law:
+            ∇ · E = ρ/ε₀
+        </p>
+
+        <p class="formula">
+            Electrostatic Curl:
+            ∇ × E = 0
+        </p>
+
+        <p class="formula">
+            Poisson's Equation:
+            ∇²V = −ρ/ε₀
+        </p>
+
+        <p class="formula">
+            Laplace's Equation:
+            ∇²V = 0
+        </p>
+
+    </div>
+</div>
+
+
+<script>
+
+function showNotes(id) {
+
+    let notes = document.getElementById(id);
+
+    if (notes.style.display === "block") {
+        notes.style.display = "none";
+    } else {
+        notes.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

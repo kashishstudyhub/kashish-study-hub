@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 3 - Sequences and Series</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        .topic {
+            background-color: white;
+            margin: 15px auto;
+            padding: 15px;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background-color: #9C27B0;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #7B1FA2;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #f3e5f5;
+            border-radius: 7px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Unit 3: Sequences and Series</h1>
+
+    <div class="topic">
+        <button onclick="showNotes('sequence')">
+            Sequence
+        </button>
+
+        <div id="sequence" class="notes">
+            <h3>Sequence</h3>
+            <p>
+                A sequence is an ordered list of numbers
+                arranged according to a definite rule.
+            </p>
+
+            <p>
+                Example: 1, 2, 3, 4, 5, ...
+            </p>
+
+            <p>
+                The general term is usually represented by aₙ.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('convergence')">
+            Convergence of Sequences and Series
+        </button>
+
+        <div id="convergence" class="notes">
+            <h3>Convergence</h3>
+
+            <p>
+                A sequence converges if its terms approach
+                a finite definite value as n approaches infinity.
+            </p>
+
+            <p>
+                A series is convergent if its sequence of
+                partial sums approaches a finite value.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('tests')">
+            Convergence Tests
+        </button>
+
+        <div id="tests" class="notes">
+            <h3>Tests of Convergence</h3>
+
+            <p>Important tests include:</p>
+
+            <ul>
+                <li>Comparison Test</li>
+                <li>Limit Comparison Test</li>
+                <li>Ratio Test</li>
+                <li>Root Test</li>
+                <li>Integral Test</li>
+                <li>Alternating Series Test</li>
+            </ul>
+
+            <p>
+                These tests help determine whether an infinite
+                series is convergent or divergent.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('power')">
+            Power Series
+        </button>
+
+        <div id="power" class="notes">
+            <h3>Power Series</h3>
+
+            <p>
+                A power series generally has the form:
+            </p>
+
+            <p>
+                Σ aₙ(x-c)ⁿ
+            </p>
+
+            <p>
+                Here c is the center of the power series.
+            </p>
+
+            <p>
+                The interval and radius of convergence can
+                be determined using convergence tests.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('taylor2')">
+            Taylor's Series for Two Variables
+        </button>
+
+        <div id="taylor2" class="notes">
+            <h3>Taylor's Series for Two Variables</h3>
+
+            <p>
+                For a function f(x,y), Taylor expansion can be
+                written around a point (a,b).
+            </p>
+
+            <p>
+                f(x,y) can be expanded using partial derivatives
+                with respect to x and y.
+            </p>
+
+            <p>
+                It is useful for approximating functions of
+                two variables.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('elementary')">
+            Elementary Function Expansions
+        </button>
+
+        <div id="elementary" class="notes">
+            <h3>Elementary Function Expansions</h3>
+
+            <p>Important expansions include:</p>
+
+            <p>
+                eˣ = 1 + x + x²/2! + x³/3! + ...
+            </p>
+
+            <p>
+                sin x = x - x³/3! + x⁵/5! - ...
+            </p>
+
+            <p>
+                cos x = 1 - x²/2! + x⁴/4! - ...
+            </p>
+
+            <p>
+                log(1+x) = x - x²/2 + x³/3 - ...
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('fourier')">
+            Fourier Series
+        </button>
+
+        <div id="fourier" class="notes">
+            <h3>Fourier Series</h3>
+
+            <p>
+                Fourier series represents a periodic function
+                as a sum of sine and cosine functions.
+            </p>
+
+            <p>
+                General form:
+            </p>
+
+            <p>
+                f(x) = a₀/2 + Σ[aₙ cos(nx) + bₙ sin(nx)]
+            </p>
+
+            <p>
+                It is widely used in mathematics, physics
+                and engineering.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('parseval')">
+            Parseval's Theorem
+        </button>
+
+        <div id="parseval" class="notes">
+            <h3>Parseval's Theorem</h3>
+
+            <p>
+                Parseval's theorem establishes a relationship
+                between a function and its Fourier coefficients.
+            </p>
+
+            <p>
+                It is useful for calculating sums and integrals
+                involving Fourier series.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            } else {
+                notes.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

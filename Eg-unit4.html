@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Engineering Graphics - Unit 4</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f5f7;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    width:95%;
+    max-width:1100px;
+    margin:20px auto;
+}
+
+.header{
+    background:white;
+    text-align:center;
+    padding:30px 20px;
+    border:2px solid #222;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.header h1{
+    margin:0;
+    font-size:32px;
+}
+
+.header h2{
+    margin:8px 0;
+}
+
+.topic{
+    background:white;
+    border:1px solid #aaa;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.topic h2{
+    border-bottom:3px solid #333;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    margin-top:25px;
+}
+
+li{
+    margin:8px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #777;
+    padding:12px;
+    vertical-align:top;
+}
+
+th{
+    font-weight:bold;
+}
+
+.formula{
+    border:2px solid #333;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+    margin:20px 0;
+}
+
+.steps{
+    border-left:5px solid #333;
+    padding:10px 20px;
+    margin:20px 0;
+}
+
+.note{
+    border:1px dashed #555;
+    padding:15px;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+.important{
+    border:2px solid #333;
+    border-radius:10px;
+    padding:18px;
+    margin-top:20px;
+}
+
+.diagram{
+    background:white;
+    border:2px solid #777;
+    border-radius:12px;
+    padding:15px;
+    margin:25px 0;
+    text-align:center;
+    overflow-x:auto;
+}
+
+.diagram svg{
+    width:100%;
+    max-width:850px;
+    height:auto;
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:96%;
+    }
+
+    .topic{
+        padding:16px;
+    }
+
+    .header h1{
+        font-size:25px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    .formula{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>📐 ENGINEERING GRAPHICS</h1>
+
+<h2>UNIT 4</h2>
+
+<p><strong>Sections, Intersection & Development of Surfaces</strong></p>
+
+<p>Complete Detailed Notes | RGPV Engineering Graphics</p>
+
+</div>
+
+
+<!-- ==================================================
+1 INTRODUCTION
+================================================== -->
+
+<div class="topic">
+
+<h2>1. Introduction</h2>
+
+<p>
+Unit 4 deals with three important engineering graphics topics:
+<strong>Sections of Solids, Intersection of Surfaces and Development
+of Surfaces.</strong>
+</p>
+
+<p>
+These methods are used to represent complicated three-dimensional
+objects in a two-dimensional engineering drawing.
+</p>
+
+<h3>Main Topics</h3>
+
+<ul>
+
+<li>Section of solids</li>
+
+<li>Section plane</li>
+
+<li>Sectional views</li>
+
+<li>True shape of section</li>
+
+<li>Intersection of surfaces</li>
+
+<li>Intersection of cylinders</li>
+
+<li>Development of surfaces</li>
+
+<li>Parallel-line development</li>
+
+<li>Radial-line development</li>
+
+</ul>
+
+</div>
+
+
+<!-- ==================================================
+2 SECTION OF SOLIDS
+================================================== -->
+
+<div class="topic">
+
+<h2>2. Section of Solids</h2>
+
+<h3>Definition</h3>
+
+<p>
+When a solid is cut by an imaginary plane, the resulting portion
+or surface exposed by the cutting plane is called a section of
+the solid.
+</p>
+
+<p>
+The drawing showing the sectional shape of a solid is called a
+<strong>sectional view</strong>.
+</p>
+
+<h3>Why Sections Are Used?</h3>
+
+<ul>
+
+<li>To understand internal details of a solid.</li>
+
+<li>To show hidden surfaces clearly.</li>
+
+<li>To represent holes and cavities.</li>
+
+<li>To simplify complicated drawings.</li>
+
+<li>To determine the shape of the cut surface.</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Section Plane Cutting a Solid</h3>
+
+<svg viewBox="0 0 850 500">
+
+<!-- cylinder -->
+
+<ellipse cx="425" cy="110"
+rx="150" ry="45"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="275" y1="110"
+x2="275" y2="390"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="575" y1="110"
+x2="575" y2="390"
+stroke="black"
+stroke-width="4"/>
+
+<ellipse cx="425" cy="390"
+rx="150" ry="45"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<!-- section plane -->
+
+<line x1="230" y1="245"
+x2="620" y2="245"
+stroke="black"
+stroke-width="7"/>
+
+<text x="270" y="225"
+font-size="24">
+Section Plane
+</text>
+
+<text x="345" y="450"
+font-size="26">
+Solid
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+3 SECTION PLANE
+================================================== -->
+
+<div class="topic">
+
+<h2>3. Section Plane</h2>
+
+<p>
+The imaginary plane used to cut a solid is called the
+<strong>section plane</strong>.
+</p>
+
+<h3>Types of Section Planes</h3>
+
+<ul>
+
+<li>Plane parallel to HP</li>
+
+<li>Plane parallel to VP</li>
+
+<li>Plane perpendicular to HP</li>
+
+<li>Plane perpendicular to VP</li>
+
+<li>Plane inclined to HP</li>
+
+<li>Plane inclined to VP</li>
+
+<li>Auxiliary section plane</li>
+
+</ul>
+
+<h3>Section Plane Representation</h3>
+
+<p>
+The cutting plane is generally represented using a cutting-plane
+line with arrows indicating the direction of viewing.
+</p>
+
+</div>
+
+
+<!-- ==================================================
+4 SECTIONAL VIEW
+================================================== -->
+
+<div class="topic">
+
+<h2>4. Sectional View</h2>
+
+<p>
+A sectional view represents the portion of the solid exposed after
+it is cut by a section plane.
+</p>
+
+<h3>Important Elements</h3>
+
+<ul>
+
+<li>Cutting plane</li>
+
+<li>Sectioned surface</li>
+
+<li>Section lines / hatching</li>
+
+<li>Direction of viewing</li>
+
+<li>Visible outlines</li>
+
+</ul>
+
+<h3>Hatching</h3>
+
+<p>
+The exposed cut surface is generally represented by thin,
+equally spaced inclined lines called section lines or hatching.
+</p>
+
+
+<div class="diagram">
+
+<h3>Sectional Representation</h3>
+
+<svg viewBox="0 0 850 450">
+
+<rect x="250" y="100"
+width="350"
+height="250"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<!-- hatching -->
+
+<line x1="260" y1="180"
+x2="340" y2="100"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="260" y1="240"
+x2="400" y2="100"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="260" y1="300"
+x2="460" y2="100"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="300" y1="350"
+x2="550" y2="100"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="380" y1="350"
+x2="600" y2="130"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="460" y1="350"
+x2="600" y2="210"
+stroke="black"
+stroke-width="2"/>
+
+<text x="315" y="400"
+font-size="25">
+Sectioned Surface
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+5 SECTION OF PRISM
+================================================== -->
+
+<div class="topic">
+
+<h2>5. Section of a Prism</h2>
+
+<p>
+A prism may be cut by a section plane parallel, perpendicular or
+inclined to its axis.
+</p>
+
+<h3>General Construction Method</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the projections of the prism.</li>
+
+<li>Draw the cutting plane at the specified position.</li>
+
+<li>Mark the points where the cutting plane intersects the edges.</li>
+
+<li>Project these intersection points into the required view.</li>
+
+<li>Join the points in their proper sequence.</li>
+
+<li>Hatch the sectional surface.</li>
+
+<li>Show the visible outlines clearly.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Section of Prism</h3>
+
+<svg viewBox="0 0 850 500">
+
+<polygon points="270,350 420,270 570,350 420,430"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<polygon points="270,150 420,70 570,150 420,230"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="270" y1="150"
+x2="270" y2="350"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="420" y1="70"
+x2="420" y2="270"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="570" y1="150"
+x2="570" y2="350"
+stroke="black"
+stroke-width="4"/>
+
+<!-- section -->
+
+<line x1="220" y1="215"
+x2="620" y2="315"
+stroke="black"
+stroke-width="6"/>
+
+<text x="320" y="460"
+font-size="25">
+Section Plane
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+6 SECTION OF PYRAMID
+================================================== -->
+
+<div class="topic">
+
+<h2>6. Section of a Pyramid</h2>
+
+<p>
+A pyramid can be sectioned by a plane cutting one or more of its
+slant edges.
+</p>
+
+<h3>Procedure</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the complete projections of the pyramid.</li>
+
+<li>Draw the section plane.</li>
+
+<li>Mark the points where the section plane intersects the edges.</li>
+
+<li>Project all intersection points.</li>
+
+<li>Join the points to obtain the sectional shape.</li>
+
+<li>Apply hatching.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Section of Pyramid</h3>
+
+<svg viewBox="0 0 850 500">
+
+<polygon points="260,360 580,360 520,280 320,280"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="260" y1="360"
+x2="425" y2="80"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="580" y1="360"
+x2="425" y2="80"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="320" y1="280"
+x2="425" y2="80"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="520" y1="280"
+x2="425" y2="80"
+stroke="black"
+stroke-width="4"/>
+
+<!-- cutting plane -->
+
+<line x1="300" y1="235"
+x2="550" y2="290"
+stroke="black"
+stroke-width="6"/>
+
+<text x="340" y="450"
+font-size="25">
+Section Plane
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+7 SECTION OF CYLINDER
+================================================== -->
+
+<div class="topic">
+
+<h2>7. Section of a Cylinder</h2>
+
+<p>
+A cylinder may be cut by a plane parallel or inclined to its axis.
+The resulting section depends on the position of the cutting plane.
+</p>
+
+<h3>Important Cases</h3>
+
+<table>
+
+<tr>
+<th>Cutting Plane</th>
+<th>Section Shape</th>
+</tr>
+
+<tr>
+<td>Perpendicular to axis</td>
+<td>Circle</td>
+</tr>
+
+<tr>
+<td>Inclined to axis</td>
+<td>Ellipse</td>
+</tr>
+
+<tr>
+<td>Parallel to axis</td>
+<td>Rectangle</td>
+</tr>
+
+</table>
+
+
+<div class="diagram">
+
+<h3>Inclined Section of Cylinder</h3>
+
+<svg viewBox="0 0 850 500">
+
+<ellipse cx="425"
+cy="100"
+rx="150"
+ry="45"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="275" y1="100"
+x2="275" y2="390"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="575" y1="100"
+x2="575" y2="390"
+stroke="black"
+stroke-width="4"/>
+
+<ellipse cx="425"
+cy="390"
+rx="150"
+ry="45"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="230" y1="300"
+x2="620" y2="210"
+stroke="black"
+stroke-width="6"/>
+
+<text x="300" y="450"
+font-size="25">
+Inclined Section Plane
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+8 SECTION OF CONE
+================================================== -->
+
+<div class="topic">
+
+<h2>8. Section of a Cone</h2>
+
+<p>
+When a cone is cut by different section planes, different conic
+sections may be obtained.
+</p>
+
+<table>
+
+<tr>
+<th>Cutting Plane</th>
+<th>Approximate Section</th>
+</tr>
+
+<tr>
+<td>Perpendicular to axis</td>
+<td>Circle</td>
+</tr>
+
+<tr>
+<td>Inclined to axis but not parallel to generator</td>
+<td>Ellipse</td>
+</tr>
+
+<tr>
+<td>Parallel to generator</td>
+<td>Parabola</td>
+</tr>
+
+<tr>
+<td>Plane cutting both nappes in a double cone</td>
+<td>Hyperbola</td>
+</tr>
+
+</table>
+
+
+<div class="diagram">
+
+<h3>Section of Cone</h3>
+
+<svg viewBox="0 0 850 500">
+
+<ellipse cx="425"
+cy="380"
+rx="170"
+ry="50"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="255" y1="380"
+x2="425" y2="80"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="595" y1="380"
+x2="425" y2="80"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="230" y1="250"
+x2="620" y2="180"
+stroke="black"
+stroke-width="6"/>
+
+<text x="330" y="450"
+font-size="25">
+Inclined Section Plane
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+9 AUXILIARY SECTION
+================================================== -->
+
+<div class="topic">
+
+<h2>9. Auxiliary Sectional View</h2>
+
+<p>
+When the cutting plane is inclined to the principal reference
+planes, an auxiliary sectional view may be required to obtain the
+true shape of the section.
+</p>
+
+<h3>Purpose</h3>
+
+<ul>
+
+<li>To obtain the true shape of an inclined section.</li>
+
+<li>To determine actual dimensions of the section.</li>
+
+<li>To accurately represent inclined surfaces.</li>
+
+</ul>
+
+<h3>Method</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the principal views.</li>
+
+<li>Draw the cutting plane in the required position.</li>
+
+<li>Mark all points of intersection.</li>
+
+<li>Project the points perpendicular to the auxiliary reference line.</li>
+
+<li>Join the projected points.</li>
+
+<li>Hatch the resulting sectional area.</li>
+
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+10 INTERSECTION
+================================================== -->
+
+<div class="topic">
+
+<h2>10. Intersection of Surfaces</h2>
+
+<h3>Definition</h3>
+
+<p>
+When two solids or surfaces meet each other, the common line or
+curve formed by their intersection is called the
+<strong>intersection of surfaces</strong>.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+
+<li>Cylinder intersecting cylinder</li>
+
+<li>Cylinder intersecting prism</li>
+
+<li>Pipe intersecting pipe</li>
+
+<li>Two cylindrical surfaces intersecting each other</li>
+
+</ul>
+
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Piping systems</li>
+
+<li>Ventilation ducts</li>
+
+<li>Machine components</li>
+
+<li>Sheet-metal fabrication</li>
+
+<li>Structural components</li>
+
+</ul>
+
+</div>
+
+
+<!-- ==================================================
+11 CYLINDER INTERSECTION
+================================================== -->
+
+<div class="topic">
+
+<h2>11. Intersection of Two Cylinders</h2>
+
+<p>
+When two cylindrical surfaces penetrate each other, a common
+intersection curve is formed.
+</p>
+
+<h3>General Construction Method</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the projections of both cylinders.</li>
+
+<li>Divide the circular surface into equal parts.</li>
+
+<li>Project the division points.</li>
+
+<li>Find the corresponding intersection points.</li>
+
+<li>Transfer these points to the other view.</li>
+
+<li>Join the points smoothly.</li>
+
+<li>Darken the visible portion of the intersection curve.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Intersection of Cylinders</h3>
+
+<svg viewBox="0 0 900 520">
+
+<!-- horizontal cylinder -->
+
+<ellipse cx="270"
+cy="260"
+rx="170"
+ry="65"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="100" y1="260"
+x2="100" y2="380"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="440" y1="260"
+x2="440" y2="380"
+stroke="black"
+stroke-width="4"/>
+
+<!-- vertical cylinder -->
+
+<ellipse cx="520"
+cy="150"
+rx="65"
+ry="25"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="455" y1="150"
+x2="455" y2="390"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="585" y1="150"
+x2="585" y2="390"
+stroke="black"
+stroke-width="4"/>
+
+<ellipse cx="520"
+cy="390"
+rx="65"
+ry="25"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<!-- intersection curve -->
+
+<path d="M455 270
+C480 230, 560 230, 585 270"
+fill="none"
+stroke="black"
+stroke-width="6"/>
+
+<text x="300" y="470"
+font-size="25">
+Common Intersection Curve
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+12 DEVELOPMENT
+================================================== -->
+
+<div class="topic">
+
+<h2>12. Development of Surfaces</h2>
+
+<h3>Definition</h3>
+
+<p>
+Development of a surface means unfolding the surface of a three-
+dimensional solid onto a plane without overlapping or changing its
+actual dimensions.
+</p>
+
+<h3>Purpose</h3>
+
+<ul>
+
+<li>Sheet-metal fabrication</li>
+
+<li>Packaging</li>
+
+<li>Pipe and duct manufacturing</li>
+
+<li>Pattern making</li>
+
+<li>Construction of containers</li>
+
+<li>Manufacturing of cones and cylinders</li>
+
+</ul>
+
+
+<div class="important">
+
+<strong>Important:</strong>
+
+<p>
+A development represents the complete surface of a solid in a
+single flat pattern.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+13 TYPES DEVELOPMENT
+================================================== -->
+
+<div class="topic">
+
+<h2>13. Methods of Development</h2>
+
+<table>
+
+<tr>
+
+<th>Method</th>
+
+<th>Used Mainly For</th>
+
+</tr>
+
+<tr>
+
+<td>Parallel Line Method</td>
+
+<td>Prisms and Cylinders</td>
+
+</tr>
+
+<tr>
+
+<td>Radial Line Method</td>
+
+<td>Pyramids and Cones</td>
+
+</tr>
+
+<tr>
+
+<td>Triangulation Method</td>
+
+<td>Complex / transition surfaces</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- ==================================================
+14 PARALLEL LINE
+================================================== -->
+
+<div class="topic">
+
+<h2>14. Parallel Line Method</h2>
+
+<h3>Definition</h3>
+
+<p>
+In the parallel line method, the generators of the solid are
+parallel to each other and are transferred onto a flat surface.
+</p>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Prism</li>
+
+<li>Cylinder</li>
+
+</ul>
+
+
+<h3>Construction Procedure</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the plan of the base.</li>
+
+<li>Divide the base into equal parts.</li>
+
+<li>Obtain the circumference divisions.</li>
+
+<li>Draw parallel generators.</li>
+
+<li>Transfer the true height of the solid.</li>
+
+<li>Join corresponding points.</li>
+
+<li>Add allowances if required.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Development of a Prism</h3>
+
+<svg viewBox="0 0 900 450">
+
+<rect x="180" y="100"
+width="500"
+height="230"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="280" y1="100"
+x2="280" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="380" y1="100"
+x2="380" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="480" y1="100"
+x2="480" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="580" y1="100"
+x2="580" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<text x="330" y="380"
+font-size="26">
+Parallel Line Development
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+15 CYLINDER DEVELOPMENT
+================================================== -->
+
+<div class="topic">
+
+<h2>15. Development of Cylinder</h2>
+
+<p>
+The development of a cylinder is a rectangle whose length is equal
+to the circumference of the circular base and whose height is equal
+to the height of the cylinder.
+</p>
+
+
+<div class="formula">
+
+Length of Development = πD = 2πr
+
+</div>
+
+<div class="formula">
+
+Width of Development = Height of Cylinder
+
+</div>
+
+
+<h3>Construction Steps</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Calculate the circumference of the base.</li>
+
+<li>Draw a rectangle having length equal to circumference.</li>
+
+<li>Take the cylinder height as the width.</li>
+
+<li>Divide the circumference into suitable equal parts.</li>
+
+<li>Transfer corresponding points.</li>
+
+<li>Complete the development.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Cylinder Development</h3>
+
+<svg viewBox="0 0 900 450">
+
+<rect x="170" y="100"
+width="560"
+height="230"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="310" y1="100"
+x2="310" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="450" y1="100"
+x2="450" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="590" y1="100"
+x2="590" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<line x1="730" y1="100"
+x2="730" y2="330"
+stroke="black"
+stroke-width="2"/>
+
+<text x="330" y="380"
+font-size="26">
+πD × Height
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+16 RADIAL METHOD
+================================================== -->
+
+<div class="topic">
+
+<h2>16. Radial Line Method</h2>
+
+<h3>Definition</h3>
+
+<p>
+In the radial line method, the development is constructed by
+drawing radial lines from a common apex or centre.
+</p>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Pyramid</li>
+
+<li>Cone</li>
+
+</ul>
+
+
+<h3>General Procedure</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the projection of the solid.</li>
+
+<li>Determine the true length of slant edges/generators.</li>
+
+<li>Take the apex as the centre.</li>
+
+<li>Draw an arc with radius equal to true slant length.</li>
+
+<li>Divide the arc according to the base divisions.</li>
+
+<li>Join each division point to the apex.</li>
+
+<li>Complete the development.</li>
+
+</ol>
+
+</div>
+</body>
+</html>

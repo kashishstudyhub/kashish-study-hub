@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 4 - Polymer & Polymerization</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ad1457;
+        }
+
+        .topic {
+            background-color: white;
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #d81b60;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #880e4f;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #fce4ec;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #ad1457;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🧪 Unit 4: Polymer & Polymerization</h1>
+
+
+    <!-- Polymer -->
+    <div class="topic">
+        <button onclick="showNotes('polymer')">
+            1. Polymer and Polymerization
+        </button>
+
+        <div id="polymer" class="notes">
+            <h3>Polymer</h3>
+
+            <p>
+                A polymer is a high molecular mass substance
+                formed by joining many small molecules called
+                monomers.
+            </p>
+
+            <h3>Polymerization</h3>
+
+            <p>
+                Polymerization is the chemical process by which
+                monomers combine to form polymers.
+            </p>
+
+            <p class="formula">
+                Monomer + Monomer + Monomer → Polymer
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Classification -->
+    <div class="topic">
+        <button onclick="showNotes('classification')">
+            2. Classification of Polymerization
+        </button>
+
+        <div id="classification" class="notes">
+            <h3>Types of Polymerization</h3>
+
+            <ul>
+                <li>Addition Polymerization</li>
+                <li>Condensation Polymerization</li>
+            </ul>
+
+            <h3>Addition Polymerization</h3>
+
+            <p>
+                Unsaturated monomers combine without elimination
+                of small molecules.
+            </p>
+
+            <h3>Condensation Polymerization</h3>
+
+            <p>
+                Monomers combine with elimination of small
+                molecules such as water or HCl.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Free Radical -->
+    <div class="topic">
+        <button onclick="showNotes('freeradical')">
+            3. Free Radical Polymerization
+        </button>
+
+        <div id="freeradical" class="notes">
+            <h3>Free Radical Polymerization</h3>
+
+            <p>
+                Free radical polymerization is a chain-growth
+                polymerization mechanism involving free radicals.
+            </p>
+
+            <h3>Main Steps</h3>
+
+            <ol>
+                <li>Initiation</li>
+                <li>Propagation</li>
+                <li>Termination</li>
+            </ol>
+
+            <p>
+                It is commonly used for polymerization of
+                vinyl monomers.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Ionic -->
+    <div class="topic">
+        <button onclick="showNotes('ionic')">
+            4. Ionic Polymerization
+        </button>
+
+        <div id="ionic" class="notes">
+            <h3>Ionic Polymerization</h3>
+
+            <p>
+                Ionic polymerization is a chain-growth process
+                in which the active centre is an ion.
+            </p>
+
+            <ul>
+                <li>Cationic polymerization</li>
+                <li>Anionic polymerization</li>
+            </ul>
+
+            <p>
+                The mechanism depends on the nature of the
+                monomer and catalyst or initiator.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- PVC -->
+    <div class="topic">
+        <button onclick="showNotes('pvc')">
+            5. PVC – Polyvinyl Chloride
+        </button>
+
+        <div id="pvc" class="notes">
+            <h3>PVC</h3>
+
+            <p>
+                PVC is produced by polymerization of
+                vinyl chloride monomer.
+            </p>
+
+            <p class="formula">
+                n(CH₂=CHCl) → [–CH₂–CHCl–]ₙ
+            </p>
+
+            <h3>Uses</h3>
+
+            <ul>
+                <li>Pipes</li>
+                <li>Cable insulation</li>
+                <li>Flooring</li>
+                <li>Sheets and films</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Teflon -->
+    <div class="topic">
+        <button onclick="showNotes('teflon')">
+            6. Teflon – PTFE
+        </button>
+
+        <div id="teflon" class="notes">
+            <h3>Teflon</h3>
+
+            <p>
+                Teflon, or PTFE, is produced by polymerization
+                of tetrafluoroethylene.
+            </p>
+
+            <p class="formula">
+                n(CF₂=CF₂) → [–CF₂–CF₂–]ₙ
+            </p>
+
+            <h3>Properties</h3>
+
+            <ul>
+                <li>High chemical resistance</li>
+                <li>Low coefficient of friction</li>
+                <li>Good thermal stability</li>
+                <li>Non-stick surface</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Nylon -->
+    <div class="topic">
+        <button onclick="showNotes('nylon')">
+            7. Nylon
+        </button>
+
+        <div id="nylon" class="notes">
+            <h3>Nylon</h3>
+
+            <p>
+                Nylon is a synthetic polyamide polymer.
+                Important types include Nylon-6 and Nylon-6,6.
+            </p>
+
+            <h3>Uses</h3>
+
+            <ul>
+                <li>Textile fibres</li>
+                <li>Ropes</li>
+                <li>Engineering plastics</li>
+                <li>Machine components</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Thermoplastic -->
+    <div class="topic">
+        <button onclick="showNotes('thermoplastic')">
+            8. Thermoplastic Polymers
+        </button>
+
+        <div id="thermoplastic" class="notes">
+            <h3>Thermoplastics</h3>
+
+            <p>
+                Thermoplastics soften on heating and harden
+                on cooling. This process can generally be
+                repeated.
+            </p>
+
+            <p>Examples:</p>
+
+            <ul>
+                <li>PVC</li>
+                <li>Polyethylene</li>
+                <li>Polystyrene</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Thermosetting -->
+    <div class="topic">
+        <button onclick="showNotes('thermosetting')">
+            9. Thermosetting Polymers
+        </button>
+
+        <div id="thermosetting" class="notes">
+            <h3>Thermosetting Polymers</h3>
+
+            <p>
+                Thermosetting polymers form a permanent
+                cross-linked structure when cured and do not
+                soften again on reheating.
+            </p>
+
+            <p>Examples:</p>
+
+            <ul>
+                <li>Bakelite</li>
+                <li>Melamine-formaldehyde</li>
+                <li>Epoxy resins</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Comparison -->
+    <div class="topic">
+        <button onclick="showNotes('comparison')">
+            10. Thermoplastic vs Thermosetting
+        </button>
+
+        <div id="comparison" class="notes">
+            <h3>Difference</h3>
+
+            <ul>
+                <li>
+                    <b>Thermoplastic:</b> Can soften on heating
+                    and generally be reshaped.
+                </li>
+
+                <li>
+                    <b>Thermosetting:</b> Once cured, cannot
+                    be remoulded by heating.
+                </li>
+
+                <li>
+                    Thermosetting polymers generally have
+                    extensive cross-linking.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Vulcanization -->
+    <div class="topic">
+        <button onclick="showNotes('vulcanization')">
+            11. Rubber Vulcanization
+        </button>
+
+        <div id="vulcanization" class="notes">
+            <h3>Vulcanization of Rubber</h3>
+
+            <p>
+                Vulcanization is the process of heating rubber
+                with sulfur to form cross-links between polymer
+                chains.
+            </p>
+
+            <h3>Advantages</h3>
+
+            <ul>
+                <li>Improves strength</li>
+                <li>Improves elasticity</li>
+                <li>Improves abrasion resistance</li>
+                <li>Improves temperature resistance</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            } else {
+                notes.style.display = "block";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

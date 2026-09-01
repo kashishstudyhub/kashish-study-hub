@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Physics Unit 4 - Lasers & Fiber Optics</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f3ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a1b9a;
+        }
+
+        .topic {
+            max-width: 800px;
+            margin: 15px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #8e24aa;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4a148c;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #f3e5f5;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #6a1b9a;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .important {
+            background-color: #fff3e0;
+            padding: 12px;
+            border-left: 5px solid #fb8c00;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🔴 Unit 4: Lasers & Fiber Optics</h1>
+
+
+<!-- LASER Introduction -->
+<div class="topic">
+    <button onclick="showNotes('laser')">
+        1. Introduction to LASER
+    </button>
+
+    <div id="laser" class="notes">
+        <h3>LASER</h3>
+
+        <p>
+            LASER stands for
+            <b>Light Amplification by Stimulated Emission
+            of Radiation.</b>
+        </p>
+
+        <p>
+            A laser produces a highly directional and coherent
+            beam of electromagnetic radiation.
+        </p>
+
+        <h3>Important Properties</h3>
+
+        <ul>
+            <li>High coherence</li>
+            <li>High directionality</li>
+            <li>High intensity</li>
+            <li>Nearly monochromatic output</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Spontaneous -->
+<div class="topic">
+    <button onclick="showNotes('spontaneous')">
+        2. Spontaneous Emission
+    </button>
+
+    <div id="spontaneous" class="notes">
+        <h3>Spontaneous Emission</h3>
+
+        <p>
+            Spontaneous emission occurs when an excited atom
+            returns to a lower energy state on its own and
+            emits a photon.
+        </p>
+
+        <p class="formula">
+            E₂ − E₁ = hν
+        </p>
+    </div>
+</div>
+
+
+<!-- Stimulated -->
+<div class="topic">
+    <button onclick="showNotes('stimulated')">
+        3. Stimulated Emission
+    </button>
+
+    <div id="stimulated" class="notes">
+        <h3>Stimulated Emission</h3>
+
+        <p>
+            Stimulated emission occurs when an incoming photon
+            of the appropriate energy causes an excited atom to
+            emit another photon.
+        </p>
+
+        <div class="important">
+            The emitted photon has the same frequency, phase,
+            direction and polarization as the stimulating photon
+            in the idealized laser transition.
+        </div>
+    </div>
+</div>
+
+
+<!-- Einstein -->
+<div class="topic">
+    <button onclick="showNotes('einstein')">
+        4. Einstein Coefficients
+    </button>
+
+    <div id="einstein" class="notes">
+        <h3>Einstein Coefficients</h3>
+
+        <p>
+            Einstein introduced coefficients to describe
+            absorption, spontaneous emission and stimulated
+            emission.
+        </p>
+
+        <ul>
+            <li><b>B₁₂:</b> Absorption</li>
+            <li><b>A₂₁:</b> Spontaneous emission</li>
+            <li><b>B₂₁:</b> Stimulated emission</li>
+        </ul>
+
+        <p>
+            These coefficients are fundamental to the theory
+            of laser action.
+        </p>
+    </div>
+</div>
+
+
+<!-- Population -->
+<div class="topic">
+    <button onclick="showNotes('population')">
+        5. Population Inversion
+    </button>
+
+    <div id="population" class="notes">
+        <h3>Population Inversion</h3>
+
+        <p>
+            Population inversion is a condition in which the
+            number of atoms in an upper laser level is greater
+            than the number in the lower laser level.
+        </p>
+
+        <p class="formula">
+            N₂ > N₁
+        </p>
+
+        <p>
+            Population inversion is necessary for net stimulated
+            emission and laser amplification.
+        </p>
+    </div>
+</div>
+
+
+<!-- Pumping -->
+<div class="topic">
+    <button onclick="showNotes('pumping')">
+        6. Pumping
+    </button>
+
+    <div id="pumping" class="notes">
+        <h3>Optical Pumping</h3>
+
+        <p>
+            Pumping is the process of supplying energy to the
+            active medium to produce population inversion.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+            <li>Optical pumping</li>
+            <li>Electrical pumping</li>
+            <li>Current injection</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Ruby -->
+<div class="topic">
+    <button onclick="showNotes('ruby')">
+        7. Ruby Laser
+    </button>
+
+    <div id="ruby" class="notes">
+        <h3>Ruby Laser</h3>
+
+        <p>
+            Ruby laser is a solid-state laser in which a ruby
+            crystal acts as the active medium.
+        </p>
+
+        <ul>
+            <li>Active medium: Ruby crystal</li>
+            <li>Pumping: Optical pumping</li>
+            <li>It operates as a pulsed laser.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- HeNe -->
+<div class="topic">
+    <button onclick="showNotes('hene')">
+        8. He-Ne Laser
+    </button>
+
+    <div id="hene" class="notes">
+        <h3>Helium-Neon Laser</h3>
+
+        <p>
+            He-Ne laser is a gas laser containing helium and
+            neon gases.
+        </p>
+
+        <ul>
+            <li>Active medium: He-Ne gas mixture</li>
+            <li>Electrical discharge is used for excitation.</li>
+            <li>It commonly produces a continuous visible beam.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Semiconductor -->
+<div class="topic">
+    <button onclick="showNotes('semiconductor')">
+        9. Semiconductor Laser
+    </button>
+
+    <div id="semiconductor" class="notes">
+        <h3>Semiconductor Laser</h3>
+
+        <p>
+            A semiconductor laser is based on stimulated emission
+            in a semiconductor junction.
+        </p>
+
+        <ul>
+            <li>Small size</li>
+            <li>High efficiency</li>
+            <li>Direct electrical pumping</li>
+            <li>Widely used in optical communication</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Fiber Optics -->
+<div class="topic">
+    <button onclick="showNotes('fiber')">
+        10. Introduction to Optical Fiber
+    </button>
+
+    <div id="fiber" class="notes">
+        <h3>Optical Fiber</h3>
+
+        <p>
+            An optical fiber is a thin, flexible dielectric
+            waveguide that transmits light through the principle
+            of total internal reflection.
+        </p>
+
+        <h3>Main Parts</h3>
+
+        <ul>
+            <li>Core</li>
+            <li>Cladding</li>
+            <li>Protective coating</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- TIR -->
+<div class="topic">
+    <button onclick="showNotes('tir')">
+        11. Total Internal Reflection
+    </button>
+
+    <div id="tir" class="notes">
+        <h3>Total Internal Reflection</h3>
+
+        <p>
+            Light is guided through an optical fiber by repeated
+            total internal reflection at the core-cladding boundary.
+        </p>
+
+        <p>
+            For total internal reflection:
+        </p>
+
+        <ul>
+            <li>Light must travel from denser to rarer medium.</li>
+            <li>Angle of incidence must exceed the critical angle.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Numerical Aperture -->
+<div class="topic">
+    <button onclick="showNotes('na')">
+        12. Numerical Aperture
+    </button>
+
+    <div id="na" class="notes">
+        <h3>Numerical Aperture</h3>
+
+        <p>
+            Numerical aperture represents the light-gathering
+            ability of an optical fiber.
+        </p>
+
+        <p class="formula">
+            NA = √(n₁² − n₂²)
+        </p>
+
+        <p>
+            For a fiber in air:
+        </p>
+
+        <p class="formula">
+            NA = sin θₐ
+        </p>
+
+        <ul>
+            <li>n₁ = Refractive index of core</li>
+            <li>n₂ = Refractive index of cladding</li>
+            <li>θₐ = Acceptance angle</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Acceptance Angle -->
+<div class="topic">
+    <button onclick="showNotes('acceptance')">
+        13. Acceptance Angle
+    </button>
+
+    <div id="acceptance" class="notes">
+        <h3>Acceptance Angle</h3>
+
+        <p>
+            The acceptance angle is the maximum angle, measured
+            with respect to the fiber axis, at which light can
+            enter the fiber and still be guided.
+        </p>
+
+        <p class="formula">
+            NA = sin θₐ
+        </p>
+    </div>
+</div>
+
+
+<!-- Fiber Types -->
+<div class="topic">
+    <button onclick="showNotes('types')">
+        14. Types of Optical Fiber
+    </button>
+
+    <div id="types" class="notes">
+        <h3>Types of Fiber</h3>
+
+        <ul>
+            <li>Single-mode fiber</li>
+            <li>Multimode fiber</li>
+            <li>Step-index fiber</li>
+            <li>Graded-index fiber</li>
+        </ul>
+
+        <p>
+            Single-mode fibers support one principal propagation
+            mode, while multimode fibers support many modes.
+        </p>
+    </div>
+</div>
+
+
+<!-- Applications -->
+<div class="topic">
+    <button onclick="showNotes('applications')">
+        15. Applications of Lasers & Fiber Optics
+    </button>
+
+    <div id="applications" class="notes">
+        <h3>Applications</h3>
+
+        <ul>
+            <li>Optical fiber communication</li>
+            <li>Medical applications</li>
+            <li>Industrial measurement</li>
+            <li>Barcode scanners</li>
+            <li>Laser printing</li>
+            <li>Data transmission</li>
+            <li>Scientific instruments</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Revision -->
+<div class="topic">
+    <button onclick="showNotes('revision')">
+        16. Quick Revision - Important Formulas
+    </button>
+
+    <div id="revision" class="notes">
+
+        <p class="formula">
+            Photon Energy: E = hν
+        </p>
+
+        <p class="formula">
+            Population Inversion: N₂ > N₁
+        </p>
+
+        <p class="formula">
+            Numerical Aperture: NA = √(n₁² − n₂²)
+        </p>
+
+        <p class="formula">
+            For air: NA = sin θₐ
+        </p>
+
+        <p>
+            Important topics:
+            stimulated emission, spontaneous emission,
+            Einstein coefficients, population inversion,
+            Ruby laser, He-Ne laser, semiconductor laser,
+            optical fiber, numerical aperture and fiber types.
+        </p>
+
+    </div>
+</div>
+
+
+<script>
+
+function showNotes(id) {
+
+    let notes = document.getElementById(id);
+
+    if (notes.style.display === "block") {
+        notes.style.display = "none";
+    }
+    else {
+        notes.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

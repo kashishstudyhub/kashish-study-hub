@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Operating System Unit 1 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e9e4f5;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.toc,
+.topic{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:8px 0;
+}
+
+.topic h2{
+    color:#5b4b8a;
+    border-bottom:2px solid #eee;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    color:#6d5aa0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+}
+
+.example{
+    background:#f0f4ff;
+    border-left:5px solid #5b4b8a;
+    padding:18px;
+    margin:20px 0;
+}
+
+.definition{
+    background:#f7f2ff;
+    border-left:5px solid #7b61b5;
+    padding:18px;
+    margin:20px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,
+td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #5b4b8a;
+    padding:15px;
+    margin:10px 0;
+}
+
+.diagram{
+    background:#202124;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    overflow-x:auto;
+    font-family:monospace;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    margin:25px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .topic,
+    .toc{
+        padding:20px;
+    }
+
+    table{
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<div class="header">
+
+<h2>📚 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>💻 Operating System – Unit 1</h1>
+
+<p>Introduction to Operating Systems</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- TABLE OF CONTENTS -->
+
+<section class="toc" id="topics">
+
+<h2>📑 Unit 1 Contents</h2>
+
+<a href="#intro">1. Introduction to Operating System</a>
+
+<a href="#purpose">2. Purpose of Operating System</a>
+
+<a href="#history">3. History & Evolution</a>
+
+<a href="#generations">4. Generations of Operating Systems</a>
+
+<a href="#types">5. Types of Operating Systems</a>
+
+<a href="#characteristics">6. Characteristics of Operating Systems</a>
+
+<a href="#protection">7. System Protection & Security</a>
+
+<a href="#architecture">8. Operating System Architecture</a>
+
+<a href="#layered">9. Layered & Monolithic Systems</a>
+
+<a href="#services">10. Operating System Services</a>
+
+<a href="#utilities">11. Utility Programs</a>
+
+<a href="#systemcalls">12. System Calls</a>
+
+<a href="#spooling">13. Spooling</a>
+
+<a href="#buffering">14. Buffering</a>
+
+<a href="#questions">15. Important Exam Questions</a>
+
+<a href="#revision">16. Quick Revision</a>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="topic" id="intro">
+
+<h2>1. Introduction to Operating System</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong>
+
+<p>
+An Operating System (OS) is system software that manages computer
+hardware and provides services and an interface for users and
+application programs.
+</p>
+
+</div>
+
+<p>
+The operating system acts as an important interface between the
+user, application programs and computer hardware.
+</p>
+
+<div class="example">
+
+<strong>Simple View:</strong>
+
+<p>
+User → Application Programs → Operating System → Hardware
+</p>
+
+</div>
+
+<h3>Examples of Operating Systems</h3>
+
+<ul>
+
+<li>Windows</li>
+
+<li>Linux</li>
+
+<li>macOS</li>
+
+<li>Android</li>
+
+<li>iOS</li>
+
+</ul>
+
+</section>
+
+
+<!-- PURPOSE -->
+
+<section class="topic" id="purpose">
+
+<h2>2. Purpose of Operating System</h2>
+
+<p>
+The operating system provides an environment in which users and
+programs can use computer resources efficiently.
+</p>
+
+<h3>Main Purposes</h3>
+
+<ul>
+
+<li>Managing hardware resources.</li>
+
+<li>Providing an interface between user and computer.</li>
+
+<li>Managing programs and processes.</li>
+
+<li>Managing files and storage.</li>
+
+<li>Controlling input and output devices.</li>
+
+<li>Providing protection and security mechanisms.</li>
+
+<li>Making computer resources easier to use.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+The OS works as a resource manager as well as a control program
+for the computer system.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- HISTORY -->
+
+<section class="topic" id="history">
+
+<h2>3. History & Evolution of Operating Systems</h2>
+
+<p>
+Operating systems developed gradually as computer hardware and user
+requirements became more advanced.
+</p>
+
+<h3>Early Computer Systems</h3>
+
+<p>
+Early computers had little or no operating-system support.
+Programs were often prepared and executed with direct interaction
+with the machine.
+</p>
+
+<h3>Batch Processing</h3>
+
+<p>
+As systems developed, jobs could be collected and processed in
+batches. This reduced the need for continuous manual intervention.
+</p>
+
+<h3>Multiprogramming</h3>
+
+<p>
+Multiprogramming allowed multiple programs to reside in memory so
+that the processor could work on another program when one program
+was waiting for I/O.
+</p>
+
+<h3>Time-Sharing</h3>
+
+<p>
+Time-sharing systems allowed multiple users or tasks to interact
+with the computer by giving each a small amount of processor time.
+</p>
+
+<h3>Modern Operating Systems</h3>
+
+<p>
+Modern operating systems support multitasking, networking,
+security, graphical interfaces, multiprocessing and many other
+features.
+</p>
+
+</section>
+
+
+<!-- GENERATIONS -->
+
+<section class="topic" id="generations">
+
+<h2>4. Generations of Operating Systems</h2>
+
+<table>
+
+<tr>
+<th>Generation / Period</th>
+<th>Main Development</th>
+</tr>
+
+<tr>
+<td>Early Systems</td>
+<td>Limited operating-system support and manual operation.</td>
+</tr>
+
+<tr>
+<td>Batch Systems</td>
+<td>Jobs were collected and processed in batches.</td>
+</tr>
+
+<tr>
+<td>Multiprogramming Systems</td>
+<td>Multiple programs could be kept in memory.</td>
+</tr>
+
+<tr>
+<td>Time-Sharing Systems</td>
+<td>Interactive use by multiple users became possible.</td>
+</tr>
+
+<tr>
+<td>Modern Systems</td>
+<td>Multitasking, networking, security, multiprocessing and advanced interfaces.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- TYPES -->
+
+<section class="topic" id="types">
+
+<h2>5. Types of Operating Systems</h2>
+
+<h3>1. Batch Operating System</h3>
+
+<p>
+A batch operating system processes a collection of jobs together
+without requiring continuous interaction with the user during
+execution.
+</p>
+
+<h3>2. Time-Sharing Operating System</h3>
+
+<p>
+A time-sharing system provides processor time to multiple users
+or tasks in small time intervals, supporting interactive use.
+</p>
+
+<h3>3. Multitasking Operating System</h3>
+
+<p>
+A multitasking operating system allows multiple tasks to make
+progress by sharing processor time.
+</p>
+
+<h3>4. Multiprogramming Operating System</h3>
+
+<p>
+Multiprogramming keeps multiple programs in memory so the CPU can
+switch to another ready program when the current program waits.
+</p>
+
+<h3>5. Real-Time Operating System</h3>
+
+<p>
+A real-time operating system is designed for systems where
+responses need to be produced within specified timing constraints.
+</p>
+
+<h3>6. Distributed Operating System</h3>
+
+<p>
+A distributed operating system works in an environment containing
+multiple networked computers and aims to coordinate resources and
+activities across the system.
+</p>
+
+<h3>7. Network Operating System</h3>
+
+<p>
+A network operating system provides services that support computers
+connected through a network, including resource sharing and
+network-related management.
+</p>
+
+<table>
+
+<tr>
+<th>Type</th>
+<th>Main Idea</th>
+</tr>
+
+<tr>
+<td>Batch</td>
+<td>Jobs processed in batches.</td>
+</tr>
+
+<tr>
+<td>Time-Sharing</td>
+<td>Interactive sharing of processor time.</td>
+</tr>
+
+<tr>
+<td>Multitasking</td>
+<td>Multiple tasks make progress.</td>
+</tr>
+
+<tr>
+<td>Multiprogramming</td>
+<td>Multiple programs kept in memory.</td>
+</tr>
+
+<tr>
+<td>Real-Time</td>
+<td>Timing constraints are important.</td>
+</tr>
+
+<tr>
+<td>Distributed</td>
+<td>Coordinates resources across multiple computers.</td>
+</tr>
+
+<tr>
+<td>Network</td>
+<td>Provides network-related services and resource sharing.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- CHARACTERISTICS -->
+
+<section class="topic" id="characteristics">
+
+<h2>6. Characteristics of Operating Systems</h2>
+
+<p>
+An effective operating system should provide useful facilities for
+users and efficient management of computer resources.
+</p>
+
+<h3>Desirable Features</h3>
+
+<ul>
+
+<li>Convenience for users.</li>
+
+<li>Efficient resource management.</li>
+
+<li>Reliability.</li>
+
+<li>Security.</li>
+
+<li>Protection.</li>
+
+<li>Ability to support multiple programs or users where required.</li>
+
+<li>Good performance and responsiveness.</li>
+
+<li>Ease of maintenance and administration.</li>
+
+</ul>
+
+</section>
+
+
+<!-- PROTECTION -->
+
+<section class="topic" id="protection">
+
+<h2>7. System Protection & Security</h2>
+
+<h3>System Protection</h3>
+
+<p>
+System protection refers to mechanisms that control access to
+system resources and help prevent one process or user from
+interfering improperly with another.
+</p>
+
+<h3>System Security</h3>
+
+<p>
+System security protects the computer system and its information
+against unauthorized access and other security threats.
+</p>
+
+<h3>Common Protection and Security Mechanisms</h3>
+
+<ul>
+
+<li>User authentication.</li>
+
+<li>Access control.</li>
+
+<li>File permissions.</li>
+
+<li>Process isolation.</li>
+
+<li>Resource access restrictions.</li>
+
+<li>Protection of system resources.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Difference:</strong>
+
+<p>
+<strong>Protection</strong> mainly controls access to resources
+within the system, while <strong>security</strong> broadly deals
+with protecting the system and its information from unauthorized
+access and threats.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ARCHITECTURE -->
+
+<section class="topic" id="architecture">
+
+<h2>8. Operating System Architecture</h2>
+
+<p>
+Operating system architecture describes how the components of an
+operating system are organized and how they interact.
+</p>
+
+<h3>System Programmer's View</h3>
+
+<p>
+From a system programmer's perspective, the operating system is a
+collection of components and mechanisms that manage hardware,
+processes, memory, files, I/O and other resources.
+</p>
+
+<h3>User's View</h3>
+
+<p>
+From the user's perspective, the operating system provides an
+interface and services that make the computer convenient to use.
+</p>
+
+<div class="diagram">
+
+User
+  ↓
+Application Programs
+  ↓
+Operating System
+  ↓
+Hardware
+
+</div>
+
+</section>
+
+
+<!-- LAYERED MONOLITHIC -->
+
+<section class="topic" id="layered">
+
+<h2>9. Layered & Monolithic Systems</h2>
+
+<h3>Monolithic System</h3>
+
+<p>
+In a monolithic operating-system design, many core operating-system
+services operate together as a large kernel.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Direct communication between components can be efficient.</li>
+
+<li>Good performance can be achieved.</li>
+
+</ul>
+
+<h3>Disadvantages</h3>
+
+<ul>
+
+<li>Large and complex kernel structure.</li>
+
+<li>Changes to one component may be harder to isolate.</li>
+
+</ul>
+
+
+<h3>Layered System</h3>
+
+<p>
+A layered operating system divides functionality into layers.
+Each layer provides services to the layer above it and uses services
+provided by the layer below it.
+</p>
+
+<div class="diagram">
+
++-----------------------+
+|      User Programs    |
++-----------------------+
+|     System Services   |
++-----------------------+
+|     File Management   |
++-----------------------+
+|    Memory Management  |
++-----------------------+
+|    Process Management |
++-----------------------+
+|       Hardware        |
++-----------------------+
+
+</div>
+
+<h3>Advantages of Layered Design</h3>
+
+<ul>
+
+<li>Clear organization.</li>
+
+<li>Easier testing and debugging.</li>
+
+<li>Better separation of responsibilities.</li>
+
+<li>Changes can often be localized to appropriate layers.</li>
+
+</ul>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="topic" id="services">
+
+<h2>10. Operating System Services</h2>
+
+<p>
+The operating system provides services to users and application
+programs.
+</p>
+
+<h3>Major Services</h3>
+
+<ul>
+
+<li>Program execution.</li>
+
+<li>Input/Output operations.</li>
+
+<li>File-system manipulation.</li>
+
+<li>Communication.</li>
+
+<li>Error detection.</li>
+
+<li>Resource allocation.</li>
+
+<li>Protection and security.</li>
+
+</ul>
+
+<table>
+
+<tr>
+<th>Service</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Program Execution</td>
+<td>Loads and executes programs.</td>
+</tr>
+
+<tr>
+<td>I/O Operations</td>
+<td>Provides controlled access to input and output devices.</td>
+</tr>
+
+<tr>
+<td>File Management</td>
+<td>Supports creation, deletion, reading and writing of files.</td>
+</tr>
+
+<tr>
+<td>Communication</td>
+<td>Supports communication between processes or systems.</td>
+</tr>
+
+<tr>
+<td>Error Detection</td>
+<td>Detects and handles various system errors.</td>
+</tr>
+
+<tr>
+<td>Resource Allocation</td>
+<td>Allocates processor, memory and other resources.</td>
+</tr>
+
+<tr>
+<td>Protection</td>
+<td>Controls access to system resources.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- UTILITIES -->
+
+<section class="topic" id="utilities">
+
+<h2>11. Utility Programs</h2>
+
+<p>
+Utility programs are system-support programs that provide useful
+facilities for managing, maintaining or using a computer system.
+</p>
+
+<h3>Examples of Utility Functions</h3>
+
+<ul>
+
+<li>File management.</li>
+
+<li>Backup and restore.</li>
+
+<li>Disk management.</li>
+
+<li>System monitoring.</li>
+
+<li>Text editing.</li>
+
+<li>Compression and archiving.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+Utility programs support the operation and maintenance of a
+computer system but are distinct from the core kernel functions
+of the operating system.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SYSTEM CALLS -->
+
+<section class="topic" id="systemcalls">
+
+<h2>12. System Calls</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong>
+
+<p>
+A system call is a controlled interface through which a user
+program requests a service from the operating system.
+</p>
+
+</div>
+
+<h3>Why are System Calls Used?</h3>
+
+<ul>
+
+<li>To request operating-system services.</li>
+
+<li>To access files.</li>
+
+<li>To create or control processes.</li>
+
+<li>To perform input/output operations.</li>
+
+<li>To communicate with other processes or system components.</li>
+
+</ul>
+
+<h3>Common Categories</h3>
+
+<table>
+
+<tr>
+<th>Category</th>
+<th>Examples of Operations</th>
+</tr>
+
+<tr>
+<td>Process Control</td>
+<td>Create, terminate and control processes.</td>
+</tr>
+
+<tr>
+<td>File Management</td>
+<td>Open, read, write and close files.</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>Request and release devices or perform I/O.</td>
+</tr>
+
+<tr>
+<td>Communication</td>
+<td>Exchange information between processes.</td>
+</tr>
+
+<tr>
+<td>Protection</td>
+<td>Control access permissions and resources.</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+<strong>Simple Flow:</strong>
+
+<p>
+Application Program → System Call → Operating System → Hardware
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SPOOLING -->
+
+<section class="topic" id="spooling">
+
+<h2>13. Spooling</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong>
+
+<p>
+Spooling stands for <strong>Simultaneous Peripheral Operations
+On-Line</strong>. It is a technique in which data for a device is
+temporarily stored, commonly on secondary storage, so that devices
+and programs can operate more efficiently.
+</p>
+
+</div>
+
+<h3>Example</h3>
+
+<p>
+Printing is a common example. Print jobs can be placed in a queue
+and processed by the printer as the device becomes available.
+</p>
+
+<div class="diagram">
+
+Application
+     ↓
+Print Queue / Spool
+     ↓
+Printer
+
+</div>
+
+<h3>Benefits</h3>
+
+<ul>
+
+<li>Helps manage slow peripheral devices.</li>
+
+<li>Allows jobs to wait in a queue.</li>
+
+<li>Improves coordination between programs and devices.</li>
+
+</ul>
+
+</section>
+
+
+<!-- BUFFERING -->
+
+<section class="topic" id="buffering">
+
+<h2>14. Buffering</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong>
+
+<p>
+Buffering is the temporary storage of data in a memory area called
+a buffer while data is being transferred between components operating
+at different speeds.
+</p>
+
+</div>
+
+<h3>Why is Buffering Used?</h3>
+
+<ul>
+
+<li>To handle speed differences between devices and processors.</li>
+
+<li>To reduce waiting during data transfer.</li>
+
+<li>To improve I/O efficiency.</li>
+
+<li>To smooth data transfer between components.</li>
+
+</ul>
+
+<div class="diagram">
+
+Input Device
+     ↓
+   Buffer
+     ↓
+   CPU / Program
+
+</div>
+
+<h3>Spooling vs Buffering</h3>
+
+<table>
+
+<tr>
+<th>Spooling</th>
+<th>Buffering</th>
+</tr>
+
+<tr>
+<td>Often uses a queue for device-related jobs.</td>
+<td>Uses temporary memory storage during data transfer.</td>
+</tr>
+
+<tr>
+<td>Commonly associated with slower shared peripheral devices.</td>
+<td>Commonly handles differences in data-transfer rates.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="topic" id="questions">
+
+<h2>15. Important Exam Questions</h2>
+
+<h3>⭐ 2-Mark Questions</h3>
+
+<div class="question">
+1. What is an Operating System?
+</div>
+
+<div class="question">
+2. What is the main purpose of an operating system?
+</div>
+
+<div class="question">
+3. What is a batch operating system?
+</div>
+
+<div class="question">
+4. What is time-sharing?
+</div>
+
+<div class="question">
+5. What is multiprogramming?
+</div>
+
+<div class="question">
+6. What is a real-time operating system?
+</div>
+
+<div class="question">
+7. What is a system call?
+</div>
+
+<div class="question">
+8. What is spooling?
+</div>
+
+<div class="question">
+9. What is buffering?
+</div>
+
+
+<h3>⭐⭐ 5-Mark Questions</h3>
+
+<div class="question">
+1. Explain the purpose and functions of an operating system.
+</div>
+
+<div class="question">
+2. Explain the history and evolution of operating systems.
+</div>
+
+<div class="question">
+3. Explain different types of operating systems.
+</div>
+
+<div class="question">
+4. Explain the desirable characteristics of an operating system.
+</div>
+
+<div class="question">
+5. Explain layered and monolithic operating-system structures.
+</div>
+
+<div class="question">
+6. Explain operating system services.
+</div>
+
+<div class="question">
+7. Explain system calls with their categories.
+</div>
+
+<div class="question">
+8. Explain spooling and buffering.
+</div>
+
+
+<h3>⭐⭐⭐ 10-Mark Questions</h3>
+
+<div class="question">
+1. Explain the evolution and generations of operating systems in
+detail.
+</div>
+
+<div class="question">
+2. Explain batch, time-sharing, multitasking, multiprogramming,
+real-time, distributed and network operating systems.
+</div>
+
+<div class="question">
+3. Explain operating-system architecture from the user's and
+system programmer's views.
+</div>
+
+<div class="question">
+4. Explain monolithic and layered operating-system structures with
+diagrams.
+</div>
+
+<div class="question">
+5. Explain operating system services, utility programs a

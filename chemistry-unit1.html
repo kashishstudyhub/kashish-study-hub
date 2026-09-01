@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 1 - Water</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0d47a1;
+        }
+
+        .topic {
+            background: white;
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1976d2;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #0d47a1;
+        }
+
+        .formula {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>💧 Unit 1: Water</h1>
+
+
+    <!-- Water Sources -->
+    <div class="topic">
+        <button onclick="showNotes('sources')">
+            1. Sources of Water
+        </button>
+
+        <div id="sources" class="notes">
+            <h3>Sources of Water</h3>
+
+            <p>
+                Water is obtained mainly from natural sources.
+                These sources are:
+            </p>
+
+            <ul>
+                <li>Rain water</li>
+                <li>Surface water – rivers, lakes and ponds</li>
+                <li>Ground water – wells and springs</li>
+                <li>Sea water</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Impurities -->
+    <div class="topic">
+        <button onclick="showNotes('impurities')">
+            2. Impurities in Water
+        </button>
+
+        <div id="impurities" class="notes">
+            <h3>Impurities in Water</h3>
+
+            <p>
+                Natural water contains various dissolved and
+                suspended impurities.
+            </p>
+
+            <ul>
+                <li>Suspended impurities</li>
+                <li>Dissolved inorganic salts</li>
+                <li>Dissolved gases</li>
+                <li>Organic impurities</li>
+                <li>Microorganisms</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Hardness -->
+    <div class="topic">
+        <button onclick="showNotes('hardness')">
+            3. Hardness of Water
+        </button>
+
+        <div id="hardness" class="notes">
+            <h3>Hardness of Water</h3>
+
+            <p>
+                Hardness is the property of water due to which
+                it does not form lather easily with soap.
+            </p>
+
+            <p>
+                Hardness is mainly caused by calcium and
+                magnesium salts.
+            </p>
+
+            <h3>Types of Hardness</h3>
+
+            <ul>
+                <li>Temporary hardness</li>
+                <li>Permanent hardness</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Causes -->
+    <div class="topic">
+        <button onclick="showNotes('causes')">
+            4. Causes of Hardness
+        </button>
+
+        <div id="causes" class="notes">
+            <h3>Causes of Hardness</h3>
+
+            <p>
+                Temporary hardness is mainly due to bicarbonates
+                of calcium and magnesium.
+            </p>
+
+            <p>
+                Permanent hardness is mainly due to chlorides
+                and sulphates of calcium and magnesium.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Units -->
+    <div class="topic">
+        <button onclick="showNotes('units')">
+            5. Units of Hardness
+        </button>
+
+        <div id="units" class="notes">
+            <h3>Units of Hardness</h3>
+
+            <p>
+                Hardness is commonly expressed in terms of
+                equivalent CaCO₃.
+            </p>
+
+            <p class="formula">
+                Hardness = mg/L as CaCO₃
+            </p>
+
+            <p>
+                Another commonly used unit is ppm.
+            </p>
+
+            <p class="formula">
+                1 ppm = 1 mg/L
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Numerical -->
+    <div class="topic">
+        <button onclick="showNotes('numerical')">
+            6. Numerical Problems on Hardness
+        </button>
+
+        <div id="numerical" class="notes">
+            <h3>Hardness Numericals</h3>
+
+            <p>
+                Hardness calculations generally involve converting
+                different calcium and magnesium salts into their
+                CaCO₃ equivalent.
+            </p>
+
+            <p class="formula">
+                CaCO₃ equivalent =
+                Amount of substance × 50 / Equivalent weight
+            </p>
+
+            <p>
+                The total hardness is obtained by adding the
+                individual CaCO₃ equivalents.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- EDTA -->
+    <div class="topic">
+        <button onclick="showNotes('edta')">
+            7. EDTA Method
+        </button>
+
+        <div id="edta" class="notes">
+            <h3>Determination of Hardness by EDTA Method</h3>
+
+            <p>
+                EDTA titration is a complexometric method used
+                to determine the hardness of water.
+            </p>
+
+            <p>
+                EDTA forms stable complexes with Ca²⁺ and Mg²⁺ ions.
+            </p>
+
+            <h3>Important Reagents</h3>
+
+            <ul>
+                <li>EDTA solution</li>
+                <li>Buffer solution</li>
+                <li>Eriochrome Black-T indicator</li>
+            </ul>
+
+            <p>
+                The colour change at the end point is commonly
+                observed from wine-red to blue.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Alkalinity -->
+    <div class="topic">
+        <button onclick="showNotes('alkalinity')">
+            8. Alkalinity of Water
+        </button>
+
+        <div id="alkalinity" class="notes">
+            <h3>Alkalinity</h3>
+
+            <p>
+                Alkalinity is the capacity of water to neutralize
+                acids. It is mainly caused by hydroxide,
+                carbonate and bicarbonate ions.
+            </p>
+
+            <ul>
+                <li>OH⁻ → Hydroxide alkalinity</li>
+                <li>CO₃²⁻ → Carbonate alkalinity</li>
+                <li>HCO₃⁻ → Bicarbonate alkalinity</li>
+            </ul>
+
+            <p>
+                Alkalinity is generally expressed as
+                mg/L as CaCO₃.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Alkalinity Determination -->
+    <div class="topic">
+        <button onclick="showNotes('determination')">
+            9. Determination of Alkalinity
+        </button>
+
+        <div id="determination" class="notes">
+            <h3>Determination of Alkalinity</h3>
+
+            <p>
+                Alkalinity can be determined by acid titration
+                using suitable indicators.
+            </p>
+
+            <p>
+                Phenolphthalein and methyl orange are commonly
+                used indicators in alkalinity determination.
+            </p>
+
+            <p class="formula">
+                Alkalinity =
+                Volume of acid × Normality of acid × 50,000
+                / Volume of water sample
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            }
+            else {
+                notes.style.display = "block";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

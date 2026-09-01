@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Computer Networks Unit 4 | Kashish Study Hub</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7ff;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#4f46a5;
+    color:white;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    background:#e8e6ff;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    color:#403895;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.box{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px #ddd;
+}
+
+h2{
+    color:#4f46a5;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+}
+
+h3{
+    color:#5d54b3;
+}
+
+.toc a{
+    display:block;
+    text-decoration:none;
+    color:#4f46a5;
+    font-weight:bold;
+    padding:8px;
+}
+
+.toc a:hover{
+    background:#eeeeff;
+    border-radius:5px;
+}
+
+.important{
+    background:#fff5cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+    border-radius:5px;
+}
+
+.example{
+    background:#eef2ff;
+    border-left:5px solid #4f46a5;
+    padding:18px;
+    margin:20px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e8e6ff;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #4f46a5;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#4f46a5;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin:20px 5px 20px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .box{
+        padding:20px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header">
+
+<h2>🌐 Kashish Study Hub</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+
+<a href="#topics">Topics</a>
+
+<a href="#questions">Questions</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>📕 Computer Networks – Unit 4</h1>
+
+<p>Network Layer</p>
+
+<p>Complete Notes • Routing Algorithms • Exam Preparation</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- TABLE OF CONTENTS -->
+
+<section class="box toc" id="topics">
+
+<h2>📚 Unit 4 Contents</h2>
+
+<a href="#networklayer">
+1. Network Layer
+</a>
+
+<a href="#design">
+2. Network Layer Design Issues
+</a>
+
+<a href="#routing">
+3. Routing
+</a>
+
+<a href="#dijkstra">
+4. Dijkstra's Algorithm
+</a>
+
+<a href="#bellman">
+5. Bellman-Ford Algorithm
+</a>
+
+<a href="#hierarchical">
+6. Hierarchical Routing
+</a>
+
+<a href="#broadcast">
+7. Broadcast Routing
+</a>
+
+<a href="#multicast">
+8. Multicast Routing
+</a>
+
+<a href="#comparison">
+9. Routing Algorithms Comparison
+</a>
+
+<a href="#questions">
+10. Important Exam Questions
+</a>
+
+</section>
+
+
+<!-- NETWORK LAYER -->
+
+<section class="box" id="networklayer">
+
+<h2>1. 🌐 Network Layer</h2>
+
+<p>
+The Network Layer is the third layer of the OSI reference model.
+Its main role is to provide communication between different
+networks and to determine suitable paths for packets.
+</p>
+
+<h3>Main Functions</h3>
+
+<ul>
+
+<li>Logical addressing</li>
+
+<li>Routing</li>
+
+<li>Packet forwarding</li>
+
+<li>Internetworking</li>
+
+<li>Handling network-level congestion and related issues</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+The Network Layer is mainly associated with
+<strong>routing and packet forwarding</strong>.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- DESIGN ISSUES -->
+
+<section class="box" id="design">
+
+<h2>2. ⚙️ Network Layer Design Issues</h2>
+
+<p>
+The Network Layer has to provide an efficient mechanism for
+moving packets from a source network to a destination network.
+</p>
+
+<h3>Important Design Issues</h3>
+
+<ul>
+
+<li>Services provided to the Transport Layer</li>
+
+<li>Routing decisions</li>
+
+<li>Packet forwarding</li>
+
+<li>Addressing</li>
+
+<li>Handling different networks</li>
+
+<li>Managing traffic efficiently</li>
+
+</ul>
+
+
+<h3>Routing and Forwarding</h3>
+
+<p>
+<strong>Routing</strong> is the process of determining a path from
+source to destination.
+</p>
+
+<p>
+<strong>Forwarding</strong> is the process of sending a packet
+towards the selected next hop.
+</p>
+
+
+<div class="example">
+
+<strong>Easy Example:</strong>
+
+<p>
+
+Source → Router A → Router B → Router C → Destination
+
+</p>
+
+<p>
+Routing determines the path, while forwarding moves the packet
+from one router to the next.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ROUTING -->
+
+<section class="box" id="routing">
+
+<h2>3. 🛣️ Routing</h2>
+
+<p>
+Routing is the process of selecting a suitable path through a
+network for packets travelling from source to destination.
+</p>
+
+<h3>Objectives of Routing</h3>
+
+<ul>
+
+<li>Find an appropriate path.</li>
+
+<li>Use network resources efficiently.</li>
+
+<li>Reduce unnecessary delay.</li>
+
+<li>Handle changes in network conditions.</li>
+
+<li>Provide reliable packet delivery paths.</li>
+
+</ul>
+
+
+<h3>Routing Algorithms</h3>
+
+<p>
+A routing algorithm determines which path or next hop should be
+used to forward packets.
+</p>
+
+<p>
+Two important algorithms in this unit are:
+</p>
+
+<ul>
+
+<li><strong>Dijkstra's Algorithm</strong></li>
+
+<li><strong>Bellman-Ford Algorithm</strong></li>
+
+</ul>
+
+</section>
+
+
+<!-- DIJKSTRA -->
+
+<section class="box" id="dijkstra">
+
+<h2>4. 🔵 Dijkstra's Algorithm</h2>
+
+<p>
+Dijkstra's algorithm is a shortest-path algorithm used to find
+minimum-cost paths from a selected source node to other nodes in
+a graph with non-negative edge weights.
+</p>
+
+<h3>Basic Idea</h3>
+
+<p>
+The algorithm repeatedly selects the currently closest unvisited
+node and uses it to improve the distance estimates of neighbouring
+nodes.
+</p>
+
+
+<h3>Steps</h3>
+
+<ol>
+
+<li>
+Choose the source node.
+</li>
+
+<li>
+Assign distance 0 to the source and infinity to other nodes.
+</li>
+
+<li>
+Select the unvisited node with the smallest tentative distance.
+</li>
+
+<li>
+Update the distances of its neighbouring nodes if a shorter path
+is found.
+</li>
+
+<li>
+Mark the selected node as visited.
+</li>
+
+<li>
+Repeat until the required shortest paths are determined.
+</li>
+
+</ol>
+
+
+<h3>Example</h3>
+
+<div class="example">
+
+<p>
+
+Suppose:
+
+</p>
+
+<p>
+A → B = 4
+</p>
+
+<p>
+A → C = 2
+</p>
+
+<p>
+C → B = 1
+</p>
+
+<p>
+Then the path A → C → B has total cost:
+</p>
+
+<p>
+
+<strong>2 + 1 = 3</strong>
+
+</p>
+
+<p>
+which is shorter than the direct path A → B with cost 4.
+</p>
+
+</div>
+
+
+<h3>Important Point</h3>
+
+<p>
+Dijkstra's algorithm is not suitable when negative edge weights
+are present.
+</p>
+
+</section>
+
+
+<!-- BELLMAN FORD -->
+
+<section class="box" id="bellman">
+
+<h2>5. 🟢 Bellman-Ford Algorithm</h2>
+
+<p>
+Bellman-Ford is a shortest-path algorithm that can handle graphs
+containing negative edge weights, provided there is no reachable
+negative-weight cycle affecting the shortest path calculation.
+</p>
+
+<h3>Basic Idea</h3>
+
+<p>
+The algorithm repeatedly relaxes all edges and improves distance
+estimates when a shorter path is found.
+</p>
+
+
+<h3>Steps</h3>
+
+<ol>
+
+<li>
+Set the source distance to 0.
+</li>
+
+<li>
+Set the initial distance of other nodes to infinity.
+</li>
+
+<li>
+Relax all edges repeatedly.
+</li>
+
+<li>
+After sufficient iterations, check for further improvements.
+</li>
+
+<li>
+If an improvement is still possible, a reachable negative-weight
+cycle may exist.
+</li>
+
+</ol>
+
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+Bellman-Ford can detect reachable negative-weight cycles,
+whereas Dijkstra's algorithm does not provide this capability.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- HIERARCHICAL -->
+
+<section class="box" id="hierarchical">
+
+<h2>6. 🏢 Hierarchical Routing</h2>
+
+<p>
+Hierarchical routing divides a large network into regions or
+levels so that routing information can be organized more
+efficiently.
+</p>
+
+<h3>Need for Hierarchical Routing</h3>
+
+<ul>
+
+<li>Large networks contain many routers.</li>
+
+<li>Maintaining complete routing information everywhere can be
+expensive.</li>
+
+<li>Hierarchy reduces the amount of routing information that needs
+to be handled at each level.</li>
+
+</ul>
+
+
+<div class="example">
+
+<strong>Simple Example:</strong>
+
+<p>
+
+Country → State → City → Local Network
+
+</p>
+
+<p>
+Similarly, a large computer network can be organized into
+multiple routing regions.
+</p>
+
+</div>
+
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Reduces routing information.</li>
+
+<li>Improves scalability.</li>
+
+<li>Makes routing management easier.</li>
+
+</ul>
+
+</section>
+
+
+<!-- BROADCAST -->
+
+<section class="box" id="broadcast">
+
+<h2>7. 📢 Broadcast Routing</h2>
+
+<p>
+Broadcast routing is a method in which a packet or message is
+delivered to all relevant nodes in a network or broadcast domain.
+</p>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Network discovery</li>
+
+<li>Distribution of information to multiple nodes</li>
+
+<li>Service discovery in suitable network environments</li>
+
+</ul>
+
+
+<h3>Important Consideration</h3>
+
+<p>
+Broadcasting can generate significant network traffic, so
+efficient techniques are important.
+</p>
+
+
+<div class="important">
+
+<strong>Easy Meaning:</strong>
+
+<p>
+Broadcast = One sender → Many/all relevant receivers.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MULTICAST -->
+
+<section class="box" id="multicast">
+
+<h2>8. 👥 Multicast Routing</h2>
+
+<p>
+Multicast routing is used when a sender needs to deliver data
+to a selected group of receivers rather than to every node.
+</p>
+
+<h3>Basic Idea</h3>
+
+<p>
+
+<strong>
+One sender → Selected group of receivers
+</strong>
+
+</p>
+
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Reduces unnecessary duplicate transmissions.</li>
+
+<li>Efficient for group communication.</li>
+
+<li>Useful when multiple receivers need the same data.</li>
+
+</ul>
+
+
+<h3>Broadcast vs Multicast</h3>
+
+<table>
+
+<tr>
+
+<th>Broadcast</th>
+
+<th>Multicast</th>
+
+</tr>
+
+<tr>
+
+<td>Data is sent to all relevant receivers.</td>
+
+<td>Data is sent to a selected group.</td>
+
+</tr>
+
+<tr>
+
+<td>May create more traffic.</td>
+
+<td>Can reduce unnecessary traffic.</td>
+
+</tr>
+
+<tr>
+
+<td>One-to-all style communication.</td>
+
+<td>One-to-group style communication.</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="box" id="comparison">
+
+<h2>9. 📊 Dijkstra vs Bellman-Ford</h2>
+
+<table>
+
+<tr>
+
+<th>Feature</th>
+
+<th>Dijkstra</th>
+
+<th>Bellman-Ford</th>
+
+</tr>
+
+<tr>
+
+<td>Shortest Path</td>
+
+<td>Yes</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>Negative Edge Weights</td>
+
+<td>Not supported</td>
+
+<td>Supported</td>
+
+</tr>
+
+<tr>
+
+<td>Basic Approach</td>
+
+<td>Select closest tentative node and relax neighbours</td>
+
+<td>Repeatedly relax all edges</td>
+
+</tr>
+
+<tr>
+
+<td>Negative Cycle Detection</td>
+
+<td>Not designed for this</td>
+
+<td>Can detect reachable negative-weight cycles</td>
+
+</tr>
+
+</table>
+
+
+<h2>📊 Routing Types</h2>
+
+<table>
+
+<tr>
+
+<th>Routing Type</th>
+
+<th>Basic Purpose</th>
+
+</tr>
+
+<tr>
+
+<td>Hierarchical Routing</td>
+
+<td>Organizes large networks into regions/levels.</td>
+
+</tr>
+
+<tr>
+
+<td>Broadcast Routing</td>
+
+<td>Delivers information to all relevant receivers.</td>
+
+</tr>
+
+<tr>
+
+<td>Multicast Routing</td>
+
+<td>Delivers information to a selected receiver group.</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="box" id="questions">
+
+<h2>⭐ 10. Important Exam Questions</h2>
+
+
+<h3>🟢 2-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> What is the Network Layer?
+</div>
+
+<div class="question">
+<strong>Q2.</strong> What is routing?
+</div>
+
+<div class="question">
+<strong>Q3.</strong> What is forwarding?
+</div>
+
+<div class="question">
+<strong>Q4.</strong> What is Dijkstra's algorithm?
+</div>
+
+<div class="question">
+<strong>Q5.</strong> What is Bellman-Ford algorithm?
+</div>
+
+<div class="question">
+<strong>Q6.</strong> What is hierarchical routing?
+</div>
+
+<div class="question">
+<strong>Q7.</strong> What is broadcast routing?
+</div>
+
+<div class="question">
+<strong>Q8.</strong> What is multicast routing?
+</div>
+
+
+<h3>🟡 5-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain the design issues of the Network Layer.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain routing and forwarding.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Explain Dijkstra's shortest path algorithm.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain Bellman-Ford algorithm.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Explain hierarchical routing.
+</div>
+
+<div class="question">
+<strong>Q6.</strong> Explain broadcast and multicast routing.
+</div>
+
+
+<h3>🔴 10-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain Dijkstra's algorithm with a suitable
+example.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain Bellman-Ford algorithm in detail.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Differentiate between Dijkstra and Bellman-Ford
+algorithms.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain hierarchical, broadcast and multicast
+routing.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Explain Network Layer design issues and routing
+algorithms.
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="box">
+
+<h2>⚡ Unit 4 Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li>
+<strong>Network Layer:</strong>
+Third layer of the OSI model.
+</li>
+
+<li>
+<strong>Routing:</strong>
+Finding a suitable path from source to destination.
+</li>
+
+<li>
+<strong>Forwarding:</strong>
+Moving a packet towards the next hop.
+</li>
+
+<li>
+<strong>Dijkstra:</strong>
+Shortest-path algorithm for non-negative edge weights.
+</li>
+
+<li>
+<strong>Bellman-Ford:</strong>
+Shortest-path algorithm that can handle negative edge weights.
+</li>
+
+<li>
+<strong>Hierarchical Routing:</strong>
+Organizes routing using levels/regions.
+</li>
+
+<li>
+<strong>Broadcast:</strong>
+One sender to all relevant receivers.
+</li>
+
+<li>
+<strong>Multicast:</strong>
+One sender to a selected group of receivers.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- BACK BUTTONS -->
+
+<a class="back" href="computer-networks.html">
+⬅ Back to Computer Networks
+</a>
+
+<a class="back" href="index.html">
+🏠 Home
+</a>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+Computer Networks – Unit 4 Notes
+</p>
+
+</footer>
+
+
+</body>
+</html>

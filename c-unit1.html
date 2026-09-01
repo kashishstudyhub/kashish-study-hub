@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C Programming Unit 1 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e9e4f5;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.toc,
+.topic{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:7px 0;
+}
+
+.topic h2{
+    color:#5b4b8a;
+    border-bottom:2px solid #eee;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    color:#6d5aa0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+}
+
+.example{
+    background:#f0f4ff;
+    border-left:5px solid #5b4b8a;
+    padding:18px;
+    margin:20px 0;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #5b4b8a;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    margin:25px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .topic,
+    .toc{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<h2>📚 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>💻 C Programming – Unit 1</h1>
+
+<p>
+Introduction, Setup, Program Structure, Data Types,
+Variables and Input/Output
+</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- TABLE OF CONTENTS -->
+
+<section class="toc">
+
+<h2>📑 Unit 1 Contents</h2>
+
+<a href="#intro">1. Introduction to C</a>
+<a href="#setup">2. GCC / IDE Setup</a>
+<a href="#helloworld">3. Hello World Program</a>
+<a href="#structure">4. Structure of a C Program</a>
+<a href="#datatypes">5. Data Types</a>
+<a href="#variables">6. Variables</a>
+<a href="#printf">7. printf() Function</a>
+<a href="#scanf">8. scanf() Function</a>
+<a href="#formats">9. Format Specifiers</a>
+<a href="#programs">10. Important Programs</a>
+<a href="#questions">11. Important Exam Questions</a>
+<a href="#revision">12. Quick Revision</a>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="topic" id="intro">
+
+<h2>1. Introduction to C</h2>
+
+<p>
+C is a general-purpose programming language used for developing
+different types of software. It is also an important language for
+learning fundamental programming concepts.
+</p>
+
+<h3>Why Learn C?</h3>
+
+<ul>
+<li>It teaches fundamental programming concepts.</li>
+<li>It helps understand variables and data types.</li>
+<li>It provides a foundation for learning other languages.</li>
+<li>It is useful for system-oriented programming.</li>
+<li>It helps students understand memory-related concepts.</li>
+</ul>
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+C is a general-purpose, procedural programming language.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SETUP -->
+
+<section class="topic" id="setup">
+
+<h2>2. GCC / IDE Setup</h2>
+
+<p>
+To write and execute a C program, we need a C compiler or an
+Integrated Development Environment (IDE) that provides suitable
+editing and compilation tools.
+</p>
+
+<h3>What is GCC?</h3>
+
+<p>
+GCC stands for GNU Compiler Collection. It includes a compiler
+capable of compiling C programs.
+</p>
+
+<h3>Basic GCC Process</h3>
+
+<ol>
+<li>Write the C source code.</li>
+<li>Save the file with a <strong>.c</strong> extension.</li>
+<li>Compile the program using a C compiler.</li>
+<li>Fix any compilation errors.</li>
+<li>Run the compiled program.</li>
+</ol>
+
+<h3>Example Commands</h3>
+
+<pre><code>gcc program.c -o program
+
+./program</code></pre>
+
+<div class="important">
+
+<strong>Note:</strong>
+
+<p>
+The exact command for running a compiled program can differ
+depending on the operating system and environment.
+</p>
+
+</div>
+
+<h3>Using an IDE</h3>
+
+<p>
+An IDE provides tools such as a code editor, compiler integration,
+error messages and program execution in one environment.
+</p>
+
+</section>
+
+
+<!-- HELLO WORLD -->
+
+<section class="topic" id="helloworld">
+
+<h2>3. Hello World Program</h2>
+
+<p>
+The Hello World program is commonly used as the first program
+when learning a programming language.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}</code></pre>
+
+<h3>Output</h3>
+
+<pre><code>Hello World</code></pre>
+
+<h3>Explanation</h3>
+
+<table>
+
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>#include &lt;stdio.h&gt;</td>
+<td>Includes declarations for standard input/output functions.</td>
+</tr>
+
+<tr>
+<td>int main()</td>
+<td>Defines the main function where execution begins.</td>
+</tr>
+
+<tr>
+<td>printf()</td>
+<td>Displays output.</td>
+</tr>
+
+<tr>
+<td>return 0;</td>
+<td>Returns a status value from main.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- STRUCTURE -->
+
+<section class="topic" id="structure">
+
+<h2>4. Structure of a C Program</h2>
+
+<p>
+A C program can contain preprocessor directives, functions,
+declarations and executable statements.
+</p>
+
+<h3>General Structure</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    /* declarations */
+
+    /* statements */
+
+    return 0;
+}</code></pre>
+
+<h3>Important Parts</h3>
+
+<ul>
+
+<li>
+<strong>Preprocessor directive:</strong>
+Used to include header files or perform preprocessing.
+</li>
+
+<li>
+<strong>main():</strong>
+The main function is the normal starting point of program execution.
+</li>
+
+<li>
+<strong>Declarations:</strong>
+Used to declare variables and other objects.
+</li>
+
+<li>
+<strong>Statements:</strong>
+Instructions that perform operations.
+</li>
+
+<li>
+<strong>return:</strong>
+Can return a status value from a function such as main.
+</li>
+
+</ul>
+
+</section>
+
+
+<!-- DATA TYPES -->
+
+<section class="topic" id="datatypes">
+
+<h2>5. Data Types</h2>
+
+<p>
+A data type specifies the kind of value that a variable can store.
+This also helps the compiler determine how that data is represented
+and handled.
+</p>
+
+<h3>Important Basic Data Types</h3>
+
+<table>
+
+<tr>
+<th>Data Type</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>int</td>
+<td>Stores whole numbers.</td>
+<td>25</td>
+</tr>
+
+<tr>
+<td>char</td>
+<td>Stores a character.</td>
+<td>'A'</td>
+</tr>
+
+<tr>
+<td>float</td>
+<td>Stores floating-point values.</td>
+<td>25.5</td>
+</tr>
+
+</table>
+
+<h3>Example</h3>
+
+<pre><code>int age = 20;
+
+char grade = 'A';
+
+float marks = 85.5;</code></pre>
+
+<div class="important">
+
+<strong>Important:</strong>
+
+<p>
+The exact size and range of a C data type can depend on the
+implementation. The sizeof operator can be used to check the
+size on a particular system.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- VARIABLES -->
+
+<section class="topic" id="variables">
+
+<h2>6. Variables</h2>
+
+<p>
+A variable is a named object used to store a value. Its value can
+be changed during program execution.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>data_type variable_name;</code></pre>
+
+<h3>Examples</h3>
+
+<pre><code>int age;
+
+char grade;
+
+float marks;</code></pre>
+
+<h3>Initialization</h3>
+
+<p>
+A variable can be given an initial value when it is declared.
+</p>
+
+<pre><code>int age = 20;
+
+char grade = 'A';
+
+float marks = 85.5;</code></pre>
+
+<h3>Rules for Variable Names</h3>
+
+<ul>
+
+<li>A variable name can contain letters, digits and underscore.</li>
+
+<li>It should not begin with a digit.</li>
+
+<li>Spaces are not allowed.</li>
+
+<li>Keywords should not be used as variable names.</li>
+
+<li>C identifiers are case-sensitive.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Valid examples:</strong>
+
+<p>
+age, student_name, marks1
+</p>
+
+<strong>Invalid examples:</strong>
+
+<p>
+2marks, student name
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PRINTF -->
+
+<section class="topic" id="printf">
+
+<h2>7. printf() Function</h2>
+
+<p>
+The printf() function is used to display formatted output.
+It is declared in the standard input/output header.
+</p>
+
+<h3>Simple Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Welcome to C Programming");
+
+    return 0;
+}</code></pre>
+
+<h3>Displaying a Variable</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 20;
+
+    printf("Age = %d", age);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- SCANF -->
+
+<section class="topic" id="scanf">
+
+<h2>8. scanf() Function</h2>
+
+<p>
+The scanf() function is commonly used to read formatted input
+from the user.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+
+    printf("Enter your age: ");
+
+    scanf("%d", &amp;age);
+
+    printf("Age = %d", age);
+
+    return 0;
+}</code></pre>
+
+<h3>Why is &amp; used?</h3>
+
+<p>
+For many ordinary scalar variables, scanf() needs the address where
+it should store the input value. The address-of operator &amp; supplies
+that address.
+</p>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<pre><code>scanf("%d", &amp;age);</code></pre>
+
+</div>
+
+</section>
+
+
+<!-- FORMAT SPECIFIERS -->
+
+<section class="topic" id="formats">
+
+<h2>9. Format Specifiers</h2>
+
+<p>
+Format specifiers tell formatted input/output functions how a value
+should be interpreted or displayed.
+</p>
+
+<table>
+
+<tr>
+<th>Specifier</th>
+<th>Common Use</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>%d</td>
+<td>int</td>
+<td>printf("%d", age);</td>
+</tr>
+
+<tr>
+<td>%c</td>
+<td>char</td>
+<td>printf("%c", grade);</td>
+</tr>
+
+<tr>
+<td>%f</td>
+<td>float</td>
+<td>printf("%f", marks);</td>
+</tr>
+
+<tr>
+<td>%lf</td>
+<td>double in scanf()</td>
+<td>scanf("%lf", &amp;x);</td>
+</tr>
+
+<tr>
+<td>%s</td>
+<td>String</td>
+<td>printf("%s", name);</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="topic" id="programs">
+
+<h2>10. Important Programs</h2>
+
+
+<h3>Program 1: Display Student Information</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 20;
+    char grade = 'A';
+    float marks = 85.5;
+
+    printf("Age = %d\n", age);
+    printf("Grade = %c\n", grade);
+    printf("Marks = %.2f\n", marks);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Input and Display Integer</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;number);
+
+    printf("You entered: %d", number);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3: Add Two Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b, sum;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    sum = a + b;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 4: Calculate Average</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    float a, b, c, average;
+
+    printf("Enter three numbers: ");
+    scanf("%f %f %f", &amp;a, &amp;b, &amp;c);
+
+    average = (a + b + c) / 3.0f;
+
+    printf("Average = %.2f", average);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 5: Calculate Area of Circle</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    float radius, area;
+
+    printf("Enter radius: ");
+    scanf("%f", &amp;radius);
+
+    area = 3.14159f * radius * radius;
+
+    printf("Area = %.2f", area);
+
+    return 0;
+}</code></pre>
+
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="topic" id="questions">
+
+<h2>11. Important Exam Questions</h2>
+
+<h3>⭐ 2-Mark Questions</h3>
+
+<div class="question">
+1. What is C programming language?
+</div>
+
+<div class="question">
+2. What is GCC?
+</div>
+
+<div class="question">
+3. What is an IDE?
+</div>
+
+<div class="question">
+4. What is a variable?
+</div>
+
+<div class="question">
+5. What is a data type?
+</div>
+
+<div class="question">
+6. What is the use of printf()?
+</div>
+
+<div class="question">
+7. What is the use of scanf()?
+</div>
+
+<div class="question">
+8. Why is &amp; used with scanf() for many scalar variables?
+</div>
+
+
+<h3>⭐⭐ 5-Mark Questions</h3>
+
+<div class="question">
+1. Explain the structure of a C program with a suitable example.
+</div>
+
+<div class="question">
+2. Explain int, char and float data types with examples.
+</div>
+
+<div class="question">
+3. Explain variables and rules for naming variables.
+</div>
+
+<div class="question">
+4. Explain printf() and scanf() with suitable examples.
+</div>
+
+<div class="question">
+5. Explain the basic process of compiling and executing a C program.
+</div>
+
+
+<h3>⭐⭐⭐ 10-Mark Questions</h3>
+
+<div class="question">
+1. Explain the setup, structure and execution process of a C program
+with a suitable Hello World example.
+</div>
+
+<div class="question">
+2. Explain data types, variables and input/output functions in C
+with suitable programs.
+</div>
+
+<div class="question">
+3. Write a C program to accept values from the user and perform
+basic calculations. Explain the program.
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="topic" id="revision">
+
+<h2>12. Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li><strong>GCC:</strong> Compiler collection that includes a C compiler.</li>
+
+<li><strong>IDE:</strong> Environment that combines programming tools.</li>
+
+<li><strong>.c:</strong> Common extension for a C source file.</li>
+
+<li><strong>main():</strong> Normal starting function of a C program.</li>
+
+<li><strong>int:</strong> Commonly used for whole numbers.</li>
+
+<li><strong>char:</strong> Used for a character.</li>
+
+<li><strong>float:</strong> Used for floating-point values.</li>
+
+<li><strong>printf():</strong> Used for formatted output.</li>
+
+<li><strong>scanf():</strong> Used for formatted input.</li>
+
+<li><strong>&amp;:</strong> Address-of operator, commonly used with scanf()
+to provide a variable's address.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<a class="back" href="index.html">
+⬅ Back to Home
+</a>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+Original educational notes for learning and exam preparation.
+</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Physics Unit 1 - Quantum Mechanics</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f7ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #283593;
+        }
+
+        .topic {
+            max-width: 800px;
+            margin: 15px auto;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #3949ab;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a237e;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #e8eaf6;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #283593;
+        }
+
+        .formula {
+            background: white;
+            padding: 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>⚛️ Unit 1: Wave Nature of Particles & Schrödinger Equation</h1>
+
+
+<!-- Quantum Mechanics -->
+<div class="topic">
+    <button onclick="showNotes('quantum')">
+        1. Introduction to Quantum Mechanics
+    </button>
+
+    <div id="quantum" class="notes">
+        <h3>Quantum Mechanics</h3>
+
+        <p>
+            Quantum mechanics is the branch of physics that
+            describes the behaviour of matter and radiation
+            at atomic and microscopic scales.
+        </p>
+
+        <ul>
+            <li>Wave-particle duality</li>
+            <li>Quantization of energy</li>
+            <li>Probability interpretation</li>
+            <li>Schrödinger equation</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Wave Nature -->
+<div class="topic">
+    <button onclick="showNotes('wave')">
+        2. Wave Nature of Particles
+    </button>
+
+    <div id="wave" class="notes">
+        <h3>de Broglie Hypothesis</h3>
+
+        <p>
+            According to de Broglie, a moving particle has
+            an associated matter wave.
+        </p>
+
+        <p class="formula">
+            λ = h / p
+        </p>
+
+        <p>
+            Where h is Planck's constant and p is the momentum
+            of the particle.
+        </p>
+    </div>
+</div>
+
+
+<!-- Operators -->
+<div class="topic">
+    <button onclick="showNotes('operators')">
+        3. Operators in Quantum Mechanics
+    </button>
+
+    <div id="operators" class="notes">
+        <h3>Quantum Operators</h3>
+
+        <p>
+            An operator is a mathematical operation that acts
+            on a wavefunction to obtain a physical quantity.
+        </p>
+
+        <p class="formula">
+            Momentum operator:
+            p̂ = -iℏ ∂/∂x
+        </p>
+
+        <p class="formula">
+            Energy operator:
+            Ê = iℏ ∂/∂t
+        </p>
+    </div>
+</div>
+
+
+<!-- Time Dependent -->
+<div class="topic">
+    <button onclick="showNotes('tdse')">
+        4. Time-Dependent Schrödinger Equation
+    </button>
+
+    <div id="tdse" class="notes">
+        <h3>Time-Dependent Schrödinger Equation</h3>
+
+        <p class="formula">
+            iℏ ∂ψ/∂t = Ĥψ
+        </p>
+
+        <p>
+            Here ψ represents the wavefunction and Ĥ is the
+            Hamiltonian operator.
+        </p>
+
+        <p>
+            This equation describes how a quantum state changes
+            with time.
+        </p>
+    </div>
+</div>
+
+
+<!-- Time Independent -->
+<div class="topic">
+    <button onclick="showNotes('tise')">
+        5. Time-Independent Schrödinger Equation
+    </button>
+
+    <div id="tise" class="notes">
+        <h3>Time-Independent Schrödinger Equation</h3>
+
+        <p class="formula">
+            Ĥψ = Eψ
+        </p>
+
+        <p>
+            For a particle in a potential V(x), the
+            one-dimensional form is:
+        </p>
+
+        <p class="formula">
+            −(ℏ²/2m)(d²ψ/dx²) + Vψ = Eψ
+        </p>
+    </div>
+</div>
+
+
+<!-- Particle in Box -->
+<div class="topic">
+    <button onclick="showNotes('box')">
+        6. Particle in a One-Dimensional Box
+    </button>
+
+    <div id="box" class="notes">
+        <h3>Particle in a 1D Box</h3>
+
+        <p>
+            A particle is confined between two impenetrable
+            walls separated by a distance L.
+        </p>
+
+        <p>
+            The allowed energy levels are quantized.
+        </p>
+
+        <p class="formula">
+            Eₙ = n²h² / 8mL²
+        </p>
+
+        <p>
+            where n = 1, 2, 3, ... is the quantum number.
+        </p>
+    </div>
+</div>
+
+
+<!-- Born Interpretation -->
+<div class="topic">
+    <button onclick="showNotes('born')">
+        7. Born Interpretation of Wavefunction
+    </button>
+
+    <div id="born" class="notes">
+        <h3>Born Interpretation</h3>
+
+        <p>
+            The wavefunction itself is not directly observable.
+            The quantity |ψ|² represents the probability density
+            of finding a particle at a particular position.
+        </p>
+
+        <p class="formula">
+            Probability Density = |ψ|²
+        </p>
+
+        <p>
+            The wavefunction must satisfy suitable normalization
+            conditions.
+        </p>
+    </div>
+</div>
+
+
+<!-- Free Particle -->
+<div class="topic">
+    <button onclick="showNotes('free')">
+        8. Free-Particle Wavefunction
+    </button>
+
+    <div id="free" class="notes">
+        <h3>Free Particle</h3>
+
+        <p>
+            For a free particle, the potential energy is taken
+            as constant, often V = 0.
+        </p>
+
+        <p class="formula">
+            ψ(x,t) = A e^{i(kx − ωt)}
+        </p>
+
+        <p>
+            where k is the wave number and ω is the angular frequency.
+        </p>
+    </div>
+</div>
+
+
+<!-- Wave Packets -->
+<div class="topic">
+    <button onclick="showNotes('packet')">
+        9. Wave Packets
+    </button>
+
+    <div id="packet" class="notes">
+        <h3>Wave Packet</h3>
+
+        <p>
+            A wave packet is a localized group of waves formed
+            by superposition of waves having different wave
+            numbers and frequencies.
+        </p>
+
+        <p>
+            Wave packets are useful for describing localized
+            particles.
+        </p>
+    </div>
+</div>
+
+
+<!-- Phase Velocity -->
+<div class="topic">
+    <button onclick="showNotes('velocity')">
+        10. Phase Velocity and Group Velocity
+    </button>
+
+    <div id="velocity" class="notes">
+        <h3>Phase Velocity</h3>
+
+        <p class="formula">
+            vₚ = ω / k
+        </p>
+
+        <h3>Group Velocity</h3>
+
+        <p class="formula">
+            vᵍ = dω / dk
+        </p>
+
+        <p>
+            For matter waves, group velocity is associated
+            with the velocity of the particle.
+        </p>
+    </div>
+</div>
+
+
+<!-- Heisenberg -->
+<div class="topic">
+    <button onclick="showNotes('heisenberg')">
+        11. Heisenberg Uncertainty Principle
+    </button>
+
+    <div id="heisenberg" class="notes">
+        <h3>Uncertainty Principle</h3>
+
+        <p>
+            It is impossible to simultaneously determine the
+            exact position and exact momentum of a particle.
+        </p>
+
+        <p class="formula">
+            Δx Δp ≥ ℏ/2
+        </p>
+
+        <p>
+            This is a fundamental principle of quantum mechanics.
+        </p>
+    </div>
+</div>
+
+
+<!-- Revision -->
+<div class="topic">
+    <button onclick="showNotes('revision')">
+        12. Quick Revision
+    </button>
+
+    <div id="revision" class="notes">
+
+        <h3>Important Formulas</h3>
+
+        <p class="formula">
+            de Broglie wavelength: λ = h/p
+        </p>
+
+        <p class="formula">
+            Particle in box: Eₙ = n²h²/8mL²
+        </p>
+
+        <p class="formula">
+            Phase velocity: vₚ = ω/k
+        </p>
+
+        <p class="formula">
+            Group velocity: vᵍ = dω/dk
+        </p>
+
+        <p class="formula">
+            Uncertainty: ΔxΔp ≥ ℏ/2
+        </p>
+
+    </div>
+</div>
+
+
+<script>
+
+function showNotes(id) {
+
+    let notes = document.getElementById(id);
+
+    if (notes.style.display === "block") {
+        notes.style.display = "none";
+    }
+    else {
+        notes.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

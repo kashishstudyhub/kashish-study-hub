@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Computer Networks Unit 2 | Kashish Study Hub</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7ff;
+    color:#222;
+    line-height:1.7;
+}
+
+/* HEADER */
+
+header{
+    background:#4f46a5;
+    color:white;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+/* HERO */
+
+.hero{
+    background:#e8e6ff;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    color:#403895;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOX */
+
+.box{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px #ddd;
+}
+
+h2{
+    color:#4f46a5;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+}
+
+h3{
+    color:#5d54b3;
+}
+
+/* TOC */
+
+.toc a{
+    display:block;
+    text-decoration:none;
+    color:#4f46a5;
+    font-weight:bold;
+    padding:8px;
+}
+
+.toc a:hover{
+    background:#eeeeff;
+    border-radius:5px;
+}
+
+/* IMPORTANT */
+
+.important{
+    background:#fff5cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+    border-radius:5px;
+}
+
+/* EXAMPLE */
+
+.example{
+    background:#eef2ff;
+    border-left:5px solid #4f46a5;
+    padding:18px;
+    margin:20px 0;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e8e6ff;
+}
+
+/* QUESTIONS */
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #4f46a5;
+    padding:15px;
+    margin:10px 0;
+}
+
+/* BUTTON */
+
+.back{
+    display:inline-block;
+    background:#4f46a5;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin:20px 5px 20px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .box{
+        padding:20px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header">
+
+<h2>🌐 Kashish Study Hub</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+
+<a href="#topics">Topics</a>
+
+<a href="#questions">Questions</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>📗 Computer Networks – Unit 2</h1>
+
+<p>
+Data Link Layer
+</p>
+
+<p>
+Complete Notes • Concepts • Protocols • Exam Preparation
+</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="box toc" id="topics">
+
+<h2>📚 Unit 2 Contents</h2>
+
+<a href="#dll">
+1. Data Link Layer
+</a>
+
+<a href="#services">
+2. Data Link Layer Services
+</a>
+
+<a href="#framing">
+3. Framing
+</a>
+
+<a href="#flow">
+4. Flow Control
+</a>
+
+<a href="#error">
+5. Error Control
+</a>
+
+<a href="#elementary">
+6. Elementary Data Link Protocols
+</a>
+
+<a href="#stopwait">
+7. Stop-and-Wait Protocol
+</a>
+
+<a href="#sliding">
+8. Sliding Window Protocol
+</a>
+
+<a href="#goback">
+9. Go-Back-N Protocol
+</a>
+
+<a href="#selective">
+10. Selective Repeat Protocol
+</a>
+
+<a href="#comparison">
+11. Protocol Comparison
+</a>
+
+<a href="#questions">
+12. Important Exam Questions
+</a>
+
+</section>
+
+
+<!-- DATA LINK LAYER -->
+
+<section class="box" id="dll">
+
+<h2>1. 🔗 Data Link Layer</h2>
+
+<p>
+The Data Link Layer is the second layer of the OSI reference model.
+It provides communication over a direct link between neighbouring
+network devices.
+</p>
+
+<p>
+It receives packets from the Network Layer and organizes them into
+frames for transmission over the link.
+</p>
+
+
+<h3>Main Functions</h3>
+
+<ul>
+
+<li>Framing</li>
+
+<li>Flow Control</li>
+
+<li>Error Control</li>
+
+<li>Reliable link-level delivery</li>
+
+<li>Managing communication over a link</li>
+
+</ul>
+
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+The three major functions emphasized in this unit are
+<strong>Framing, Flow Control and Error Control.</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="box" id="services">
+
+<h2>2. ⚙️ Data Link Layer Services</h2>
+
+<p>
+The Data Link Layer provides services to the Network Layer and
+handles communication over the underlying physical link.
+</p>
+
+
+<h3>Important Services</h3>
+
+<ul>
+
+<li>
+<strong>Framing:</strong>
+Divides the bit stream into frames.
+</li>
+
+<li>
+<strong>Flow Control:</strong>
+Controls the rate at which frames are sent.
+</li>
+
+<li>
+<strong>Error Control:</strong>
+Detects and handles transmission errors.
+</li>
+
+<li>
+<strong>Link Management:</strong>
+Helps manage communication between directly connected devices.
+</li>
+
+</ul>
+
+
+<div class="example">
+
+<strong>Simple Example:</strong>
+
+<p>
+Suppose one computer wants to send data to another computer.
+The Data Link Layer packages the data into frames and helps
+control and protect the transfer over the link.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FRAMING -->
+
+<section class="box" id="framing">
+
+<h2>3. 🧩 Framing</h2>
+
+<p>
+Framing is the process of dividing a continuous stream of bits
+received from the Network Layer into manageable units called
+<strong>frames</strong>.
+</p>
+
+
+<h3>Why is Framing Required?</h3>
+
+<ul>
+
+<li>Identifies the beginning of a frame.</li>
+
+<li>Identifies the end of a frame.</li>
+
+<li>Allows the receiver to process data frame by frame.</li>
+
+<li>Supports error detection and control.</li>
+
+</ul>
+
+
+<h3>Common Framing Approaches</h3>
+
+<ul>
+
+<li>Character count</li>
+
+<li>Byte stuffing</li>
+
+<li>Bit stuffing</li>
+
+</ul>
+
+
+<h3>Character Count</h3>
+
+<p>
+In character-count framing, a field indicates the number of
+characters contained in the frame.
+</p>
+
+
+<h3>Byte Stuffing</h3>
+
+<p>
+Byte stuffing inserts special escape bytes when data contains
+a byte pattern that could otherwise be interpreted as a frame
+delimiter.
+</p>
+
+
+<h3>Bit Stuffing</h3>
+
+<p>
+Bit stuffing inserts an extra bit into the transmitted bit stream
+when a particular sequence of consecutive bits occurs, helping
+distinguish data from frame delimiters.
+</p>
+
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+Framing = Bit stream ko frames me divide karna.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FLOW CONTROL -->
+
+<section class="box" id="flow">
+
+<h2>4. 🚦 Flow Control</h2>
+
+<p>
+Flow control is a mechanism that regulates the rate of data
+transmission so that a sender does not overwhelm a receiver.
+</p>
+
+
+<h3>Need for Flow Control</h3>
+
+<ul>
+
+<li>Receiver may process data more slowly than the sender.</li>
+
+<li>Prevents excessive buffering at the receiver.</li>
+
+<li>Helps maintain efficient communication.</li>
+
+</ul>
+
+
+<h3>Common Flow Control Techniques</h3>
+
+<ul>
+
+<li>Stop-and-Wait</li>
+
+<li>Sliding Window</li>
+
+</ul>
+
+
+<h3>Stop-and-Wait Flow Control</h3>
+
+<p>
+The sender transmits one frame and waits for an acknowledgement
+before sending the next frame.
+</p>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+
+Sender → Frame 1 → Receiver
+
+<br><br>
+
+Receiver → ACK → Sender
+
+<br><br>
+
+Sender → Frame 2 → Receiver
+
+</p>
+
+</div>
+
+
+<h3>Sliding Window Flow Control</h3>
+
+<p>
+Sliding Window allows multiple frames to be transmitted before
+receiving acknowledgements for all of them.
+</p>
+
+</section>
+
+
+<!-- ERROR CONTROL -->
+
+<section class="box" id="error">
+
+<h2>5. ❌ Error Control</h2>
+
+<p>
+Error control is concerned with detecting transmission errors and
+recovering from them when necessary.
+</p>
+
+
+<h3>Main Components</h3>
+
+<ul>
+
+<li>Error detection</li>
+
+<li>Acknowledgements</li>
+
+<li>Sequence numbers</li>
+
+<li>Retransmission</li>
+
+<li>Timers</li>
+
+</ul>
+
+
+<h3>Error Detection</h3>
+
+<p>
+Error detection techniques allow the receiver to determine whether
+the received frame has been corrupted.
+</p>
+
+
+<h3>Acknowledgement</h3>
+
+<p>
+An acknowledgement informs the sender about successful receipt
+of a frame or data.
+</p>
+
+
+<h3>Retransmission</h3>
+
+<p>
+If a frame is lost or corrupted, the protocol can request or
+trigger retransmission.
+</p>
+
+
+<h3>Sequence Number</h3>
+
+<p>
+Sequence numbers help identify frames and support correct ordering
+and duplicate detection.
+</p>
+
+
+<div class="important">
+
+<strong>Easy Formula:</strong>
+
+<p>
+
+Error Control =
+<strong>
+Detection + ACK + Sequence Number + Retransmission
+</strong>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ELEMENTARY PROTOCOLS -->
+
+<section class="box" id="elementary">
+
+<h2>6. 📡 Elementary Data Link Protocols</h2>
+
+<p>
+Elementary data link protocols are basic protocols used to explain
+how frames can be transmitted reliably over a data link.
+</p>
+
+
+<h3>Main Ideas</h3>
+
+<ul>
+
+<li>Sending frames</li>
+
+<li>Receiving frames</li>
+
+<li>Acknowledgements</li>
+
+<li>Flow control</li>
+
+<li>Error recovery</li>
+
+</ul>
+
+
+<p>
+These basic protocols provide the foundation for understanding
+more advanced protocols such as sliding window protocols.
+</p>
+
+</section>
+
+
+<!-- STOP AND WAIT -->
+
+<section class="box" id="stopwait">
+
+<h2>7. ⏸️ Stop-and-Wait Protocol</h2>
+
+<p>
+In Stop-and-Wait, the sender sends one frame and waits for an
+acknowledgement before sending the next frame.
+</p>
+
+
+<h3>Working</h3>
+
+<ol>
+
+<li>Sender sends a frame.</li>
+
+<li>Receiver receives the frame.</li>
+
+<li>Receiver sends an acknowledgement.</li>
+
+<li>Sender receives the acknowledgement.</li>
+
+<li>Sender sends the next frame.</li>
+
+</ol>
+
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Simple to understand.</li>
+
+<li>Simple implementation.</li>
+
+<li>Provides basic flow control.</li>
+
+</ul>
+
+
+<h3>Disadvantages</h3>
+
+<ul>
+
+<li>Can be inefficient on long-delay links.</li>
+
+<li>Sender may remain idle while waiting for acknowledgement.</li>
+
+</ul>
+
+</section>
+
+
+<!-- SLIDING WINDOW -->
+
+<section class="box" id="sliding">
+
+<h2>8. 🪟 Sliding Window Protocol</h2>
+
+<p>
+Sliding Window is a flow and error control technique that allows
+multiple frames to be in transit at the same time.
+</p>
+
+
+<h3>Basic Concept</h3>
+
+<p>
+The sender maintains a window containing frames that it is allowed
+to transmit.
+As acknowledgements are received, the window moves forward.
+</p>
+
+
+<div class="example">
+
+<strong>Simple Example:</strong>
+
+<p>
+
+Window initially:
+
+<strong>[1] [2] [3] [4]</strong>
+
+<br><br>
+
+After acknowledgement of frame 1:
+
+<strong>[2] [3] [4] [5]</strong>
+
+</p>
+
+<p>
+This movement is called <strong>sliding of the window</strong>.
+</p>
+
+</div>
+
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Allows multiple frames in transit.</li>
+
+<li>Improves link utilization.</li>
+
+<li>Supports flow control.</li>
+
+<li>Can support error recovery.</li>
+
+</ul>
+
+</section>
+
+
+<!-- GO BACK N -->
+
+<section class="box" id="goback">
+
+<h2>9. 🔄 Go-Back-N Protocol</h2>
+
+<p>
+Go-Back-N is a sliding-window error-control protocol.
+It allows multiple frames to be transmitted before acknowledgements
+are received.
+</p>
+
+
+<h3>Working</h3>
+
+<ol>
+
+<li>Sender transmits a sequence of frames.</li>
+
+<li>If a frame is lost or damaged, the receiver detects the problem.</li>
+
+<li>The sender retransmits the affected frame and subsequent
+outstanding frames according to the protocol.</li>
+
+</ol>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+
+Frames sent:
+
+<strong>1 → 2 → 3 → 4 → 5</strong>
+
+</p>
+
+<p>
+
+If frame 3 requires retransmission, the sender may retransmit:
+
+<strong>3 → 4 → 5</strong>
+
+</p>
+
+</div>
+
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Relatively simple implementation.</li>
+
+<li>Uses pipelined transmission.</li>
+
+</ul>
+
+
+<h3>Disadvantage</h3>
+
+<p>
+Correctly received frames after the problematic frame may need
+to be retransmitted, causing additional traffic.
+</p>
+
+</section>
+
+
+<!-- SELECTIVE REPEAT -->
+
+<section class="box" id="selective">
+
+<h2>9.5️⃣ Selective Repeat Protocol</h2>
+
+<p>
+Selective Repeat is a sliding-window protocol that retransmits
+only the frames that are missing or received incorrectly.
+</p>
+
+
+<h3>Working</h3>
+
+<ol>
+
+<li>Multiple frames are transmitted.</li>
+
+<li>Receiver can accept correctly received frames.</li>
+
+<li>Incorrect or missing frames are identified.</li>
+
+<li>Only required frames are retransmitted.</li>
+
+</ol>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+
+Frames sent:
+
+<strong>1 → 2 → 3 → 4 → 5</strong>
+
+</p>
+
+<p>
+
+Suppose frame 3 is lost.
+
+Only frame:
+
+<strong>3</strong>
+
+needs retransmission, while correctly received frames
+can be retained.
+
+</p>
+
+</div>
+
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Reduces unnecessary retransmissions.</li>
+
+<li>Efficient when errors are relatively infrequent.</li>
+
+</ul>
+
+
+<h3>Disadvantage</h3>
+
+<ul>
+
+<li>More complex than Go-Back-N.</li>
+
+<li>Receiver needs additional buffering and management.</li>
+
+</ul>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="box" id="comparison">
+
+<h2>10. 📊 Go-Back-N vs Selective Repeat</h2>
+
+<table>
+
+<tr>
+
+<th>Feature</th>
+
+<th>Go-Back-N</th>
+
+<th>Selective Repeat</th>
+
+</tr>
+
+<tr>
+
+<td>Retransmission</td>
+
+<td>Affected frame and subsequent outstanding frames may be
+retransmitted</td>
+
+<td>Only required frames are retransmitted</td>
+
+</tr>
+
+<tr>
+
+<td>Complexity</td>
+
+<td>Lower</td>
+
+<td>Higher</td>
+
+</tr>
+
+<tr>
+
+<td>Efficiency</td>
+
+<td>Can be lower when errors occur</td>
+
+<td>Can be higher when errors occur</td>
+
+</tr>
+
+<tr>
+
+<td>Buffering</td>
+
+<td>Relatively simpler</td>
+
+<td>Requires more receiver buffering</td>
+
+</tr>
+
+</table>
+
+
+<div class="important">
+
+<strong>Exam Tip:</strong>
+
+<p>
+Go-Back-N aur Selective Repeat ka difference table form me
+yaad karo. Ye comparison question ke liye useful hai.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="box" id="questions">
+
+<h2>⭐ 12. Important Exam Questions</h2>
+
+
+<h3>🟢 2-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> What is the Data Link Layer?
+</div>
+
+<div class="question">
+<strong>Q2.</strong> What is framing?
+</div>
+
+<div class="question">
+<strong>Q3.</strong> What is flow control?
+</div>
+
+<div class="question">
+<strong>Q4.</strong> What is error control?
+</div>
+
+<div class="question">
+<strong>Q5.</strong> What is a sliding window protocol?
+</div>
+
+<div class="question">
+<strong>Q6.</strong> What is Go-Back-N?
+</div>
+
+<div class="question">
+<strong>Q7.</strong> What is Selective Repeat?
+</div>
+
+
+<h3>🟡 5-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain the functions of the Data Link Layer.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain framing and its common approaches.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Explain flow control.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain error control.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Explain sliding window protocol.
+</div>
+
+
+<h3>🔴 10-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain Data Link Layer services, framing,
+flow control and error control in detail.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain elementary data link protocols.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Explain Sliding Window Protocol with suitable
+example.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain Go-Back-N and Selective Repeat protocols.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Differentiate between Go-Back-N and Selective
+Repeat.
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="box">
+
+<h2>⚡ Unit 2 Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li>
+<strong>Data Link Layer:</strong>
+Second layer of OSI model.
+</li>
+
+<li>
+<strong>Framing:</strong>
+Divides bit stream into frames.
+</li>
+
+<li>
+<strong>Flow Control:</strong>
+Controls transmission rate.
+</li>
+
+<li>
+<strong>Error Control:</strong>
+Detects and handles transmission errors.
+</li>
+
+<li>
+<strong>Stop-and-Wait:</strong>
+One frame is sent before waiting for acknowledgement.
+</li>
+
+<li>
+<strong>Sliding Window:</strong>
+Multiple frames can be in transit.
+</li>
+
+<li>
+<strong>Go-Back-N:</strong>
+May retransmit the affected frame and subsequent outstanding frames.
+</li>
+
+<li>
+<strong>Selective Repeat:</strong>
+Retransmits only required frames.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- BACK BUTTONS -->
+
+<a class="back" href="computer-networks.html">
+⬅ Back to Computer Networks
+</a>
+
+<a class="back" href="index.html">
+🏠 Home
+</a>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+Computer Networks – Unit 2 Notes
+</p>
+
+</footer>
+
+
+</body>
+</html>

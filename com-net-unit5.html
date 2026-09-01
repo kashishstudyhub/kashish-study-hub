@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Computer Networks Unit 5 | Kashish Study Hub</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7ff;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#4f46a5;
+    color:white;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    background:#e8e6ff;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    color:#403895;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.box{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px #ddd;
+}
+
+h2{
+    color:#4f46a5;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+}
+
+h3{
+    color:#5d54b3;
+}
+
+.toc a{
+    display:block;
+    text-decoration:none;
+    color:#4f46a5;
+    font-weight:bold;
+    padding:8px;
+}
+
+.toc a:hover{
+    background:#eeeeff;
+    border-radius:5px;
+}
+
+.important{
+    background:#fff5cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+    border-radius:5px;
+}
+
+.example{
+    background:#eef2ff;
+    border-left:5px solid #4f46a5;
+    padding:18px;
+    margin:20px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e8e6ff;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #4f46a5;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#4f46a5;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin:20px 5px 20px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .box{
+        padding:20px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header">
+
+<h2>🌐 Kashish Study Hub</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+
+<a href="#topics">Topics</a>
+
+<a href="#questions">Questions</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>📘 Computer Networks – Unit 5</h1>
+
+<p>Transport Layer</p>
+
+<p>Complete Notes • UDP • TCP • Flow Control • Congestion Control</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="box toc" id="topics">
+
+<h2>📚 Unit 5 Contents</h2>
+
+<a href="#transport">
+1. Transport Layer
+</a>
+
+<a href="#services">
+2. Transport Layer Services
+</a>
+
+<a href="#udp">
+3. UDP
+</a>
+
+<a href="#udpheader">
+4. UDP Header
+</a>
+
+<a href="#tcp">
+5. TCP
+</a>
+
+<a href="#tcpheader">
+6. TCP Header
+</a>
+
+<a href="#connection">
+7. TCP Connection Management
+</a>
+
+<a href="#reliability">
+8. TCP Reliability
+</a>
+
+<a href="#flow">
+9. TCP Flow Control
+</a>
+
+<a href="#congestion">
+10. TCP Congestion Control
+</a>
+
+<a href="#timer">
+11. TCP Timer Management
+</a>
+
+<a href="#comparison">
+12. UDP vs TCP
+</a>
+
+<a href="#questions">
+13. Important Exam Questions
+</a>
+
+</section>
+
+
+<!-- TRANSPORT -->
+
+<section class="box" id="transport">
+
+<h2>1. 🚚 Transport Layer</h2>
+
+<p>
+The Transport Layer is the fourth layer of the OSI reference model.
+It provides communication services between application processes
+running on different hosts.
+</p>
+
+<h3>Main Functions</h3>
+
+<ul>
+
+<li>Process-to-process communication</li>
+
+<li>Segmentation and reassembly</li>
+
+<li>Flow control</li>
+
+<li>Error control and reliability</li>
+
+<li>Connection management</li>
+
+<li>Congestion control</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+Transport Layer provides end-to-end communication services between
+applications/processes.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="box" id="services">
+
+<h2>2. ⚙️ Transport Layer Services</h2>
+
+<p>
+The Transport Layer accepts data from applications and provides
+appropriate transport services for communication with the
+destination process.
+</p>
+
+<h3>Important Services</h3>
+
+<ul>
+
+<li>Process-to-process delivery</li>
+
+<li>Reliable data transfer when supported by the protocol</li>
+
+<li>Flow control</li>
+
+<li>Connection management</li>
+
+<li>Congestion control</li>
+
+</ul>
+
+</section>
+
+
+<!-- UDP -->
+
+<section class="box" id="udp">
+
+<h2>3. 📡 UDP</h2>
+
+<p>
+UDP stands for <strong>User Datagram Protocol</strong>.
+It is a connectionless transport protocol.
+</p>
+
+<h3>Characteristics</h3>
+
+<ul>
+
+<li>Connectionless</li>
+
+<li>Low protocol overhead</li>
+
+<li>Does not provide TCP-style reliable delivery</li>
+
+<li>Does not perform connection establishment</li>
+
+<li>Suitable for applications where low overhead is important</li>
+
+</ul>
+
+<h3>UDP Working</h3>
+
+<ol>
+
+<li>Application gives data to UDP.</li>
+
+<li>UDP places the data into a datagram.</li>
+
+<li>The datagram is passed to the IP layer.</li>
+
+<li>The destination host receives the datagram.</li>
+
+</ol>
+
+<div class="important">
+
+<strong>Easy Meaning:</strong>
+
+<p>
+UDP = Simple, connectionless transport with low overhead.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- UDP HEADER -->
+
+<section class="box" id="udpheader">
+
+<h2>4. 🧾 UDP Header</h2>
+
+<p>
+A UDP header contains four main fields.
+</p>
+
+<table>
+
+<tr>
+<th>Field</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Source Port</td>
+<td>Identifies the sending application port.</td>
+</tr>
+
+<tr>
+<td>Destination Port</td>
+<td>Identifies the receiving application port.</td>
+</tr>
+
+<tr>
+<td>Length</td>
+<td>Indicates the length of the UDP datagram.</td>
+</tr>
+
+<tr>
+<td>Checksum</td>
+<td>Used for error detection.</td>
+</tr>
+
+</table>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+UDP Header = Source Port + Destination Port + Length + Checksum
+</p>
+
+</div>
+
+</section>
+
+
+<!-- TCP -->
+
+<section class="box" id="tcp">
+
+<h2>5. 🔒 TCP</h2>
+
+<p>
+TCP stands for <strong>Transmission Control Protocol</strong>.
+It is a connection-oriented transport protocol.
+</p>
+
+<h3>Main Characteristics</h3>
+
+<ul>
+
+<li>Connection-oriented</li>
+
+<li>Reliable data transfer</li>
+
+<li>Ordered delivery</li>
+
+<li>Flow control</li>
+
+<li>Congestion control</li>
+
+<li>Uses acknowledgements and sequence numbers</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Simple Example:</strong>
+
+<p>
+
+Sender → TCP → Network → TCP → Receiver
+
+</p>
+
+<p>
+TCP helps ensure that data is delivered reliably and in the
+correct order.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- TCP HEADER -->
+
+<section class="box" id="tcpheader">
+
+<h2>6. 🧾 TCP Header</h2>
+
+<p>
+TCP uses a larger header because it provides several control and
+reliability features.
+</p>
+
+<table>
+
+<tr>
+<th>Field</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Source Port</td>
+<td>Identifies the sending application.</td>
+</tr>
+
+<tr>
+<td>Destination Port</td>
+<td>Identifies the receiving application.</td>
+</tr>
+
+<tr>
+<td>Sequence Number</td>
+<td>Helps identify the position of data in the byte stream.</td>
+</tr>
+
+<tr>
+<td>Acknowledgement Number</td>
+<td>Indicates the next byte expected by the receiver.</td>
+</tr>
+
+<tr>
+<td>Header Length</td>
+<td>Indicates the size of the TCP header.</td>
+</tr>
+
+<tr>
+<td>Control Flags</td>
+<td>Used for connection and control functions.</td>
+</tr>
+
+<tr>
+<td>Window Size</td>
+<td>Used for flow control.</td>
+</tr>
+
+<tr>
+<td>Checksum</td>
+<td>Used for error detection.</td>
+</tr>
+
+<tr>
+<td>Urgent Pointer</td>
+<td>Provides information for urgent data when applicable.</td>
+</tr>
+
+</table>
+
+<h3>Important TCP Flags</h3>
+
+<ul>
+
+<li>SYN</li>
+
+<li>ACK</li>
+
+<li>FIN</li>
+
+<li>RST</li>
+
+<li>PSH</li>
+
+<li>URG</li>
+
+</ul>
+
+</section>
+
+
+<!-- CONNECTION MANAGEMENT -->
+
+<section class="box" id="connection">
+
+<h2>7. 🤝 TCP Connection Management</h2>
+
+<p>
+TCP establishes a connection before normal data transfer and
+terminates it when communication is finished.
+</p>
+
+<h3>Three-Way Handshake</h3>
+
+<p>
+TCP commonly establishes a connection using a three-step
+handshake.
+</p>
+
+<ol>
+
+<li>
+Client sends <strong>SYN</strong>.
+</li>
+
+<li>
+Server responds with <strong>SYN + ACK</strong>.
+</li>
+
+<li>
+Client responds with <strong>ACK</strong>.
+</li>
+
+</ol>
+
+<div class="example">
+
+<strong>Easy Diagram:</strong>
+
+<p>
+Client → SYN → Server
+</p>
+
+<p>
+Client ← SYN + ACK ← Server
+</p>
+
+<p>
+Client → ACK → Server
+</p>
+
+<p>
+<strong>Connection Established ✔</strong>
+</p>
+
+</div>
+
+
+<h3>Connection Termination</h3>
+
+<p>
+TCP uses control messages to close the connection in an orderly
+manner.
+</p>
+
+</section>
+
+
+<!-- RELIABILITY -->
+
+<section class="box" id="reliability">
+
+<h2>8. ✅ TCP Reliability</h2>
+
+<p>
+TCP provides reliable byte-stream delivery using several mechanisms.
+</p>
+
+<h3>Main Mechanisms</h3>
+
+<ul>
+
+<li>Sequence numbers</li>
+
+<li>Acknowledgements</li>
+
+<li>Retransmission</li>
+
+<li>Checksum</li>
+
+<li>Timers</li>
+
+</ul>
+
+
+<h3>Sequence Numbers</h3>
+
+<p>
+Sequence numbers identify positions of bytes in the TCP byte
+stream and help the receiver maintain the correct order.
+</p>
+
+
+<h3>Acknowledgements</h3>
+
+<p>
+Acknowledgements allow the receiver to inform the sender about
+successfully received data.
+</p>
+
+
+<h3>Retransmission</h3>
+
+<p>
+When TCP determines that data may have been lost, it can
+retransmit the required data.
+</p>
+
+</section>
+
+
+<!-- FLOW CONTROL -->
+
+<section class="box" id="flow">
+
+<h2>9. 🚦 TCP Flow Control</h2>
+
+<p>
+TCP flow control prevents a fast sender from overwhelming a
+receiver that has limited available buffer space.
+</p>
+
+<h3>Window-Based Flow Control</h3>
+
+<p>
+TCP uses the receiver's advertised window to indicate how much
+additional data the receiver is currently prepared to accept.
+</p>
+
+<div class="example">
+
+<strong>Simple Example:</strong>
+
+<p>
+
+Receiver Window = 5000 bytes
+
+</p>
+
+<p>
+The sender uses this information to control how much unacknowledged
+data it can have in transit.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONGESTION -->
+
+<section class="box" id="congestion">
+
+<h2>10. 🚦 TCP Congestion Control</h2>
+
+<p>
+Congestion occurs when the offered traffic exceeds what the network
+can handle effectively.
+</p>
+
+<p>
+TCP uses congestion-control mechanisms to regulate the amount of
+data injected into the network.
+</p>
+
+<h3>Important Concepts</h3>
+
+<ul>
+
+<li>Congestion Window (cwnd)</li>
+
+<li>Slow Start</li>
+
+<li>Congestion Avoidance</li>
+
+<li>Fast Retransmit</li>
+
+<li>Fast Recovery</li>
+
+</ul>
+
+
+<h3>Slow Start</h3>
+
+<p>
+TCP begins with a relatively small congestion window and increases
+the sending rate as acknowledgements arrive, subject to the
+algorithm's rules.
+</p>
+
+
+<h3>Congestion Avoidance</h3>
+
+<p>
+After reaching an appropriate threshold, TCP changes its growth
+behavior to increase the congestion window more cautiously.
+</p>
+
+
+<h3>Fast Retransmit</h3>
+
+<p>
+TCP can retransmit a segment before a normal retransmission timer
+expires when sufficient duplicate acknowledgements indicate that
+a segment may be missing.
+</p>
+
+</section>
+
+
+<!-- TIMER -->
+
+<section class="box" id="timer">
+
+<h2>11. ⏱️ TCP Timer Management</h2>
+
+<p>
+Timers help TCP determine when data may need retransmission if an
+expected acknowledgement does not arrive in time.
+</p>
+
+<h3>Retransmission Timer</h3>
+
+<p>
+TCP uses a retransmission timer associated with outstanding data.
+If the timer expires before the expected acknowledgement is
+received, TCP may retransmit the relevant data.
+</p>
+
+<h3>Why Timers are Important?</h3>
+
+<ul>
+
+<li>Helps recover from packet loss.</li>
+
+<li>Prevents indefinite waiting for acknowledgements.</li>
+
+<li>Supports reliable communication.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+TCP Timer → Wait for ACK → Timeout → Possible Retransmission
+</p>
+
+</div>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="box" id="comparison">
+
+<h2>12. 📊 UDP vs TCP</h2>
+
+<table>
+
+<tr>
+
+<th>Feature</th>
+<th>UDP</th>
+<th>TCP</th>
+
+</tr>
+
+<tr>
+
+<td>Connection</td>
+<td>Connectionless</td>
+<td>Connection-oriented</td>
+
+</tr>
+
+<tr>
+
+<td>Reliability</td>
+<td>Does not provide TCP-style reliable delivery</td>
+<td>Provides reliable byte-stream delivery</td>
+
+</tr>
+
+<tr>
+
+<td>Ordering</td>
+<td>No TCP-style ordered byte-stream delivery</td>
+<td>Ordered byte-stream delivery</td>
+
+</tr>
+
+<tr>
+
+<td>Flow Control</td>
+<td>No TCP-style flow control</td>
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>Congestion Control</td>
+<td>No TCP-style congestion control</td>
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>Overhead</td>
+<td>Lower</td>
+<td>Higher</td>
+
+</tr>
+
+<tr>
+
+<td>Connection Setup</td>
+<td>Not required</td>
+<td>Required</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="box" id="questions">
+
+<h2>⭐ 13. Important Exam Questions</h2>
+
+
+<h3>🟢 2-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> What is the Transport Layer?
+</div>
+
+<div class="question">
+<strong>Q2.</strong> What is UDP?
+</div>
+
+<div class="question">
+<strong>Q3.</strong> What is TCP?
+</div>
+
+<div class="question">
+<strong>Q4.</strong> What is a TCP sequence number?
+</div>
+
+<div class="question">
+<strong>Q5.</strong> What is flow control?
+</div>
+
+<div class="question">
+<strong>Q6.</strong> What is congestion control?
+</div>
+
+<div class="question">
+<strong>Q7.</strong> What is the three-way handshake?
+</div>
+
+<div class="question">
+<strong>Q8.</strong> What is a retransmission timer?
+</div>
+
+
+<h3>🟡 5-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain UDP and its header format.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain TCP and its important features.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Explain TCP connection establishment.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain TCP reliability mechanisms.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Explain TCP flow control.
+</div>
+
+<div class="question">
+<strong>Q6.</strong> Explain TCP congestion control.
+</div>
+
+
+<h3>🔴 10-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain UDP header format with all fields.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain TCP header format in detail.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Explain TCP connection management and the
+three-way handshake.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain TCP reliability, flow control and
+congestion control.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Differentiate between TCP and UDP.
+</div>
+
+<div class="question">
+<strong>Q6.</strong> Explain TCP timer management and retransmission.
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="box">
+
+<h2>⚡ Unit 5 Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li>
+<strong>Transport Layer:</strong>
+Provides process-to-process communication.
+</li>
+
+<li>
+<strong>UDP:</strong>
+Connectionless transport protocol with low overhead.
+</li>
+
+<li>
+<strong>TCP:</strong>
+Connection-oriented and reliable transport protocol.
+</li>
+
+<li>
+<strong>UDP Header:</strong>
+Source Port, Destination Port, Length, Checksum.
+</li>
+
+<li>
+<strong>TCP:</strong>
+Uses sequence numbers, acknowledgements and retransmissions
+for reliability.
+</li>
+
+<li>
+<strong>Three-Way Handshake:</strong>
+SYN → SYN+ACK → ACK.
+</li>
+
+<li>
+<strong>Flow Control:</strong>
+Protects the receiver from being overwhelmed.
+</li>
+
+<li>
+<strong>Congestion Control:</strong>
+Regulates traffic entering the network.
+</li>
+
+<li>
+<strong>Timer:</strong>
+Helps TCP detect possible loss and trigger retransmission.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- BACK BUTTONS -->
+
+<a class="back" href="computer-networks.html">
+⬅ Back to Computer Networks
+</a>
+
+<a class="back" href="index.html">
+🏠 Home
+</a>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+Computer Networks – Unit 5 Notes
+</p>
+
+</footer>
+
+</body>
+</html>

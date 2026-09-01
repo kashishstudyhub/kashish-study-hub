@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 5 - Phase Equilibrium & Corrosion</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #37474f;
+        }
+
+        .topic {
+            background-color: white;
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #455a64;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #263238;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #eceff1;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #37474f;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📊 Unit 5: Phase Equilibrium & Corrosion</h1>
+
+
+    <!-- Phase Rule -->
+    <div class="topic">
+        <button onclick="showNotes('phaserule')">
+            1. Phase Rule
+        </button>
+
+        <div id="phaserule" class="notes">
+            <h3>Gibbs Phase Rule</h3>
+
+            <p>
+                Gibbs phase rule gives the relationship between
+                phases, components and degrees of freedom in
+                an equilibrium system.
+            </p>
+
+            <p class="formula">
+                F = C - P + 2
+            </p>
+
+            <p>
+                Where:
+            </p>
+
+            <ul>
+                <li>F = Degrees of freedom</li>
+                <li>C = Number of components</li>
+                <li>P = Number of phases</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Phase -->
+    <div class="topic">
+        <button onclick="showNotes('phase')">
+            2. Phase and Component
+        </button>
+
+        <div id="phase" class="notes">
+            <h3>Phase</h3>
+
+            <p>
+                A phase is a physically homogeneous and
+                mechanically separable portion of a system.
+            </p>
+
+            <h3>Component</h3>
+
+            <p>
+                Components are the minimum number of chemically
+                independent substances required to describe the
+                composition of all phases in a system.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Water System -->
+    <div class="topic">
+        <button onclick="showNotes('water')">
+            3. One-Component Water System
+        </button>
+
+        <div id="water" class="notes">
+            <h3>Water System</h3>
+
+            <p>
+                The water system is a one-component system
+                because water (H₂O) is the only chemical component.
+            </p>
+
+            <p>
+                It can exist in three phases:
+            </p>
+
+            <ul>
+                <li>Ice – solid</li>
+                <li>Water – liquid</li>
+                <li>Water vapour – gas</li>
+            </ul>
+
+            <p class="formula">
+                C = 1
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Water Phase Diagram -->
+    <div class="topic">
+        <button onclick="showNotes('waterdiagram')">
+            4. Phase Diagram of Water
+        </button>
+
+        <div id="waterdiagram" class="notes">
+            <h3>Water Phase Diagram</h3>
+
+            <p>
+                The phase diagram of water shows the equilibrium
+                between ice, liquid water and water vapour at
+                different temperatures and pressures.
+            </p>
+
+            <p>
+                Important points include:
+            </p>
+
+            <ul>
+                <li>Triple point</li>
+                <li>Fusion curve</li>
+                <li>Vaporization curve</li>
+                <li>Sublimation curve</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Binary Eutectic -->
+    <div class="topic">
+        <button onclick="showNotes('binary')">
+            5. Binary Eutectic System
+        </button>
+
+        <div id="binary" class="notes">
+            <h3>Binary Eutectic System</h3>
+
+            <p>
+                A binary system contains two components.
+                A eutectic system has a composition at which
+                the mixture melts or solidifies at a minimum
+                temperature.
+            </p>
+
+            <p>
+                Example:
+            </p>
+
+            <p class="formula">
+                Cu – Ag System
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Cu Ag -->
+    <div class="topic">
+        <button onclick="showNotes('cuag')">
+            6. Cu-Ag Eutectic System
+        </button>
+
+        <div id="cuag" class="notes">
+            <h3>Copper-Silver System</h3>
+
+            <p>
+                The Cu-Ag system is an important binary eutectic
+                system used to study phase equilibrium.
+            </p>
+
+            <p>
+                It contains two components:
+            </p>
+
+            <ul>
+                <li>Copper (Cu)</li>
+                <li>Silver (Ag)</li>
+            </ul>
+
+            <p>
+                The eutectic point represents the composition
+                and temperature at which liquid transforms into
+                two solid phases simultaneously.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Corrosion -->
+    <div class="topic">
+        <button onclick="showNotes('corrosion')">
+            7. Corrosion
+        </button>
+
+        <div id="corrosion" class="notes">
+            <h3>Corrosion</h3>
+
+            <p>
+                Corrosion is the gradual deterioration of a metal
+                due to chemical or electrochemical reaction with
+                its environment.
+            </p>
+
+            <p>
+                Example: Rusting of iron.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Chemical Corrosion -->
+    <div class="topic">
+        <button onclick="showNotes('chemical')">
+            8. Chemical Corrosion
+        </button>
+
+        <div id="chemical" class="notes">
+            <h3>Chemical Corrosion</h3>
+
+            <p>
+                Chemical corrosion occurs due to direct chemical
+                reaction between a metal and a dry environment,
+                such as gases or non-electrolytic liquids.
+            </p>
+
+            <p>
+                It is also called dry corrosion.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Electrochemical -->
+    <div class="topic">
+        <button onclick="showNotes('electrochemical')">
+            9. Electrochemical Corrosion
+        </button>
+
+        <div id="electrochemical" class="notes">
+            <h3>Electrochemical Corrosion</h3>
+
+            <p>
+                Electrochemical corrosion occurs when anodic and
+                cathodic reactions take place through an
+                electrolyte.
+            </p>
+
+            <p>
+                At the anode, metal oxidation occurs:
+            </p>
+
+            <p class="formula">
+                M → Mⁿ⁺ + ne⁻
+            </p>
+
+            <p>
+                Electrons travel through the metallic path
+                toward the cathodic region.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Corrosion Prevention -->
+    <div class="topic">
+        <button onclick="showNotes('prevention')">
+            10. Prevention of Corrosion
+        </button>
+
+        <div id="prevention" class="notes">
+            <h3>Methods of Prevention</h3>
+
+            <ul>
+                <li>Protective coatings</li>
+                <li>Galvanization</li>
+                <li>Tinning</li>
+                <li>Cathodic protection</li>
+                <li>Use of corrosion inhibitors</li>
+                <li>Proper material selection</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Galvanization -->
+    <div class="topic">
+        <button onclick="showNotes('galvanization')">
+            11. Galvanization
+        </button>
+
+        <div id="galvanization" class="notes">
+            <h3>Galvanization</h3>
+
+            <p>
+                Galvanization is the process of coating iron or
+                steel with a protective layer of zinc to reduce
+                corrosion.
+            </p>
+
+            <p>
+                Zinc provides barrier protection and can also
+                provide sacrificial protection to the underlying
+                iron or steel.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Tinning -->
+    <div class="topic">
+        <button onclick="showNotes('tinning')">
+            12. Tinning
+        </button>
+
+        <div id="tinning" class="notes">
+            <h3>Tinning</h3>
+
+            <p>
+                Tinning is the process of coating iron or steel
+                with a thin layer of tin.
+            </p>
+
+            <p>
+                The tin coating acts as a barrier between the
+                metal and the surrounding environment.
+            </p>
+
+            <h3>Applications</h3>
+
+            <ul>
+                <li>Food containers</li>
+                <li>Metal sheets</li>
+                <li>Household utensils</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Numericals -->
+    <div class="topic">
+        <button onclick="showNotes('numericals')">
+            13. Phase Rule Numericals
+        </button>
+
+        <div id="numericals" class="notes">
+            <h3>Important Formula</h3>
+
+            <p class="formula">
+                F = C - P + 2
+            </p>
+
+            <p>
+                For condensed systems where pressure is constant,
+                the reduced phase rule is commonly written as:
+            </p>
+
+            <p class="formula">
+                F = C - P + 1
+            </p>
+
+            <p>
+                These formulas are used to calculate the degrees
+                of freedom of an equilibrium system.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            }
+            else {
+                notes.style.display = "block";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

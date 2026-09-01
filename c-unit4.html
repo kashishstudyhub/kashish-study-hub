@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C Programming Unit 4 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e9e4f5;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.toc,
+.topic{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:8px 0;
+}
+
+.topic h2{
+    color:#5b4b8a;
+    border-bottom:2px solid #eee;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    color:#6d5aa0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+}
+
+.example{
+    background:#f0f4ff;
+    border-left:5px solid #5b4b8a;
+    padding:18px;
+    margin:20px 0;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,
+td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #5b4b8a;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    margin:25px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .topic,
+    .toc{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<h2>📚 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>💻 C Programming – Unit 4</h1>
+
+<p>Functions, Recursion & Pointers</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="toc" id="topics">
+
+<h2>📑 Unit 4 Contents</h2>
+
+<a href="#functions">1. Functions in C</a>
+<a href="#types">2. Types of Functions</a>
+<a href="#arguments">3. Arguments and Parameters</a>
+<a href="#return">4. Return Values</a>
+<a href="#recursion">5. Recursion</a>
+<a href="#recursionprograms">6. Recursion Programs</a>
+<a href="#pointers">7. Introduction to Pointers</a>
+<a href="#address">8. Address and Dereference Operators</a>
+<a href="#pointerdeclaration">9. Pointer Declaration</a>
+<a href="#pointerprograms">10. Pointer Programs</a>
+<a href="#passing">11. Passing Arguments</a>
+<a href="#questions">12. Important Exam Questions</a>
+<a href="#revision">13. Quick Revision</a>
+
+</section>
+
+
+<!-- FUNCTIONS -->
+
+<section class="topic" id="functions">
+
+<h2>1. Functions in C</h2>
+
+<p>
+A function is a block of statements designed to perform a particular
+task. Functions help divide a large program into smaller and
+manageable parts.
+</p>
+
+<h3>Advantages of Functions</h3>
+
+<ul>
+<li>Code becomes easier to understand.</li>
+<li>Code can be reused.</li>
+<li>Large programs can be divided into smaller modules.</li>
+<li>Testing and debugging become easier.</li>
+<li>Program structure becomes clearer.</li>
+</ul>
+
+<h3>Basic Function Syntax</h3>
+
+<pre><code>return_type function_name(parameters)
+{
+    // statements
+}</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+void message()
+{
+    printf("Welcome to C Programming");
+}
+
+int main()
+{
+    message();
+
+    return 0;
+}</code></pre>
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+A function may receive input through parameters and may return a
+value to the calling function.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- TYPES -->
+
+<section class="topic" id="types">
+
+<h2>2. Types of Functions</h2>
+
+<p>
+Functions in C can be classified according to whether they take
+arguments and whether they return a value.
+</p>
+
+<table>
+
+<tr>
+<th>Type</th>
+<th>Arguments</th>
+<th>Return Value</th>
+</tr>
+
+<tr>
+<td>Type 1</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Type 2</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Type 3</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Type 4</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+</table>
+
+<h3>Example: Function with Arguments and Return Value</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+    int result;
+
+    result = add(10, 20);
+
+    printf("Sum = %d", result);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- ARGUMENTS -->
+
+<section class="topic" id="arguments">
+
+<h2>3. Arguments and Parameters</h2>
+
+<p>
+A parameter is a variable listed in a function definition.
+An argument is the actual value supplied when the function is called.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>int add(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+    printf("%d", add(5, 10));
+
+    return 0;
+}</code></pre>
+
+<p>
+Here <strong>a</strong> and <strong>b</strong> are parameters, while
+<strong>5</strong> and <strong>10</strong> are arguments.
+</p>
+
+</section>
+
+
+<!-- RETURN -->
+
+<section class="topic" id="return">
+
+<h2>4. Return Values</h2>
+
+<p>
+The return statement sends a value from a function back to its caller.
+</p>
+
+<pre><code>int square(int n)
+{
+    return n * n;
+}</code></pre>
+
+<h3>Complete Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int square(int n)
+{
+    return n * n;
+}
+
+int main()
+{
+    int result;
+
+    result = square(6);
+
+    printf("Square = %d", result);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- RECURSION -->
+
+<section class="topic" id="recursion">
+
+<h2>5. Recursion</h2>
+
+<p>
+Recursion is a technique in which a function calls itself to solve
+a problem.
+</p>
+
+<h3>Important Parts of Recursion</h3>
+
+<ul>
+<li><strong>Base Case:</strong> Condition that stops further calls.</li>
+<li><strong>Recursive Case:</strong> Part where the function calls itself.</li>
+</ul>
+
+<div class="important">
+
+<strong>Important:</strong>
+
+<p>
+A recursive function must have a suitable stopping condition.
+Otherwise, the function can continue calling itself indefinitely.
+</p>
+
+</div>
+
+<h3>General Structure</h3>
+
+<pre><code>void function()
+{
+    if(condition)
+        return;
+
+    function();
+}</code></pre>
+
+</section>
+
+
+<!-- RECURSION PROGRAMS -->
+
+<section class="topic" id="recursionprograms">
+
+<h2>6. Recursion Programs</h2>
+
+<h3>Program 1: Factorial Using Recursion</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int factorial(int n)
+{
+    if(n == 0 || n == 1)
+    {
+        return 1;
+    }
+
+    return n * factorial(n - 1);
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    printf("Factorial = %d", factorial(n));
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Sum of Natural Numbers Using Recursion</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int sum(int n)
+{
+    if(n == 0)
+    {
+        return 0;
+    }
+
+    return n + sum(n - 1);
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    printf("Sum = %d", sum(n));
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3: Fibonacci Using Recursion</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int fibonacci(int n)
+{
+    if(n == 0)
+        return 0;
+
+    if(n == 1)
+        return 1;
+
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main()
+{
+    int n, i;
+
+    printf("Enter number of terms: ");
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+    {
+        printf("%d ", fibonacci(i));
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- POINTERS -->
+
+<section class="topic" id="pointers">
+
+<h2>7. Introduction to Pointers</h2>
+
+<p>
+A pointer is a variable that stores the memory address of another
+variable.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>int x = 10;
+int *p;
+
+p = &amp;x;</code></pre>
+
+<p>
+Here:
+</p>
+
+<ul>
+<li><strong>x</strong> stores the value 10.</li>
+<li><strong>&amp;x</strong> gives the address of x.</li>
+<li><strong>p</strong> stores the address of x.</li>
+<li><strong>*p</strong> accesses the value stored at that address.</li>
+</ul>
+
+</section>
+
+
+<!-- ADDRESS -->
+
+<section class="topic" id="address">
+
+<h2>8. Address and Dereference Operators</h2>
+
+<h3>Address Operator &amp;</h3>
+
+<p>
+The <strong>&amp;</strong> operator gives the memory address of a variable.
+</p>
+
+<pre><code>int x = 10;
+
+printf("%p", (void*)&amp;x);</code></pre>
+
+<h3>Dereference Operator *</h3>
+
+<p>
+The <strong>*</strong> operator can be used to access the value stored
+at the address held by a pointer.
+</p>
+
+<pre><code>int x = 10;
+int *p = &amp;x;
+
+printf("%d", *p);</code></pre>
+
+</section>
+
+
+<!-- POINTER DECLARATION -->
+
+<section class="topic" id="pointerdeclaration">
+
+<h2>9. Pointer Declaration</h2>
+
+<p>
+The general syntax for declaring a pointer is:
+</p>
+
+<pre><code>data_type *pointer_name;</code></pre>
+
+<h3>Examples</h3>
+
+<pre><code>int *p;
+char *c;
+float *f;</code></pre>
+
+<p>
+The pointer type should be compatible with the type of object whose
+address it stores.
+</p>
+
+</section>
+
+
+<!-- POINTER PROGRAMS -->
+
+<section class="topic" id="pointerprograms">
+
+<h2>10. Important Pointer Programs</h2>
+
+<h3>Program 1: Display Value Using Pointer</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int x = 25;
+    int *p;
+
+    p = &amp;x;
+
+    printf("Value = %d\n", x);
+    printf("Value using pointer = %d", *p);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Change Value Using Pointer</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int x = 10;
+    int *p = &amp;x;
+
+    *p = 50;
+
+    printf("New value = %d", x);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3: Swap Two Numbers Using Pointers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b)
+{
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main()
+{
+    int x = 10;
+    int y = 20;
+
+    printf("Before swap: x = %d, y = %d\n", x, y);
+
+    swap(&amp;x, &amp;y);
+
+    printf("After swap: x = %d, y = %d", x, y);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- PASSING -->
+
+<section class="topic" id="passing">
+
+<h2>11. Passing Arguments</h2>
+
+<h3>Passing by Value</h3>
+
+<p>
+In passing by value, a function receives a copy of the argument.
+Changing the parameter does not directly change the original
+variable.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+void change(int x)
+{
+    x = 100;
+}
+
+int main()
+{
+    int a = 10;
+
+    change(a);
+
+    printf("%d", a);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Using Pointers to Modify the Caller’s Variable</h3>
+
+<p>
+A pointer can be passed to a function so that the function can access
+and modify the original object through its address.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+void change(int *x)
+{
+    *x = 100;
+}
+
+int main()
+{
+    int a = 10;
+
+    change(&amp;a);
+
+    printf("%d", a);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="topic" id="questions">
+
+<h2>12. Important Exam Questions</h2>
+
+<h3>⭐ 2-Mark Questions</h3>
+
+<div class="question">
+1. What is a function in C?
+</div>
+
+<div class="question">
+2. What is a parameter?
+</div>
+
+<div class="question">
+3. What is an argument?
+</div>
+
+<div class="question">
+4. What is recursion?
+</div>
+
+<div class="question">
+5. What is a pointer?
+</div>
+
+<div class="question">
+6. What is the use of the &amp; operator?
+</div>
+
+<div class="question">
+7. What is the dereference operator?
+</div>
+
+
+<h3>⭐⭐ 5-Mark Questions</h3>
+
+<div class="question">
+1. Explain functions in C with suitable examples.
+</div>
+
+<div class="question">
+2. Explain the different types of functions.
+</div>
+
+<div class="question">
+3. Explain recursion with a suitable program.
+</div>
+
+<div class="question">
+4. Explain pointers and their uses.
+</div>
+
+<div class="question">
+5. Explain passing arguments using pointers.
+</div>
+
+
+<h3>⭐⭐⭐ 10-Mark Questions</h3>
+
+<div class="question">
+1. Explain functions, arguments, parameters and return values with
+suitable programs.
+</div>
+
+<div class="question">
+2. Explain recursion in detail and write a program to find factorial
+using recursion.
+</div>
+
+<div class="question">
+3. Explain pointers with declaration, initialization, address
+operator and dereference operator.
+</div>
+
+<div class="question">
+4. Write a C program to swap two numbers using pointers and explain
+its working.
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="topic" id="revision">
+
+<h2>13. Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li><strong>Function:</strong> Block of statements that performs a
+specific task.</li>
+
+<li><strong>Parameter:</strong

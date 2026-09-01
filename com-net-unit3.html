@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Computer Networks Unit 3 | Kashish Study Hub</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7ff;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#4f46a5;
+    color:white;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    background:#e8e6ff;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    color:#403895;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.box{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px #ddd;
+}
+
+h2{
+    color:#4f46a5;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+}
+
+h3{
+    color:#5d54b3;
+}
+
+.toc a{
+    display:block;
+    text-decoration:none;
+    color:#4f46a5;
+    font-weight:bold;
+    padding:8px;
+}
+
+.toc a:hover{
+    background:#eeeeff;
+    border-radius:5px;
+}
+
+.important{
+    background:#fff5cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+    border-radius:5px;
+}
+
+.example{
+    background:#eef2ff;
+    border-left:5px solid #4f46a5;
+    padding:18px;
+    margin:20px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e8e6ff;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #4f46a5;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#4f46a5;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin:20px 5px 20px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .box{
+        padding:20px;
+    }
+
+    table{
+        font-size:14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<h2>🌐 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>📙 Computer Networks – Unit 3</h1>
+
+<p>MAC Sublayer</p>
+
+<p>Complete Notes • Protocols • Exam Preparation</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="box toc" id="topics">
+
+<h2>📚 Unit 3 Contents</h2>
+
+<a href="#mac">1. MAC Sublayer</a>
+
+<a href="#address">2. MAC Addressing</a>
+
+<a href="#contention">3. Contention-Based Protocols</a>
+
+<a href="#aloha">4. ALOHA</a>
+
+<a href="#purealoha">5. Pure ALOHA</a>
+
+<a href="#slotted">6. Slotted ALOHA</a>
+
+<a href="#csma">7. CSMA</a>
+
+<a href="#csmacd">8. CSMA/CD</a>
+
+<a href="#csmaca">9. CSMA/CA</a>
+
+<a href="#beb">10. Binary Exponential Backoff</a>
+
+<a href="#collisionfree">11. Collision-Free Protocols</a>
+
+<a href="#limited">12. Limited Contention Protocols</a>
+
+<a href="#comparison">13. Protocol Comparison</a>
+
+<a href="#questions">14. Important Exam Questions</a>
+
+</section>
+
+
+<!-- MAC -->
+
+<section class="box" id="mac">
+
+<h2>1. 🌐 MAC Sublayer</h2>
+
+<p>
+MAC stands for <strong>Media Access Control</strong>.
+It is a sublayer of the Data Link Layer.
+</p>
+
+<p>
+The main purpose of the MAC sublayer is to control how multiple
+devices access and share a common communication medium.
+</p>
+
+<h3>Main Functions</h3>
+
+<ul>
+
+<li>Controls access to the shared medium.</li>
+
+<li>Uses MAC addresses for link-level identification.</li>
+
+<li>Helps coordinate transmissions.</li>
+
+<li>Deals with collisions in contention-based networks.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+MAC Sublayer = Controls access to the communication medium.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MAC ADDRESS -->
+
+<section class="box" id="address">
+
+<h2>2. 🏷️ MAC Addressing</h2>
+
+<p>
+A MAC address is a link-layer address associated with a network
+interface.
+</p>
+
+<p>
+It is used to identify network interfaces for communication
+on the local network.
+</p>
+
+<h3>Important Features</h3>
+
+<ul>
+
+<li>Associated with a network interface.</li>
+
+<li>Used at the Data Link Layer.</li>
+
+<li>Helps identify the source and destination at the link level.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Example format:</strong>
+
+<p>
+A MAC address is commonly written as groups of hexadecimal
+digits, for example:
+</p>
+
+<p>
+<strong>00:1A:2B:3C:4D:5E</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONTENTION -->
+
+<section class="box" id="contention">
+
+<h2>3. ⚔️ Contention-Based Protocols</h2>
+
+<p>
+In contention-based protocols, multiple stations compete for access
+to a shared communication channel.
+</p>
+
+<p>
+When two or more stations transmit at the same time, a collision
+can occur in protocols where simultaneous transmission is not
+allowed.
+</p>
+
+<h3>Important Protocols</h3>
+
+<ul>
+
+<li>ALOHA</li>
+
+<li>CSMA</li>
+
+<li>CSMA/CD</li>
+
+<li>CSMA/CA</li>
+
+</ul>
+
+</section>
+
+
+<!-- ALOHA -->
+
+<section class="box" id="aloha">
+
+<h2>4. 📡 ALOHA</h2>
+
+<p>
+ALOHA is a contention-based medium access protocol.
+A station transmits when it has data to send.
+</p>
+
+<p>
+If transmissions overlap and a collision occurs, the affected
+frame can be retransmitted after a waiting period.
+</p>
+
+<h3>Types of ALOHA</h3>
+
+<ul>
+
+<li>Pure ALOHA</li>
+
+<li>Slotted ALOHA</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Exam Tip:</strong>
+
+<p>
+Pure ALOHA allows transmission at any time, whereas Slotted ALOHA
+restricts transmission to defined time slots.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PURE ALOHA -->
+
+<section class="box" id="purealoha">
+
+<h2>5. 📤 Pure ALOHA</h2>
+
+<p>
+In Pure ALOHA, a station can transmit whenever it has a frame
+ready.
+</p>
+
+<h3>Working</h3>
+
+<ol>
+
+<li>Station prepares a frame.</li>
+
+<li>Station transmits the frame.</li>
+
+<li>If no collision occurs, transmission succeeds.</li>
+
+<li>If a collision occurs, the station waits for a random period.</li>
+
+<li>The frame can then be retransmitted.</li>
+
+</ol>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Simple concept.</li>
+
+<li>Easy to implement.</li>
+
+</ul>
+
+<h3>Disadvantages</h3>
+
+<ul>
+
+<li>Collisions can occur frequently.</li>
+
+<li>Channel utilization can be low under heavy load.</li>
+
+</ul>
+
+</section>
+
+
+<!-- SLOTTED -->
+
+<section class="box" id="slotted">
+
+<h2>6. ⏱️ Slotted ALOHA</h2>
+
+<p>
+In Slotted ALOHA, time is divided into equal slots and a station
+can begin transmission only at the beginning of a slot.
+</p>
+
+<h3>Working</h3>
+
+<ol>
+
+<li>Time is divided into slots.</li>
+
+<li>Station waits for the beginning of a slot.</li>
+
+<li>Station transmits its frame.</li>
+
+<li>If collision occurs, retransmission is attempted later.</li>
+
+</ol>
+
+<h3>Difference Between Pure and Slotted ALOHA</h3>
+
+<table>
+
+<tr>
+
+<th>Pure ALOHA</th>
+
+<th>Slotted ALOHA</th>
+
+</tr>
+
+<tr>
+
+<td>Transmission can begin at any time.</td>
+
+<td>Transmission begins only at slot boundaries.</td>
+
+</tr>
+
+<tr>
+
+<td>Higher possibility of overlapping transmissions.</td>
+
+<td>Timing reduces the vulnerable period.</td>
+
+</tr>
+
+<tr>
+
+<td>Simple timing requirement.</td>
+
+<td>Requires synchronization of time slots.</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- CSMA -->
+
+<section class="box" id="csma">
+
+<h2>7. 👂 CSMA</h2>
+
+<p>
+CSMA stands for <strong>Carrier Sense Multiple Access</strong>.
+</p>
+
+<p>
+Before transmitting, a station senses the communication channel
+to determine whether another transmission is already taking place.
+</p>
+
+<h3>Basic Working</h3>
+
+<ol>
+
+<li>Station senses the channel.</li>
+
+<li>If the channel is suitable, it attempts transmission.</li>
+
+<li>If the channel is busy, the station waits according to the
+protocol.</li>
+
+<li>Transmission is attempted again later.</li>
+
+</ol>
+
+<div class="important">
+
+<strong>Easy Meaning:</strong>
+
+<p>
+CSMA = "Transmit karne se pehle channel ko check karo."
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CSMA/CD -->
+
+<section class="box" id="csmacd">
+
+<h2>8. 💥 CSMA/CD</h2>
+
+<p>
+CSMA/CD stands for
+<strong>Carrier Sense Multiple Access with Collision Detection</strong>.
+</p>
+
+<p>
+It combines carrier sensing with collision detection.
+</p>
+
+<h3>Basic Working</h3>
+
+<ol>
+
+<li>Station senses the channel.</li>
+
+<li>If the channel is free, transmission begins.</li>
+
+<li>While transmitting, the station monitors for collision.</li>
+
+<li>If a collision is detected, the transmission is stopped or
+handled according to the protocol.</li>
+
+<li>The station waits for a backoff period.</li>
+
+<li>Transmission is attempted again.</li>
+
+</ol>
+
+<h3>Key Idea</h3>
+
+<p>
+<strong>CSMA/CD detects collisions after they occur.</strong>
+</p>
+
+</section>
+
+
+<!-- CSMA CA -->
+
+<section class="box" id="csmaca">
+
+<h2>9. 🛡️ CSMA/CA</h2>
+
+<p>
+CSMA/CA stands for
+<strong>Carrier Sense Multiple Access with Collision Avoidance</strong>.
+</p>
+
+<p>
+It attempts to reduce the chance of collision before transmission.
+</p>
+
+<h3>Basic Working</h3>
+
+<ol>
+
+<li>Station senses the channel.</li>
+
+<li>If the channel is busy, it waits.</li>
+
+<li>If the channel is suitable, the station uses the required
+waiting/backoff mechanism.</li>
+
+<li>Transmission is then attempted.</li>
+
+</ol>
+
+<h3>CSMA/CD vs CSMA/CA</h3>
+
+<table>
+
+<tr>
+
+<th>CSMA/CD</th>
+
+<th>CSMA/CA</th>
+
+</tr>
+
+<tr>
+
+<td>Collision Detection</td>
+
+<td>Collision Avoidance</td>
+
+</tr>
+
+<tr>
+
+<td>Detects collision during transmission.</td>
+
+<td>Attempts to reduce collisions before transmission.</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- BEB -->
+
+<section class="box" id="beb">
+
+<h2>10. 🔢 Binary Exponential Backoff (BEB)</h2>
+
+<p>
+Binary Exponential Backoff is a backoff technique used after
+collisions.
+</p>
+
+<p>
+After repeated collisions, the range from which a station selects
+its waiting time becomes larger.
+</p>
+
+<h3>Basic Idea</h3>
+
+<ul>
+
+<li>Collision occurs.</li>
+
+<li>Station waits for a random backoff period.</li>
+
+<li>If another collision occurs, the possible waiting range increases.</li>
+
+<li>This process continues according to the protocol.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+More collisions → larger possible backoff range.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- COLLISION FREE -->
+
+<section class="box" id="collisionfree">
+
+<h2>11. 🚫 Collision-Free Protocols</h2>
+
+<p>
+Collision-free protocols are designed to organize access to the
+shared communication medium so that simultaneous transmissions
+do not result in collisions.
+</p>
+
+<h3>Main Idea</h3>
+
+<p>
+Instead of allowing stations to freely compete at the same time,
+access is coordinated according to a defined method.
+</p>
+
+<h3>Examples of Approaches</h3>
+
+<ul>
+
+<li>Reservation-based access</li>
+
+<li>Controlled access</li>
+
+<li>Token-based access</li>
+
+</ul>
+
+</section>
+
+
+<!-- LIMITED -->
+
+<section class="box" id="limited">
+
+<h2>12. ⚖️ Limited Contention Protocols</h2>
+
+<p>
+Limited contention protocols attempt to combine the advantages
+of contention-based access with controlled access.
+</p>
+
+<p>
+The main objective is to reduce collisions while maintaining
+efficient use of the shared channel.
+</p>
+
+<h3>Main Idea</h3>
+
+<ul>
+
+<li>Stations contend for access.</li>
+
+<li>Contention is controlled or limited.</li>
+
+<li>Collision probability can be reduced.</li>
+
+<li>Channel utilization can be improved.</li>
+
+</ul>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="box" id="comparison">
+
+<h2>13. 📊 Important Protocol Comparison</h2>
+
+<table>
+
+<tr>
+
+<th>Protocol</th>
+
+<th>Main Idea</th>
+
+</tr>
+
+<tr>
+
+<td>Pure ALOHA</td>
+
+<td>Transmit whenever data is ready.</td>
+
+</tr>
+
+<tr>
+
+<td>Slotted ALOHA</td>
+
+<td>Transmit only at slot boundaries.</td>
+
+</tr>
+
+<tr>
+
+<td>CSMA</td>
+
+<td>Sense the channel before transmission.</td>
+
+</tr>
+
+<tr>
+
+<td>CSMA/CD</td>
+
+<td>Detect collisions during transmission.</td>
+
+</tr>
+
+<tr>
+
+<td>CSMA/CA</td>
+
+<td>Attempt to avoid collisions before transmission.</td>
+
+</tr>
+
+<tr>
+
+<td>BEB</td>
+
+<td>Increase the backoff range after repeated collisions.</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="box" id="questions">
+
+<h2>⭐ 14. Important Exam Questions</h2>
+
+
+<h3>🟢 2-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> What is the MAC sublayer?
+</div>
+
+<div class="question">
+<strong>Q2.</strong> What is a MAC address?
+</div>
+
+<div class="question">
+<strong>Q3.</strong> What is ALOHA?
+</div>
+
+<div class="question">
+<strong>Q4.</strong> What is CSMA?
+</div>
+
+<div class="question">
+<strong>Q5.</strong> What is CSMA/CD?
+</div>
+
+<div class="question">
+<strong>Q6.</strong> What is CSMA/CA?
+</div>
+
+<div class="question">
+<strong>Q7.</strong> What is Binary Exponential Backoff?
+</div>
+
+
+<h3>🟡 5-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain Pure ALOHA and Slotted ALOHA.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain CSMA with its basic working.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Explain CSMA/CD.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain CSMA/CA.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Explain Binary Exponential Backoff.
+</div>
+
+
+<h3>🔴 10-Mark Questions</h3>
+
+<div class="question">
+<strong>Q1.</strong> Explain ALOHA in detail and differentiate
+between Pure ALOHA and Slotted ALOHA.
+</div>
+
+<div class="question">
+<strong>Q2.</strong> Explain CSMA/CD and CSMA/CA with their working.
+</div>
+
+<div class="question">
+<strong>Q3.</strong> Explain Binary Exponential Backoff algorithm.
+</div>
+
+<div class="question">
+<strong>Q4.</strong> Explain collision-free protocols.
+</div>
+
+<div class="question">
+<strong>Q5.</strong> Explain limited contention protocols.
+</div>
+
+<div class="question">
+<strong>Q6.</strong> Explain MAC addressing and contention-based
+protocols.
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="box">
+
+<h2>⚡ Unit 3 Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li>
+<strong>MAC:</strong> Controls access to a shared communication medium.
+</li>
+
+<li>
+<strong>MAC Address:</strong> Link-layer address associated with a
+network interface.
+</li>
+
+<li>
+<strong>ALOHA:</strong> Contention-based access protocol.
+</li>
+
+<li>
+<strong>Pure ALOHA:</strong> Transmission can begin at any time.
+</li>
+
+<li>
+<strong>Slotted ALOHA:</strong> Transmission begins at slot boundaries.
+</li>
+
+<li>
+<strong>CSMA:</strong> Sense channel before transmitting.
+</li>
+
+<li>
+<strong>CSMA/CD:</strong> Collision Detection.
+</li>
+
+<li>
+<strong>CSMA/CA:</strong> Collision Avoidance.
+</li>
+
+<li>
+<strong>BEB:</strong> Backoff range increases after repeated collisions.
+</li>
+
+<li>
+<strong>Collision-Free:</strong> Access is coordinated to avoid
+simultaneous conflicting transmissions.
+</li>
+
+<li>
+<strong>Limited Contention:</strong> Contention is controlled or limited.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- BACK -->
+
+<a class="back" href="computer-networks.html">
+⬅ Back to Computer Networks
+</a>
+
+<a class="back" href="index.html">
+🏠 Home
+</a>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+Computer Networks – Unit 3 Notes
+</p>
+
+</footer>
+
+</body>
+</html>

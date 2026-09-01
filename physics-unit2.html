@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Physics Unit 2 - Wave Optics</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e65100;
+        }
+
+        .topic {
+            max-width: 800px;
+            margin: 15px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ef6c00;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #bf360c;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #fff3e0;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #e65100;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .important {
+            background-color: #fce4ec;
+            padding: 12px;
+            border-left: 5px solid #c2185b;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🌊 Unit 2: Wave Optics</h1>
+
+
+<!-- Huygens -->
+<div class="topic">
+    <button onclick="showNotes('huygens')">
+        1. Huygens' Principle
+    </button>
+
+    <div id="huygens" class="notes">
+        <h3>Huygens' Principle</h3>
+
+        <p>
+            According to Huygens' principle, every point on a
+            wavefront acts as a source of secondary wavelets.
+            The new wavefront is the envelope of these wavelets.
+        </p>
+
+        <ul>
+            <li>Explains propagation of waves.</li>
+            <li>Useful in understanding reflection and refraction.</li>
+            <li>Forms the basis of wave optics.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Interference -->
+<div class="topic">
+    <button onclick="showNotes('interference')">
+        2. Interference of Light
+    </button>
+
+    <div id="interference" class="notes">
+        <h3>Interference</h3>
+
+        <p>
+            Interference is the redistribution of intensity that
+            occurs when two or more coherent light waves overlap.
+        </p>
+
+        <h3>Types</h3>
+
+        <ul>
+            <li>Constructive interference</li>
+            <li>Destructive interference</li>
+        </ul>
+
+        <p class="formula">
+            Constructive: Path difference = nλ
+        </p>
+
+        <p class="formula">
+            Destructive: Path difference = (2n + 1)λ/2
+        </p>
+    </div>
+</div>
+
+
+<!-- Coherent -->
+<div class="topic">
+    <button onclick="showNotes('coherent')">
+        3. Coherent Sources
+    </button>
+
+    <div id="coherent" class="notes">
+        <h3>Coherent Sources</h3>
+
+        <p>
+            Two sources are coherent when they emit waves of
+            the same frequency and maintain a constant phase
+            difference.
+        </p>
+
+        <div class="important">
+            Coherent sources are essential for obtaining
+            sustained interference fringes.
+        </div>
+    </div>
+</div>
+
+
+<!-- Young -->
+<div class="topic">
+    <button onclick="showNotes('young')">
+        4. Young's Double Slit Experiment
+    </button>
+
+    <div id="young" class="notes">
+        <h3>Young's Experiment</h3>
+
+        <p>
+            Young's double-slit experiment demonstrates the
+            wave nature of light through interference.
+        </p>
+
+        <p class="formula">
+            Fringe Width: β = λD/d
+        </p>
+
+        <ul>
+            <li>λ = Wavelength</li>
+            <li>D = Distance between slits and screen</li>
+            <li>d = Distance between two slits</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Newton Rings -->
+<div class="topic">
+    <button onclick="showNotes('newton')">
+        5. Newton's Rings
+    </button>
+
+    <div id="newton" class="notes">
+        <h3>Newton's Rings</h3>
+
+        <p>
+            Newton's rings are concentric interference fringes
+            produced by the thin air film between a curved lens
+            and a plane glass plate.
+        </p>
+
+        <p class="formula">
+            Dₙ² = 4nλR
+        </p>
+
+        <p>
+            where Dₙ is the diameter of the nth dark ring and R
+            is the radius of curvature of the lens.
+        </p>
+    </div>
+</div>
+
+
+<!-- Michelson -->
+<div class="topic">
+    <button onclick="showNotes('michelson')">
+        6. Michelson Interferometer
+    </button>
+
+    <div id="michelson" class="notes">
+        <h3>Michelson Interferometer</h3>
+
+        <p>
+            Michelson interferometer is an optical instrument
+            used to produce and study interference fringes.
+        </p>
+
+        <h3>Applications</h3>
+
+        <ul>
+            <li>Measurement of wavelength</li>
+            <li>Measurement of small distances</li>
+            <li>Determination of refractive index</li>
+            <li>Precision optical measurements</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Mach Zehnder -->
+<div class="topic">
+    <button onclick="showNotes('mach')">
+        7. Mach-Zehnder Interferometer
+    </button>
+
+    <div id="mach" class="notes">
+        <h3>Mach-Zehnder Interferometer</h3>
+
+        <p>
+            Mach-Zehnder interferometer divides a light beam into
+            two paths and then recombines them to produce
+            interference.
+        </p>
+
+        <p>
+            It is useful for studying changes in optical path
+            length and refractive index.
+        </p>
+    </div>
+</div>
+
+
+<!-- Diffraction -->
+<div class="topic">
+    <button onclick="showNotes('diffraction')">
+        8. Diffraction of Light
+    </button>
+
+    <div id="diffraction" class="notes">
+        <h3>Diffraction</h3>
+
+        <p>
+            Diffraction is the bending and spreading of waves
+            when they pass through an aperture or around an
+            obstacle whose dimensions are comparable to the
+            wavelength.
+        </p>
+
+        <h3>Types</h3>
+
+        <ul>
+            <li>Fresnel diffraction</li>
+            <li>Fraunhofer diffraction</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Fraunhofer -->
+<div class="topic">
+    <button onclick="showNotes('fraunhofer')">
+        9. Fraunhofer Diffraction
+    </button>
+
+    <div id="fraunhofer" class="notes">
+        <h3>Fraunhofer Diffraction</h3>
+
+        <p>
+            Fraunhofer diffraction is observed when the source
+            and observation point are effectively at infinity,
+            commonly achieved using lenses.
+        </p>
+
+        <p class="formula">
+            Single Slit Minima: a sinθ = nλ
+        </p>
+
+        <p>
+            where a is the slit width and n = 1, 2, 3, ...
+        </p>
+    </div>
+</div>
+
+
+<!-- Rayleigh -->
+<div class="topic">
+    <button onclick="showNotes('rayleigh')">
+        10. Rayleigh Criterion
+    </button>
+
+    <div id="rayleigh" class="notes">
+        <h3>Rayleigh Criterion</h3>
+
+        <p>
+            Rayleigh criterion gives a condition for two
+            point sources to be just resolved by an optical
+            instrument.
+        </p>
+
+        <p class="formula">
+            θmin = 1.22 λ/D
+        </p>
+
+        <p>
+            where D is the diameter of the circular aperture.
+        </p>
+    </div>
+</div>
+
+
+<!-- Grating -->
+<div class="topic">
+    <button onclick="showNotes('grating')">
+        11. Diffraction Grating
+    </button>
+
+    <div id="grating" class="notes">
+        <h3>Diffraction Grating</h3>
+
+        <p>
+            A diffraction grating consists of a large number
+            of equally spaced parallel slits or lines.
+        </p>
+
+        <p class="formula">
+            d sinθ = nλ
+        </p>
+
+        <p>
+            This relation gives the principal maxima for
+            normal incidence.
+        </p>
+
+        <h3>Applications</h3>
+
+        <ul>
+            <li>Measurement of wavelength</li>
+            <li>Spectral analysis</li>
+            <li>Resolution of spectral lines</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Quick Revision -->
+<div class="topic">
+    <button onclick="showNotes('revision')">
+        12. Quick Revision – Important Formulas
+    </button>
+
+    <div id="revision" class="notes">
+
+        <p class="formula">
+            Fringe width: β = λD/d
+        </p>
+
+        <p class="formula">
+            Newton's Rings: Dₙ² = 4nλR
+        </p>
+
+        <p class="formula">
+            Single Slit Minima: a sinθ = nλ
+        </p>
+
+        <p class="formula">
+            Rayleigh Criterion: θmin = 1.22λ/D
+        </p>
+
+        <p class="formula">
+            Grating: d sinθ = nλ
+        </p>
+
+    </div>
+</div>
+
+
+<script>
+
+function showNotes(id) {
+
+    let notes = document.getElementById(id);
+
+    if (notes.style.display === "block") {
+        notes.style.display = "none";
+    }
+    else {
+        notes.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

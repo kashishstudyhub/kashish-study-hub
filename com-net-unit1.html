@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Networks Unit 1 | Kashish Study Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #4f46a5;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+            background: #e8e6ff;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #403895;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .box {
+            background: white;
+            margin: 25px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        h2 {
+            color: #4f46a5;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5d54b3;
+        }
+
+        .important {
+            background: #fff5cf;
+            border-left: 5px solid #e0a800;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .example {
+            background: #eef2ff;
+            border-left: 5px solid #4f46a5;
+            padding: 18px;
+            margin: 20px 0;
+        }
+
+        .toc a {
+            display: block;
+            text-decoration: none;
+            color: #4f46a5;
+            font-weight: bold;
+            padding: 8px;
+        }
+
+        .toc a:hover {
+            background: #eeeeff;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e6ff;
+            color: #333;
+        }
+
+        .question {
+            background: #fafafa;
+            border-left: 4px solid #4f46a5;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .back {
+            display: inline-block;
+            background: #4f46a5;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 700px) {
+
+            .header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header a {
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .box {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="header">
+
+        <h2>🌐 Kashish Study Hub</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#topics">Topics</a>
+            <a href="#questions">Questions</a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>🌐 Computer Networks – Unit 1</h1>
+
+    <p>
+        Introduction & Layered Architecture
+    </p>
+
+    <p>
+        Complete Notes • Important Concepts • Exam Preparation
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="box toc" id="topics">
+
+    <h2>📚 Unit 1 Contents</h2>
+
+    <a href="#network-goals">1. Network Goals</a>
+
+    <a href="#architecture">2. Network Architecture</a>
+
+    <a href="#classification">3. Network Classification</a>
+
+    <a href="#protocol">4. Protocol Hierarchy</a>
+
+    <a href="#services">5. Connection-Oriented & Connectionless Services</a>
+
+    <a href="#primitives">6. Service Primitives</a>
+
+    <a href="#osi">7. ISO-OSI Reference Model</a>
+
+    <a href="#questions">8. Important Exam Questions</a>
+
+</section>
+
+
+<!-- NETWORK GOALS -->
+
+<section class="box" id="network-goals">
+
+    <h2>1. 🎯 Network Goals</h2>
+
+    <p>
+        A computer network is a collection of interconnected
+        computers and devices that communicate with each other
+        and share information and resources.
+    </p>
+
+    <h3>Main Goals of Computer Networks</h3>
+
+    <ul>
+
+        <li>
+            <strong>Resource Sharing:</strong>
+            Hardware, software and information can be shared
+            between connected systems.
+        </li>
+
+        <li>
+            <strong>Communication:</strong>
+            Users can communicate and exchange information.
+        </li>
+
+        <li>
+            <strong>Information Sharing:</strong>
+            Data can be transferred between different systems.
+        </li>
+
+        <li>
+            <strong>Reliability:</strong>
+            Network systems can improve availability of
+            services and information.
+        </li>
+
+        <li>
+            <strong>Scalability:</strong>
+            Networks can be expanded by adding additional
+            devices and resources.
+        </li>
+
+        <li>
+            <strong>Efficient Resource Utilization:</strong>
+            Network resources can be utilized by multiple users.
+        </li>
+
+    </ul>
+
+    <div class="important">
+
+        <strong>Exam Point:</strong>
+
+        <p>
+            The major goals of networking include communication,
+            resource sharing, information sharing, reliability
+            and scalability.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ARCHITECTURE -->
+
+<section class="box" id="architecture">
+
+    <h2>2. 🏗️ Network Architecture</h2>
+
+    <p>
+        Network architecture describes the overall organization
+        of network components, communication protocols and
+        services.
+    </p>
+
+    <h3>Important Elements</h3>
+
+    <ul>
+
+        <li>Network devices</li>
+
+        <li>Communication links</li>
+
+        <li>Protocols</li>
+
+        <li>Services</li>
+
+        <li>Layered organization</li>
+
+    </ul>
+
+    <div class="example">
+
+        <strong>Simple Example:</strong>
+
+        <p>
+            When a computer sends data to another computer,
+            different network layers perform different tasks
+            to make communication possible.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CLASSIFICATION -->
+
+<section class="box" id="classification">
+
+    <h2>3. 🌐 Network Classification</h2>
+
+    <p>
+        Networks can be classified according to their geographical
+        coverage and purpose.
+    </p>
+
+    <table>
+
+        <tr>
+            <th>Network</th>
+            <th>Full Form</th>
+            <th>Coverage</th>
+        </tr>
+
+        <tr>
+            <td>PAN</td>
+            <td>Personal Area Network</td>
+            <td>Very small personal area</td>
+        </tr>
+
+        <tr>
+            <td>LAN</td>
+            <td>Local Area Network</td>
+            <td>Building, room or campus</td>
+        </tr>
+
+        <tr>
+            <td>MAN</td>
+            <td>Metropolitan Area Network</td>
+            <td>City or metropolitan area</td>
+        </tr>
+
+        <tr>
+            <td>WAN</td>
+            <td>Wide Area Network</td>
+            <td>Large geographical area</td>
+        </tr>
+
+    </table>
+
+    <h3>PAN</h3>
+
+    <p>
+        Personal Area Network is designed for communication
+        among devices around an individual user.
+    </p>
+
+    <h3>LAN</h3>
+
+    <p>
+        Local Area Network connects devices within a relatively
+        small geographical area such as a room, building or campus.
+    </p>
+
+    <h3>MAN</h3>
+
+    <p>
+        Metropolitan Area Network covers a larger area such as
+        a city.
+    </p>
+
+    <h3>WAN</h3>
+
+    <p>
+        Wide Area Network connects systems over large
+        geographical distances.
+    </p>
+
+</section>
+
+
+<!-- PROTOCOL HIERARCHY -->
+
+<section class="box" id="protocol">
+
+    <h2>4. 📡 Protocol Hierarchy</h2>
+
+    <p>
+        A protocol is a set of rules that determines how
+        communication takes place between network entities.
+    </p>
+
+    <p>
+        In a layered network architecture, network functions
+        are divided into multiple layers.
+    </p>
+
+    <h3>Advantages of Layering</h3>
+
+    <ul>
+
+        <li>Reduces complexity</li>
+
+        <li>Makes network design easier</li>
+
+        <li>Allows independent development of layers</li>
+
+        <li>Makes troubleshooting easier</li>
+
+        <li>Provides standardization</li>
+
+    </ul>
+
+    <div class="important">
+
+        <strong>Remember:</strong>
+
+        <p>
+            Each layer provides services to the layer above it
+            and uses services of the layer below it.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="box" id="services">
+
+    <h2>5. 🔗 Connection-Oriented & Connectionless Services</h2>
+
+    <h3>Connection-Oriented Service</h3>
+
+    <p>
+        In a connection-oriented service, a logical connection
+        is established before data transfer begins.
+    </p>
+
+    <h3>Three Basic Phases</h3>
+
+    <ol>
+
+        <li>Connection Establishment</li>
+
+        <li>Data Transfer</li>
+
+        <li>Connection Termination</li>
+
+    </ol>
+
+    <div class="example">
+
+        <strong>Example:</strong>
+
+        <p>
+            It is similar to establishing a communication
+            session before exchanging information.
+        </p>
+
+    </div>
+
+
+    <h3>Connectionless Service</h3>
+
+    <p>
+        In a connectionless service, data can be sent without
+        establishing a connection first.
+    </p>
+
+    <p>
+        Each data unit can be handled independently.
+    </p>
+
+
+    <h3>Difference</h3>
+
+    <table>
+
+        <tr>
+            <th>Connection-Oriented</th>
+            <th>Connectionless</th>
+        </tr>
+
+        <tr>
+            <td>Connection is established first</td>
+            <td>No prior connection establishment</td>
+        </tr>
+
+        <tr>
+            <td>Has establishment and termination phases</td>
+            <td>Does not require these phases</td>
+        </tr>
+
+        <tr>
+            <td>Suitable when session-based communication is needed</td>
+            <td>Suitable when independent data transfer is sufficient</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- SERVICE PRIMITIVES -->
+
+<section class="box" id="primitives">
+
+    <h2>6. ⚙️ Service Primitives</h2>
+
+    <p>
+        Service primitives are operations through which a layer
+        requests or receives a service from another layer.
+    </p>
+
+    <table>
+
+        <tr>
+            <th>Primitive</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr>
+            <td>LISTEN</td>
+            <td>Wait for an incoming connection</td>
+        </tr>
+
+        <tr>
+            <td>CONNECT</td>
+            <td>Request establishment of a connection</td>
+        </tr>
+
+        <tr>
+            <td>SEND</td>
+            <td>Send information</td>
+        </tr>
+
+        <tr>
+            <td>RECEIVE</td>
+            <td>Receive information</td>
+        </tr>
+
+        <tr>
+            <td>DISCONNECT</td>
+            <td>Terminate a connection</td>
+        </tr>
+
+    </table>
+
+    <div class="important">
+
+        <strong>Exam Point:</strong>
+
+        <p>
+            LISTEN, CONNECT, SEND, RECEIVE and DISCONNECT are
+            commonly used service primitive operations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- OSI MODEL -->
+
+<section class="box" id="osi">
+
+    <h2>7. 🧩 ISO-OSI Reference Model</h2>
+
+    <p>
+        The OSI (Open Systems Interconnection) reference model
+        organizes network communication into seven layers.
+    </p>
+
+    <table>
+
+        <tr>
+            <th>No.</th>
+            <th>Layer</th>
+            <th>Main Function</th>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Application</td>
+            <td>Provides network services to applications</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Presentation</td>
+            <td>Handles data representation and translation</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Session</td>
+            <td>Manages communication sessions</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Transport</td>
+            <td>Provides transport and end-to-end communication services</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Network</td>
+            <td>Logical addressing and routing</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Data Link</td>
+            <td>Framing and link-level control</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Physical</td>
+            <td>Transmission of bits over the physical medium</td>
+        </tr>
+
+    </table>
+
+
+    <h3>Layer 1 – Physical Layer</h3>
+
+    <p>
+        The Physical Layer is concerned with transmitting raw
+        bits over a physical communication medium.
+    </p>
+
+    <h3>Layer 2 – Data Link Layer</h3>
+
+    <p>
+        The Data Link Layer deals with frames and communication
+        over a single link. It includes functions such as framing,
+        flow control and error control.
+    </p>
+
+    <h3>Layer 3 – Network Layer</h3>
+
+    <p>
+        The Network Layer is responsible for logical addressing
+        and routing packets between networks.
+    </p>
+
+    <h3>Layer 4 – Transport Layer</h3>
+
+    <p>
+        The Transport Layer provides communication services
+        between application processes and supports end-to-end
+        transport functions.
+    </p>
+
+    <h3>Layer 5 – Session Layer</h3>
+
+    <p>
+        The Session Layer manages communication sessions between
+        applications.
+    </p>
+
+    <h3>Layer 6 – Presentation Layer</h3>
+
+    <p>
+        The Presentation Layer deals with data representation,
+        translation and related formatting functions.
+    </p>
+
+    <h3>Layer 7 – Application Layer</h3>
+
+    <p>
+        The Application Layer provides network-related services
+        directly to application software.
+    </p>
+
+
+    <div class="example">
+
+        <strong>🧠 Easy Order to Remember:</strong>
+
+        <p>
+            <strong>
+            Application → Presentation → Session → Transport
+            → Network → Data Link → Physical
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="box" id="questions">
+
+    <h2>⭐ Important Exam Questions</h2>
+
+    <div class="question">
+        <strong>Q1.</strong>
+        What is a computer network? Explain its major goals.
+    </div>
+
+    <div class="question">
+        <strong>Q2.</strong>
+        Explain network architecture.
+    </div>
+
+    <div class="question">
+        <strong>Q3.</strong>
+        Explain different classifications of computer networks.
+    </div>
+
+    <div class="question">
+        <strong>Q4.</strong>
+        What is protocol hierarchy? Explain the advantages of layering.
+    </div>
+
+    <div class="question">
+        <strong>Q5.</strong>
+        Differentiate between connection-oriented and
+        connectionless services.
+    </div>
+
+    <div class="question">
+        <strong>Q6.</strong>
+        What are service primitives? Explain their functions.
+    </div>
+
+    <div class="question">
+        <strong>Q7.</strong>
+        Explain the ISO-OSI reference model.
+    </div>
+
+    <div class="question">
+        <strong>Q8.</strong>
+        Explain the functions of all seven layers of the OSI model.
+    </div>
+
+    <div class="question">
+        <strong>Q9.</strong>
+        Write short notes on Physical, Data Link and Network layers.
+    </div>
+
+    <div class="question">
+        <strong>Q10.</strong>
+        Compare connection-oriented and connectionless services.
+    </div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="box">
+
+    <h2>⚡ Unit 1 Quick Revision</h2>
+
+    <div class="important">
+
+        <ul>
+
+            <li>
+                <strong>Network:</strong>
+                Interconnection of computers/devices for communication
+                and resource sharing.
+            </li>
+
+            <li>
+                <strong>Protocol:</strong>
+                Set of rules for communication.
+            </li>
+
+            <li>
+                <strong>Layering:</strong>
+                Divides network functions into separate layers.
+            </li>
+
+            <li>
+                <strong>Connection-Oriented:</strong>
+                Connection is established before data transfer.
+            </li>
+
+            <li>
+                <strong>Connectionless:</strong>
+                No prior connection establishment is required.
+            </li>
+
+            <li>
+                <strong>OSI:</strong>
+                Seven-layer reference model.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- BACK BUTTON -->
+
+<a class="back" href="computer-networks.html">
+    ⬅ Back to Computer Networks
+</a>
+
+<a class="back" href="index.html">
+    🏠 Home
+</a>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Kashish Study Hub</p>
+
+    <p>
+        Computer Networks – Unit 1 Notes
+    </p>
+
+</footer>
+
+</body>
+</html>

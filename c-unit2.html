@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C Programming Unit 2 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e9e4f5;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.toc,
+.topic{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:7px 0;
+}
+
+.topic h2{
+    color:#5b4b8a;
+    border-bottom:2px solid #eee;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    color:#6d5aa0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+}
+
+.example{
+    background:#f0f4ff;
+    border-left:5px solid #5b4b8a;
+    padding:18px;
+    margin:20px 0;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,
+td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #5b4b8a;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    margin:25px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .topic,
+    .toc{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<h2>📚 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>💻 C Programming – Unit 2</h1>
+
+<p>
+Operators & Control Flow
+</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- TABLE OF CONTENTS -->
+
+<section class="toc">
+
+<h2>📑 Unit 2 Contents</h2>
+
+<a href="#operators">1. Operators in C</a>
+<a href="#arithmetic">2. Arithmetic Operators</a>
+<a href="#relational">3. Relational Operators</a>
+<a href="#logical">4. Logical Operators</a>
+<a href="#increment">5. Increment and Decrement</a>
+<a href="#if">6. if Statement</a>
+<a href="#ifelse">7. if-else Statement</a>
+<a href="#elseif">8. else-if Ladder</a>
+<a href="#nested">9. Nested if</a>
+<a href="#for">10. for Loop</a>
+<a href="#while">11. while Loop</a>
+<a href="#dowhile">12. do-while Loop</a>
+<a href="#breakcontinue">13. break and continue</a>
+<a href="#programs">14. Important Programs</a>
+<a href="#questions">15. Important Exam Questions</a>
+<a href="#revision">16. Quick Revision</a>
+
+</section>
+
+
+<!-- OPERATORS -->
+
+<section class="topic" id="operators">
+
+<h2>1. Operators in C</h2>
+
+<p>
+An operator is a symbol that tells the compiler to perform an
+operation on one or more operands.
+</p>
+
+<p>
+For example, in <strong>a + b</strong>, the symbols a and b are
+operands and + is the operator.
+</p>
+
+<h3>Operators Covered in This Unit</h3>
+
+<ul>
+<li>Arithmetic operators</li>
+<li>Relational operators</li>
+<li>Logical operators</li>
+<li>Increment operator</li>
+<li>Decrement operator</li>
+</ul>
+
+</section>
+
+
+<!-- ARITHMETIC -->
+
+<section class="topic" id="arithmetic">
+
+<h2>2. Arithmetic Operators</h2>
+
+<p>
+Arithmetic operators are used to perform common mathematical
+operations.
+</p>
+
+<table>
+
+<tr>
+<th>Operator</th>
+<th>Operation</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>a + b</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>a - b</td>
+</tr>
+
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>a * b</td>
+</tr>
+
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>a / b</td>
+</tr>
+
+<tr>
+<td>%</td>
+<td>Remainder</td>
+<td>a % b</td>
+</tr>
+
+</table>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 20;
+    int b = 6;
+
+    printf("Addition = %d\n", a + b);
+    printf("Subtraction = %d\n", a - b);
+    printf("Multiplication = %d\n", a * b);
+    printf("Division = %d\n", a / b);
+    printf("Remainder = %d\n", a % b);
+
+    return 0;
+}</code></pre>
+
+<div class="important">
+
+<strong>Important:</strong>
+
+<p>
+When both operands of / are integers, the result is integer division.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- RELATIONAL -->
+
+<section class="topic" id="relational">
+
+<h2>3. Relational Operators</h2>
+
+<p>
+Relational operators compare two values. A comparison expression
+evaluates to a truth value used by control statements.
+</p>
+
+<table>
+
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>==</td>
+<td>Equal to</td>
+</tr>
+
+<tr>
+<td>!=</td>
+<td>Not equal to</td>
+</tr>
+
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
+</tr>
+
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+</tr>
+
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal to</td>
+</tr>
+
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+</tr>
+
+</table>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+
+    printf("%d\n", a &lt; b);
+    printf("%d\n", a == b);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- LOGICAL -->
+
+<section class="topic" id="logical">
+
+<h2>4. Logical Operators</h2>
+
+<p>
+Logical operators are used to combine or negate conditions.
+</p>
+
+<table>
+
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>&amp;&amp;</td>
+<td>Logical AND</td>
+<td>True when both conditions are true.</td>
+</tr>
+
+<tr>
+<td>||</td>
+<td>Logical OR</td>
+<td>True when at least one condition is true.</td>
+</tr>
+
+<tr>
+<td>!</td>
+<td>Logical NOT</td>
+<td>Reverses the logical value of its operand.</td>
+</tr>
+
+</table>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 20;
+    int marks = 75;
+
+    if(age &gt;= 18 &amp;&amp; marks &gt;= 40)
+    {
+        printf("Both conditions are satisfied");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- INCREMENT -->
+
+<section class="topic" id="increment">
+
+<h2>5. Increment and Decrement Operators</h2>
+
+<p>
+The increment operator <strong>++</strong> increases its operand by one.
+The decrement operator <strong>--</strong> decreases its operand by one.
+</p>
+
+<h3>Increment</h3>
+
+<pre><code>int x = 5;
+
+x++;</code></pre>
+
+<p>
+After the statement, x becomes 6.
+</p>
+
+<h3>Decrement</h3>
+
+<pre><code>int x = 5;
+
+x--;</code></pre>
+
+<p>
+After the statement, x becomes 4.
+</p>
+
+<h3>Prefix and Postfix</h3>
+
+<table>
+
+<tr>
+<th>Form</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>Prefix</td>
+<td>++x</td>
+</tr>
+
+<tr>
+<td>Postfix</td>
+<td>x++</td>
+</tr>
+
+<tr>
+<td>Prefix decrement</td>
+<td>--x</td>
+</tr>
+
+<tr>
+<td>Postfix decrement</td>
+<td>x--</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+<strong>Exam Tip:</strong>
+
+<p>
+In a prefix expression, the increment/decrement occurs before
+the value is used in that expression. In a postfix expression,
+the original value is used first and the update occurs afterward.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- IF -->
+
+<section class="topic" id="if">
+
+<h2>6. if Statement</h2>
+
+<p>
+The if statement executes a block of statements when its condition
+is true.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>if(condition)
+{
+    statements;
+}</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int number;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;number);
+
+    if(number &gt; 0)
+    {
+        printf("Positive number");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- IF ELSE -->
+
+<section class="topic" id="ifelse">
+
+<h2>7. if-else Statement</h2>
+
+<p>
+The if-else statement provides two alternative paths.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>if(condition)
+{
+    statements;
+}
+else
+{
+    statements;
+}</code></pre>
+
+<h3>Example: Even or Odd</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    if(n % 2 == 0)
+    {
+        printf("Even number");
+    }
+    else
+    {
+        printf("Odd number");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- ELSE IF -->
+
+<section class="topic" id="elseif">
+
+<h2>8. else-if Ladder</h2>
+
+<p>
+An else-if ladder is used when multiple conditions need to be
+checked in sequence.
+</p>
+
+<h3>Example: Grade</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int marks;
+
+    printf("Enter marks: ");
+    scanf("%d", &amp;marks);
+
+    if(marks &gt;= 90)
+    {
+        printf("Grade A");
+    }
+    else if(marks &gt;= 75)
+    {
+        printf("Grade B");
+    }
+    else if(marks &gt;= 60)
+    {
+        printf("Grade C");
+    }
+    else if(marks &gt;= 40)
+    {
+        printf("Grade D");
+    }
+    else
+    {
+        printf("Fail");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- NESTED IF -->
+
+<section class="topic" id="nested">
+
+<h2>9. Nested if</h2>
+
+<p>
+A nested if is an if statement placed inside another if statement.
+It can be useful when a second condition should only be considered
+after the first condition is satisfied.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+    int marks;
+
+    printf("Enter age: ");
+    scanf("%d", &amp;age);
+
+    printf("Enter marks: ");
+    scanf("%d", &amp;marks);
+
+    if(age &gt;= 18)
+    {
+        if(marks &gt;= 40)
+        {
+            printf("Both conditions are satisfied");
+        }
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- FOR -->
+
+<section class="topic" id="for">
+
+<h2>10. for Loop</h2>
+
+<p>
+The for loop is commonly used when the iteration pattern is known.
+It contains initialization, condition and update expressions.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>for(initialization; condition; update)
+{
+    statements;
+}</code></pre>
+
+<h3>Example: Print 1 to 10</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 1; i &lt;= 10; i++)
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}</code></pre>
+
+<h3>Parts of for Loop</h3>
+
+<table>
+
+<tr>
+<th>Part</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Initialization</td>
+<td>Sets the initial value.</td>
+</tr>
+
+<tr>
+<td>Condition</td>
+<td>Controls whether another iteration occurs.</td>
+</tr>
+
+<tr>
+<td>Update</td>
+<td>Changes the loop control variable.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- WHILE -->
+
+<section class="topic" id="while">
+
+<h2>11. while Loop</h2>
+
+<p>
+The while loop checks its condition before executing the body.
+Therefore, the body can execute zero times.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>while(condition)
+{
+    statements;
+}</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i = 1;
+
+    while(i &lt;= 5)
+    {
+        printf("%d ", i);
+        i++;
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- DO WHILE -->
+
+<section class="topic" id="dowhile">
+
+<h2>12. do-while Loop</h2>
+
+<p>
+The do-while loop executes the body first and checks the condition
+afterward. Therefore, the body executes at least once.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>do
+{
+    statements;
+}
+while(condition);</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i = 1;
+
+    do
+    {
+        printf("%d ", i);
+        i++;
+    }
+    while(i &lt;= 5);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- BREAK CONTINUE -->
+
+<section class="topic" id="breakcontinue">
+
+<h2>13. break and continue</h2>
+
+<h3>break</h3>
+
+<p>
+The break statement terminates the nearest enclosing loop or switch.
+</p>
+
+<pre><code>for(int i = 1; i &lt;= 10; i++)
+{
+    if(i == 5)
+        break;
+
+    printf("%d ", i);
+}</code></pre>
+
+<p>
+Output: <strong>1 2 3 4</strong>
+</p>
+
+
+<h3>continue</h3>
+
+<p>
+The continue statement skips the remaining part of the current
+iteration and moves to the next iteration of the loop.
+</p>
+
+<pre><code>for(int i = 1; i &lt;= 5; i++)
+{
+    if(i == 3)
+        continue;
+
+    printf("%d ", i);
+}</code></pre>
+
+<p>
+Output: <strong>1 2 4 5</strong>
+</p>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="topic" id="programs">
+
+<h2>14. Important Programs</h2>
+
+
+<h3>Program 1: Find Greater of Two Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    if(a &gt; b)
+        printf("A is greater");
+    else if(b &gt; a)
+        printf("B is greater");
+    else
+        printf("Both are equal");
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Multiplication Table</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    for(i = 1; i &lt;= 10; i++)
+    {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3: Sum of Natural Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+    int sum = 0;
+
+    printf("Enter n: ");
+    scanf("%d", &amp;n);
+
+    for(i = 1; i &lt;= n; i++)
+    {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 4: Factorial</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+    long long factorial = 1;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    if(n &lt; 0)
+    {
+        printf("Factorial is not defined for negative integers.");
+        return 0;
+    }
+
+    for(i = 1; i &lt;= n; i++)
+    {
+        factorial = factorial * i;
+    }
+
+    printf("Factorial = %lld", factorial);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 5: Check Positive, Negative or Zero</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    if(n &gt; 0)
+        printf("Positive");
+    else if(n &lt; 0)
+        printf("Negative");
+    else
+        printf("Zero");
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 6: Print Even Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 2; i &lt;= 20; i += 2)
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="topic" id="questions">
+
+<h2>15. Important Exam Questions</h2>
+
+<h3>⭐ 2-Mark Questions</h3>
+
+<div class="question">
+1. What is an operator?
+</div>
+
+<div class="question">
+2. What are arithmetic operators?
+</div>
+
+<div class="question">
+3. What is the difference between == and =?
+</div>
+
+<div class="question">
+4. What are logical operators?
+</div>
+
+<div class="question">
+5. What is the use of ++ and --?
+</div>
+
+<div class="question">
+6. What is an if statement?
+</div>
+
+<div class="question">
+7. What is a loop?
+</div>
+
+<div class="question">
+8. What is the difference between while and do-while?
+</div>
+
+
+<h3>⭐⭐ 5-Mark Questions</h3>
+
+<div class="question">
+1. Explain arithmetic and relational operators with examples.
+</div>
+
+<div class="question">
+2. Explain logical operators with suitable examples.
+</div>
+
+<div class="question">
+3. Explain if-else and else-if ladder.
+</div>
+
+<div class="question">
+4. Explain for, while and do-while loops.
+</div>
+
+<div class="question">
+5. Explain increment and decrement operators.
+</div>
+
+
+<h3>⭐⭐⭐ 10-Mark Questions</h3>
+
+<div class="question">
+1. Explain different operators in C with suitable examples.
+</div>
+
+<div class="question">
+2. Explain decision-making statements in C with programs.
+</div>
+
+<div class="question">
+3. Explain different looping statements in C in detail.
+</div>
+
+<div class="question">
+4. Write programs using if-else and loops and explain their working.
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="topic" id="revision">
+
+<h2>16. Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li><strong>+</strong> → Addition</li>
+
+<li><strong>-</strong> → Subtraction</li>
+
+<li><strong>*</strong> → Multiplication</li>
+
+<li><strong>/</strong> → Division</li>
+
+<li><strong>%</strong> → Remainder</li>
+
+<li><strong>==</strong> → Equal comparison</li>
+
+<li><strong>!=</strong> → Not equal</li>
+
+<li><strong>&amp;&amp;</strong> → Logical AND</li>
+
+<li><strong>||</strong> → Logical OR</li>
+
+<li><strong>!</strong> → Logical NOT</li>
+
+<li><strong>++</strong> → Increment by one</li>
+
+<li><strong>--</strong> → Decrement by one</li>
+
+<li><strong>if-else</strong> → Decision making</li>
+
+<li><strong>for</strong> → Loop with initialization, condition and update</li>
+
+<li><strong>while</strong> → Condition checked before each iteration</li>
+
+<li><strong>do-while</strong> → Body executes before condition check</li>
+
+<li><strong>break</strong> → Terminates nearest loop/switch</li>
+
+<li><strong>continue</strong> → Skips current loop iteration</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<a class="back" href="index.html">
+⬅ Back to Home
+</a>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+Original educational notes for learning and exam preparation.
+</p>
+
+</footer>
+
+</body>
+</html>

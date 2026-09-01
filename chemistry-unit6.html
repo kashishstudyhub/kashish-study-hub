@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 6 - Spectroscopic Techniques</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a1b9a;
+        }
+
+        .topic {
+            background-color: white;
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #7b1fa2;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #4a148c;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #f3e5f5;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #6a1b9a;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .important {
+            background-color: #fff3e0;
+            padding: 10px;
+            border-left: 5px solid #fb8c00;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔬 Unit 6: Spectroscopic Techniques</h1>
+
+
+    <!-- Spectroscopy -->
+    <div class="topic">
+        <button onclick="showNotes('spectroscopy')">
+            1. Introduction to Spectroscopy
+        </button>
+
+        <div id="spectroscopy" class="notes">
+            <h3>What is Spectroscopy?</h3>
+
+            <p>
+                Spectroscopy is the study of the interaction
+                between electromagnetic radiation and matter.
+            </p>
+
+            <p>
+                It is used to identify substances and study
+                their molecular structure.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Electromagnetic -->
+    <div class="topic">
+        <button onclick="showNotes('emr')">
+            2. Electromagnetic Radiation
+        </button>
+
+        <div id="emr" class="notes">
+            <h3>Electromagnetic Radiation</h3>
+
+            <p>
+                Electromagnetic radiation travels through space
+                in the form of electric and magnetic fields.
+            </p>
+
+            <p class="formula">
+                c = νλ
+            </p>
+
+            <p>
+                Where:
+            </p>
+
+            <ul>
+                <li>c = Speed of light</li>
+                <li>ν = Frequency</li>
+                <li>λ = Wavelength</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- UV Visible -->
+    <div class="topic">
+        <button onclick="showNotes('uv')">
+            3. UV-Visible Spectroscopy
+        </button>
+
+        <div id="uv" class="notes">
+            <h3>UV-Visible Spectroscopy</h3>
+
+            <p>
+                UV-Visible spectroscopy measures the absorption
+                of ultraviolet and visible radiation by a substance.
+            </p>
+
+            <p>
+                It is commonly associated with electronic
+                transitions in molecules.
+            </p>
+
+            <p class="formula">
+                A = εcl
+            </p>
+
+            <p>
+                This is the Beer-Lambert law.
+            </p>
+
+            <ul>
+                <li>A = Absorbance</li>
+                <li>ε = Molar absorptivity</li>
+                <li>c = Concentration</li>
+                <li>l = Path length</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Principle -->
+    <div class="topic">
+        <button onclick="showNotes('uvprinciple')">
+            4. Principle of UV-Visible Spectroscopy
+        </button>
+
+        <div id="uvprinciple" class="notes">
+            <h3>Principle</h3>
+
+            <p>
+                When a molecule absorbs UV or visible radiation,
+                an electron can be promoted from a lower-energy
+                molecular orbital to a higher-energy molecular orbital.
+            </p>
+
+            <p>
+                The wavelength of maximum absorption is called
+                λmax.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Instrumentation -->
+    <div class="topic">
+        <button onclick="showNotes('uvinstrument')">
+            5. Instrumentation of UV-Visible Spectroscopy
+        </button>
+
+        <div id="uvinstrument" class="notes">
+            <h3>Main Components</h3>
+
+            <ol>
+                <li>Radiation source</li>
+                <li>Monochromator</li>
+                <li>Sample holder</li>
+                <li>Detector</li>
+                <li>Display/recording system</li>
+            </ol>
+
+            <p>
+                The instrument measures how much radiation is
+                absorbed by the sample.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Applications UV -->
+    <div class="topic">
+        <button onclick="showNotes('uvapplications')">
+            6. Applications of UV-Visible Spectroscopy
+        </button>
+
+        <div id="uvapplications" class="notes">
+            <h3>Applications</h3>
+
+            <ul>
+                <li>Determination of concentration</li>
+                <li>Identification of absorbing species</li>
+                <li>Study of electronic transitions</li>
+                <li>Analysis of pharmaceutical compounds</li>
+                <li>Environmental and chemical analysis</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- IR -->
+    <div class="topic">
+        <button onclick="showNotes('ir')">
+            7. IR Spectroscopy
+        </button>
+
+        <div id="ir" class="notes">
+            <h3>Infrared Spectroscopy</h3>
+
+            <p>
+                IR spectroscopy studies the absorption of
+                infrared radiation by molecules.
+            </p>
+
+            <p>
+                It is mainly used to study molecular vibrations
+                and identify functional groups.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Principle IR -->
+    <div class="topic">
+        <button onclick="showNotes('irprinciple')">
+            8. Principle of IR Spectroscopy
+        </button>
+
+        <div id="irprinciple" class="notes">
+            <h3>Principle</h3>
+
+            <p>
+                Molecules absorb infrared radiation at frequencies
+                corresponding to their vibrational motions.
+            </p>
+
+            <p>
+                Different chemical bonds absorb at characteristic
+                frequencies, making IR spectroscopy useful for
+                identifying molecular structures.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Vibrations -->
+    <div class="topic">
+        <button onclick="showNotes('vibrations')">
+            9. Molecular Vibrations
+        </button>
+
+        <div id="vibrations" class="notes">
+            <h3>Types of Molecular Vibrations</h3>
+
+            <ul>
+                <li>Stretching vibration</li>
+                <li>Bending vibration</li>
+            </ul>
+
+            <h3>Stretching</h3>
+
+            <p>
+                Stretching involves a change in bond length.
+            </p>
+
+            <h3>Bending</h3>
+
+            <p>
+                Bending involves a change in bond angle.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Diatomic -->
+    <div class="topic">
+        <button onclick="showNotes('diatomic')">
+            10. IR Spectra of Diatomic Molecules
+        </button>
+
+        <div id="diatomic" class="notes">
+            <h3>Diatomic Molecules</h3>
+
+            <p>
+                A diatomic molecule contains two atoms.
+                Examples include HCl, CO and NO.
+            </p>
+
+            <p>
+                A diatomic molecule can show vibrational absorption
+                when the vibration produces a change in dipole moment.
+            </p>
+
+            <div class="important">
+                <b>Important:</b>
+                Homonuclear diatomic molecules such as H₂ and N₂
+                do not show ordinary IR vibrational absorption
+                because their vibration does not produce a change
+                in dipole moment.
+            </div>
+        </div>
+    </div>
+
+
+    <!-- IR Instrumentation -->
+    <div class="topic">
+        <button onclick="showNotes('irinstrument')">
+            11. Instrumentation of IR Spectroscopy
+        </button>
+
+        <div id="irinstrument" class="notes">
+            <h3>Main Components</h3>
+
+            <ol>
+                <li>IR radiation source</li>
+                <li>Wavelength selector / interferometer</li>
+                <li>Sample holder</li>
+                <li>Detector</li>
+                <li>Signal processing system</li>
+                <li>Display</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <!-- Applications IR -->
+    <div class="topic">
+        <button onclick="showNotes('irapplications')">
+            12. Applications of IR Spectroscopy
+        </button>
+
+        <div id="irapplications" class="notes">
+            <h3>Applications</h3>
+
+            <ul>
+                <li>Identification of functional groups</li>
+                <li>Identification of compounds</li>
+                <li>Study of molecular structure</li>
+                <li>Purity testing</li>
+                <li>Qualitative chemical analysis</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- UV vs IR -->
+    <div class="topic">
+        <button onclick="showNotes('comparison')">
+            13. UV-Visible vs IR Spectroscopy
+        </button>
+
+        <div id="comparison" class="notes">
+            <h3>Comparison</h3>
+
+            <ul>
+                <li>
+                    <b>UV-Visible:</b>
+                    Mainly studies electronic transitions.
+                </li>
+
+                <li>
+                    <b>IR:</b>
+                    Mainly studies molecular vibrational transitions.
+                </li>
+
+                <li>
+                    UV-Visible is widely used for quantitative
+                    concentration measurements.
+                </li>
+
+                <li>
+                    IR is widely used for identifying functional
+                    groups and compounds.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            }
+            else {
+                notes.style.display = "block";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Engineering Graphics - Unit 2</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
+    color:#222;
+    line-height:1.7;
+}
+
+.page{
+    width:95%;
+    max-width:1100px;
+    margin:20px auto;
+}
+
+.header{
+    background:white;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:15px;
+    border:2px solid #222;
+    margin-bottom:25px;
+}
+
+.header h1{
+    margin:0;
+    font-size:32px;
+}
+
+.header h2{
+    margin:8px 0;
+    font-size:25px;
+}
+
+.header p{
+    margin:5px;
+}
+
+.topic{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #aaa;
+}
+
+.topic h2{
+    border-bottom:3px solid #333;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    margin-top:25px;
+}
+
+.topic li{
+    margin:8px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #777;
+    padding:12px;
+    vertical-align:top;
+}
+
+th{
+    font-weight:bold;
+}
+
+.formula{
+    border:2px solid #333;
+    padding:15px;
+    margin:18px 0;
+    text-align:center;
+    font-size:19px;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.diagram{
+    width:100%;
+    overflow-x:auto;
+    border:2px solid #777;
+    border-radius:12px;
+    padding:15px;
+    margin:25px 0;
+    text-align:center;
+    background:white;
+}
+
+.diagram svg{
+    width:100%;
+    max-width:850px;
+    height:auto;
+}
+
+.steps{
+    border-left:5px solid #333;
+    padding:15px 20px;
+    margin:20px 0;
+}
+
+.important{
+    border:2px solid #333;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.note{
+    border:1px dashed #555;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+@media(max-width:600px){
+
+    .page{
+        width:96%;
+    }
+
+    .header h1{
+        font-size:25px;
+    }
+
+    .header h2{
+        font-size:20px;
+    }
+
+    .topic{
+        padding:16px;
+    }
+
+    .topic h2{
+        font-size:21px;
+    }
+
+    .formula{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- =====================================================
+HEADER
+===================================================== -->
+
+<div class="header">
+
+<h1>📐 ENGINEERING GRAPHICS</h1>
+
+<h2>UNIT 2</h2>
+
+<p><strong>Projections of Points & Lines</strong></p>
+
+<p>Complete Detailed Notes | RGPV Engineering Graphics</p>
+
+</div>
+
+
+<!-- =====================================================
+1 INTRODUCTION
+===================================================== -->
+
+<div class="topic">
+
+<h2>1. Introduction to Orthographic Projection</h2>
+
+<h3>What is Projection?</h3>
+
+<p>
+Projection is the process of representing a three-dimensional
+object on a two-dimensional drawing surface.
+</p>
+
+<p>
+In engineering graphics, projection is used to obtain accurate
+views of objects such as their front view, top view and side view.
+</p>
+
+<h3>What is Orthographic Projection?</h3>
+
+<p>
+Orthographic projection is a method of representing an object by
+drawing perpendicular projectors from the object to the plane of
+projection.
+</p>
+
+<h3>Main Projection Planes</h3>
+
+<ul>
+<li><strong>Horizontal Plane (HP):</strong> Used mainly for top view.</li>
+
+<li><strong>Vertical Plane (VP):</strong> Used mainly for front view.</li>
+
+<li><strong>Profile Plane:</strong> Used for side view.</li>
+</ul>
+
+
+<div class="diagram">
+
+<h3>HP and VP</h3>
+
+<svg viewBox="0 0 850 450">
+
+<line x1="100" y1="225"
+x2="750" y2="225"
+stroke="black"
+stroke-width="4"/>
+
+<text x="700" y="210"
+font-size="25">XY</text>
+
+<rect x="150" y="70"
+width="550"
+height="155"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<rect x="150" y="225"
+width="550"
+height="155"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="390" y="145"
+font-size="28">VP</text>
+
+<text x="390" y="315"
+font-size="28">HP</text>
+
+</svg>
+
+</div>
+
+
+<h3>Reference Line XY</h3>
+
+<p>
+The line XY represents the intersection of the Horizontal Plane
+and Vertical Plane. It is used as the reference line for drawing
+projections.
+</p>
+
+</div>
+
+
+<!-- =====================================================
+2 PRINCIPLES
+===================================================== -->
+
+<div class="topic">
+
+<h2>2. Principles of Orthographic Projection</h2>
+
+<ol>
+
+<li>
+The object is assumed to be placed in a definite position with
+respect to HP and VP.
+</li>
+
+<li>
+Projectors are drawn perpendicular to the plane of projection.
+</li>
+
+<li>
+The front view is obtained on VP.
+</li>
+
+<li>
+The top view is obtained on HP.
+</li>
+
+<li>
+The views are arranged according to the selected projection method.
+</li>
+
+<li>
+All projections should be accurate and properly aligned.
+</li>
+
+</ol>
+
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Provides accurate dimensions.</li>
+
+<li>Shows the exact shape of surfaces.</li>
+
+<li>Useful for manufacturing.</li>
+
+<li>Provides standardized engineering representation.</li>
+
+<li>Helps in understanding three-dimensional objects.</li>
+
+</ul>
+
+</div>
+
+
+<!-- =====================================================
+3 FIRST ANGLE
+===================================================== -->
+
+<div class="topic">
+
+<h2>3. First Angle Projection</h2>
+
+<h3>Definition</h3>
+
+<p>
+In first angle projection, the object is placed in the first
+quadrant, that is, above HP and in front of VP.
+</p>
+
+<h3>Position of Object</h3>
+
+<ul>
+
+<li>Object is above HP.</li>
+
+<li>Object is in front of VP.</li>
+
+</ul>
+
+
+<h3>Arrangement of Views</h3>
+
+<p>
+In first angle projection, the view is placed on the opposite side
+of the object.
+</p>
+
+<ul>
+
+<li>Top view appears below the front view.</li>
+
+<li>Right side view appears on the left side.</li>
+
+<li>Left side view appears on the right side.</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>First Angle Projection Arrangement</h3>
+
+<svg viewBox="0 0 850 500">
+
+<rect x="300" y="70"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="365" y="155"
+font-size="28">FRONT</text>
+
+<rect x="300" y="220"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="380" y="305"
+font-size="28">TOP</text>
+
+<rect x="50" y="70"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="105" y="155"
+font-size="25">RIGHT</text>
+
+<rect x="550" y="70"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="610" y="155"
+font-size="25">LEFT</text>
+
+</svg>
+
+</div>
+
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+In First Angle Projection, the top view is below the front view.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+4 THIRD ANGLE
+===================================================== -->
+
+<div class="topic">
+
+<h2>4. Third Angle Projection</h2>
+
+<h3>Definition</h3>
+
+<p>
+In third angle projection, the object is placed in the third
+quadrant, that is, below HP and behind VP.
+</p>
+
+<h3>Arrangement of Views</h3>
+
+<ul>
+
+<li>Top view appears above the front view.</li>
+
+<li>Right side view appears on the right side.</li>
+
+<li>Left side view appears on the left side.</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Third Angle Projection Arrangement</h3>
+
+<svg viewBox="0 0 850 500">
+
+<rect x="300" y="220"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="365" y="305"
+font-size="28">FRONT</text>
+
+<rect x="300" y="70"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="380" y="155"
+font-size="28">TOP</text>
+
+<rect x="550" y="220"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="610" y="305"
+font-size="25">RIGHT</text>
+
+<rect x="50" y="220"
+width="250"
+height="150"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="105" y="305"
+font-size="25">LEFT</text>
+
+</svg>
+
+</div>
+
+
+<table>
+
+<tr>
+<th>First Angle</th>
+<th>Third Angle</th>
+</tr>
+
+<tr>
+<td>Top view below front view</td>
+<td>Top view above front view</td>
+</tr>
+
+<tr>
+<td>Right view on left</td>
+<td>Right view on right</td>
+</tr>
+
+<tr>
+<td>Object lies in first quadrant</td>
+<td>Object lies in third quadrant</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- =====================================================
+5 QUADRANTS
+===================================================== -->
+
+<div class="topic">
+
+<h2>5. Quadrants of Projection</h2>
+
+<p>
+The HP and VP divide the space around them into four quadrants.
+</p>
+
+<table>
+
+<tr>
+<th>Quadrant</th>
+<th>Position of Point</th>
+<th>Front View</th>
+<th>Top View</th>
+</tr>
+
+<tr>
+<td>First Quadrant</td>
+<td>Above HP and in front of VP</td>
+<td>Above XY</td>
+<td>Below XY</td>
+</tr>
+
+<tr>
+<td>Second Quadrant</td>
+<td>Above HP and behind VP</td>
+<td>Above XY</td>
+<td>Above XY</td>
+</tr>
+
+<tr>
+<td>Third Quadrant</td>
+<td>Below HP and behind VP</td>
+<td>Below XY</td>
+<td>Above XY</td>
+</tr>
+
+<tr>
+<td>Fourth Quadrant</td>
+<td>Below HP and in front of VP</td>
+<td>Below XY</td>
+<td>Below XY</td>
+</tr>
+
+</table>
+
+
+<div class="diagram">
+
+<h3>Four Quadrants</h3>
+
+<svg viewBox="0 0 850 550">
+
+<line x1="100" y1="275"
+x2="750" y2="275"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="425" y1="60"
+x2="425" y2="490"
+stroke="black"
+stroke-width="4"/>
+
+<text x="440" y="100"
+font-size="30">I</text>
+
+<text x="350" y="100"
+font-size="30">II</text>
+
+<text x="350" y="450"
+font-size="30">III</text>
+
+<text x="440" y="450"
+font-size="30">IV</text>
+
+<text x="690" y="260"
+font-size="22">XY</text>
+
+<text x="435" y="85"
+font-size="22">VP</text>
+
+<text x="690" y="305"
+font-size="22">HP</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+6 PROJECTION OF POINT
+===================================================== -->
+
+<div class="topic">
+
+<h2>6. Projection of Points</h2>
+
+<p>
+A point is represented by its front view and top view.
+The position of these views depends on the location of the point
+with respect to HP and VP.
+</p>
+
+
+<h3>Point in First Quadrant</h3>
+
+<p>
+A point is above HP and in front of VP.
+</p>
+
+<p>
+Its front view is above XY and its top view is below XY.
+</p>
+
+
+<div class="diagram">
+
+<h3>Point A in First Quadrant</h3>
+
+<svg viewBox="0 0 850 450">
+
+<line x1="100" y1="230"
+x2="750" y2="230"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="400" y1="70"
+x2="400" y2="380"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<circle cx="400"
+cy="130"
+r="8"
+fill="black"/>
+
+<circle cx="400"
+cy="330"
+r="8"
+fill="black"/>
+
+<text x="415" y="135"
+font-size="25">a'</text>
+
+<text x="415" y="335"
+font-size="25">a</text>
+
+<text x="690" y="220"
+font-size="22">XY</text>
+
+</svg>
+
+</div>
+
+
+<h3>Notation</h3>
+
+<p>
+The front view of point A is generally represented as
+<strong>a'</strong>, while the top view is represented as
+<strong>a</strong>.
+</p>
+
+</div>
+
+
+<!-- =====================================================
+7 POINT POSITIONS
+===================================================== -->
+
+<div class="topic">
+
+<h2>7. Positions of Points in Different Quadrants</h2>
+
+<table>
+
+<tr>
+
+<th>Position</th>
+<th>Front View</th>
+<th>Top View</th>
+
+</tr>
+
+
+<tr>
+
+<td>Above HP, in front of VP</td>
+
+<td>Above XY</td>
+
+<td>Below XY</td>
+
+</tr>
+
+
+<tr>
+
+<td>Above HP, behind VP</td>
+
+<td>Above XY</td>
+
+<td>Above XY</td>
+
+</tr>
+
+
+<tr>
+
+<td>Below HP, behind VP</td>
+
+<td>Below XY</td>
+
+<td>Above XY</td>
+
+</tr>
+
+
+<tr>
+
+<td>Below HP, in front of VP</td>
+
+<td>Below XY</td>
+
+<td>Below XY</td>
+
+</tr>
+
+</table>
+
+
+<div class="note">
+
+<strong>Exam Tip:</strong>
+
+<p>
+Always remember the position of HP and VP first. Then determine
+whether the front view and top view will lie above or below XY.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+8 PROJECTION OF LINES
+===================================================== -->
+
+<div class="topic">
+
+<h2>8. Projection of Straight Lines</h2>
+
+<h3>Definition</h3>
+
+<p>
+Projection of a straight line means obtaining the projections of
+both endpoints of the line on HP and VP and joining their
+corresponding projections.
+</p>
+
+<h3>Important Cases</h3>
+
+<ol>
+
+<li>Line parallel to both HP and VP.</li>
+
+<li>Line perpendicular to HP and parallel to VP.</li>
+
+<li>Line perpendicular to VP and parallel to HP.</li>
+
+<li>Line inclined to HP and parallel to VP.</li>
+
+<li>Line inclined to VP and parallel to HP.</li>
+
+<li>Line inclined to both HP and VP.</li>
+
+</ol>
+
+</div>
+
+
+<!-- =====================================================
+9 LINE PARALLEL BOTH
+===================================================== -->
+
+<div class="topic">
+
+<h2>9. Line Parallel to Both HP and VP</h2>
+
+<p>
+When a line is parallel to both HP and VP, its front view and
+top view are parallel to XY.
+</p>
+
+<h3>Result</h3>
+
+<ul>
+
+<li>Front view shows true length.</li>
+
+<li>Top view shows true length.</li>
+
+<li>Both views are parallel to XY.</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Line Parallel to HP and VP</h3>
+
+<svg viewBox="0 0 850 450">
+
+<line x1="100" y1="225"
+x2="750" y2="225"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="250" y1="130"
+x2="600" y2="130"
+stroke="black"
+stroke-width="5"/>
+
+<line x1="250" y1="320"
+x2="600" y2="320"
+stroke="black"
+stroke-width="5"/>
+
+<text x="380" y="115"
+font-size="24">Front View</text>
+
+<text x="380" y="355"
+font-size="24">Top View</text>
+
+<text x="690" y="215"
+font-size="22">XY</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+10 LINE INCLINED HP
+===================================================== -->
+
+<div class="topic">
+
+<h2>10. Line Inclined to HP and Parallel to VP</h2>
+
+<p>
+In this case the line is inclined at an angle to HP but remains
+parallel to VP.
+</p>
+
+<h3>Characteristics</h3>
+
+<ul>
+
+<li>Front view shows the true length.</li>
+
+<li>Front view makes the true inclination with XY.</li>
+
+<li>Top view is shorter than the true length.</li>
+
+<li>Top view is generally parallel to XY.</li>
+
+</ul>
+
+
+<div class="formula">
+
+True Length = Front View Length
+
+</div>
+
+
+<h3>Construction Procedure</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the reference line XY.</li>
+
+<li>Mark the first endpoint.</li>
+
+<li>Draw the true length at the given inclination to XY.</li>
+
+<li>Project both endpoints downward to HP.</li>
+
+<li>Join the top-view points.</li>
+
+<li>Mark the required dimensions.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Line Inclined to HP</h3>
+
+<svg viewBox="0 0 850 500">
+
+<line x1="100" y1="250"
+x2="750" y2="250"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="250" y1="160"
+x2="550" y2="80"
+stroke="black"
+stroke-width="5"/>
+
+<line x1="250" y1="160"
+x2="250" y2="350"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="550" y1="80"
+x2="550" y2="350"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="250" y1="350"
+x2="550" y2="350"
+stroke="black"
+stroke-width="5"/>
+
+<text x="370" y="70"
+font-size="23">True Length</text>
+
+<text x="680" y="240"
+font-size="22">XY</text>
+
+<text x="360" y="390"
+font-size="22">Top View</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+11 LINE INCLINED VP
+===================================================== -->
+
+<div class="topic">
+
+<h2>11. Line Inclined to VP and Parallel to HP</h2>
+
+<p>
+In this case the line is inclined to VP but remains parallel
+to HP.
+</p>
+
+<h3>Characteristics</h3>
+
+<ul>
+
+<li>Top view shows true length.</li>
+
+<li>Top view shows true inclination.</li>
+
+<li>Front view is shorter.</li>
+
+<li>Front view is generally parallel to XY.</li>
+
+</ul>
+
+
+<div class="formula">
+
+True Length = Top View Length
+
+</div>
+
+
+<h3>Construction Procedure</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw XY reference line.</li>
+
+<li>Draw the true length in top view at the given angle.</li>
+
+<li>Project its endpoints upward to VP.</li>
+
+<li>Join the front-view points.</li>
+
+<li>Complete the dimensions.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Line Inclined to VP</h3>
+
+<svg viewBox="0 0 850 500">
+
+<line x1="100" y1="250"
+x2="750" y2="250"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="250" y1="350"
+x2="550" y2="430"
+stroke="black"
+stroke-width="5"/>
+
+<line x1="250" y1="350"
+x2="250" y2="150"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="550" y1="430"
+x2="550" y2="150"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="250" y1="150"
+x2="550" y2="150"
+stroke="black"
+stroke-width="5"/>
+
+<text x="350" y="455"
+font-size="23">True Length</text>
+
+<text x="680" y="240"
+font-size="22">XY</text>
+
+<text x="360" y="135"
+font-size="22">Front View</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+12 LINE INCLINED BOTH
+===================================================== -->
+
+<div class="topic">
+
+<h2>12. Line Inclined to Both HP and VP</h2>
+
+<p>
+This is one of the most important cases in engineering graphics.
+Here the line is inclined to both reference planes.
+</p>
+
+<h3>Characteristics</h3>
+
+<ul>
+
+<li>Neither front view nor top view shows true length.</li>
+
+<li>Both projections are shorter than the true length.</li>
+
+<li>True length must be obtained by an appropriate construction.</li>
+
+<li>The line has two true inclinations.</li>
+
+</ul>
+
+
+<h3>Symbols</h3>
+
+<p>
+Let:
+</p>
+
+<div class="formula">
+
+θ = True inclination with HP
+
+</div>
+
+<div class="formula">
+
+φ = True inclination with VP
+
+</div>
+
+
+<h3>General Construction Method</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the XY reference line.</li>
+
+<li>Draw the initial position of the line.</li>
+
+<li>Project its endpoints onto HP and VP.</li>
+
+<li>Obtain the apparent front and top views.</li>
+
+<li>Use rotation / auxiliary construction to determine true length.</li>
+
+<li>Measure the true angles with reference planes.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Line Inclined to Both HP and VP</h3>
+
+<svg viewBox="0 0 900 500">
+
+<line x1="100" y1="250"
+x2="800" y2="250"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="250" y1="140"
+x2="600" y2="200"
+stroke="black"
+stroke-width="5"/>
+
+<line x1="250" y1="340"
+x2="600" y2="410"
+stroke="black"
+stroke-width="5"/>
+
+<line x1="250" y1="140"
+x2="250" y2="340"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="600" y1="200"
+x2="600" y2="410"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<text x="350" y="125"
+font-size="22">Front View</text>
+
+<text x="370" y="440"
+font-size="22">Top View</text>
+
+<text x="730" y="240"
+font-size="22">XY</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+13 TRUE LENGTH
+===================================================== -->
+
+<div class="topic">
+
+<h2>13. True Length of a Line</h2>
+
+<h3>Definition</h3>
+
+<p>
+The actual length of a line in space is called its true length.
+</p>
+
+<p>
+If a line is inclined to both HP and VP, its projected lengths
+are smaller than its actual length.
+</p>
+
+
+<h3>When is True Length Visible?</h3>
+
+<table>
+
+<tr>
+<th>Position of Line</th>
+<th>True Length Visible In</th>
+</tr>
+
+<tr>
+<td>Parallel to HP</td>
+<td>Top View</td>
+</tr>
+
+<tr>
+<td>Parallel to VP</td>
+<td>Front View</td>
+</tr>
+
+<tr>
+<td>Inclined to HP only</td>
+<td>Front View</td>
+</tr>
+
+<tr>
+<td>Inclined to VP only</td>
+<td>Top View</td>
+</tr>
+
+<tr>
+<td>Inclined to both</td>
+<td>Neither direct view</td>
+</tr>
+
+</table>
+
+
+<div class="important">
+
+<strong>Important:</strong>
+
+<p>
+A projection generally shows true length only when the line is
+parallel to that particular plane of projection.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+14 TRUE INCLINATION
+===================================================== -->
+
+<div class="topic">
+
+<h2>14. True Inclination</h2>
+
+<p>
+The angle made by a line with a reference plane is called its
+true inclination with that plane.
+</p>
+
+<h3>Types</h3>
+
+<ul>
+
+<li>
+<strong>θ (Theta):</strong>
+Inclination with HP.
+</li>
+
+<li>
+<strong>φ (Phi):</strong>
+Inclination with VP.
+</li>
+
+</ul>
+
+
+<div class="formula">
+
+θ = True Angle with HP
+
+</div>
+
+<div class="formula">
+
+φ = True Angle with VP
+
+</div>
+
+
+<h3>Apparent Inclination</h3>
+
+<p>
+The angle observed in a projection is called apparent inclination.
+It may not be equal to the true inclination when the line is
+inclined to both planes.
+</p>
+
+</div>
+</body>
+</html>

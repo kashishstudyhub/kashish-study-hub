@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Physics Unit 3 - Introduction to Solids</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2fbf7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00695c;
+        }
+
+        .topic {
+            max-width: 800px;
+            margin: 15px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00897b;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #e0f2f1;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #00695c;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .important {
+            background-color: #fff3e0;
+            padding: 12px;
+            border-left: 5px solid #fb8c00;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🔷 Unit 3: Introduction to Solids</h1>
+
+
+<!-- Solid State -->
+<div class="topic">
+    <button onclick="showNotes('solid')">
+        1. Introduction to Solids
+    </button>
+
+    <div id="solid" class="notes">
+        <h3>Solid State</h3>
+
+        <p>
+            A solid has a definite shape and volume because
+            its particles are strongly bound.
+        </p>
+
+        <p>
+            Solids can be broadly classified as crystalline
+            and amorphous.
+        </p>
+
+        <ul>
+            <li>Crystalline solids have long-range order.</li>
+            <li>Amorphous solids have mainly short-range order.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Free Electron Theory -->
+<div class="topic">
+    <button onclick="showNotes('freeelectron')">
+        2. Free Electron Theory
+    </button>
+
+    <div id="freeelectron" class="notes">
+        <h3>Free Electron Theory</h3>
+
+        <p>
+            Free electron theory treats conduction electrons
+            in a metal as approximately free to move through
+            the solid.
+        </p>
+
+        <h3>Basic Ideas</h3>
+
+        <ul>
+            <li>Metals contain mobile conduction electrons.</li>
+            <li>Positive ions form the lattice.</li>
+            <li>Electrons contribute to electrical conduction.</li>
+            <li>Electron motion is influenced by collisions.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Drude Sommerfeld -->
+<div class="topic">
+    <button onclick="showNotes('sommerfeld')">
+        3. Quantum Free Electron Theory
+    </button>
+
+    <div id="sommerfeld" class="notes">
+        <h3>Sommerfeld Model</h3>
+
+        <p>
+            The quantum free electron model applies quantum
+            mechanics to conduction electrons in metals.
+        </p>
+
+        <p>
+            Electrons occupy allowed quantum states according
+            to the Pauli exclusion principle and Fermi-Dirac
+            statistics.
+        </p>
+    </div>
+</div>
+
+
+<!-- Fermi Level -->
+<div class="topic">
+    <button onclick="showNotes('fermi')">
+        4. Fermi Energy and Fermi Level
+    </button>
+
+    <div id="fermi" class="notes">
+        <h3>Fermi Energy</h3>
+
+        <p>
+            Fermi energy is the energy of the highest occupied
+            state at absolute zero temperature.
+        </p>
+
+        <p class="formula">
+            E<sub>F</sub> = (ℏ²/2m)(3π²n)<sup>2/3</sup>
+        </p>
+
+        <p>
+            Here n is the electron number density.
+        </p>
+
+        <div class="important">
+            At absolute zero, states below the Fermi energy
+            are occupied and states above it are unoccupied
+            for an ideal free-electron gas.
+        </div>
+    </div>
+</div>
+
+
+<!-- Density of States -->
+<div class="topic">
+    <button onclick="showNotes('density')">
+        5. Density of States
+    </button>
+
+    <div id="density" class="notes">
+        <h3>Density of States (DOS)</h3>
+
+        <p>
+            Density of states represents the number of allowed
+            quantum states available per unit energy interval.
+        </p>
+
+        <p>
+            For a three-dimensional free-electron system,
+            the density of states increases with the square
+            root of energy.
+        </p>
+
+        <p class="formula">
+            g(E) ∝ √E
+        </p>
+    </div>
+</div>
+
+
+<!-- Band Theory -->
+<div class="topic">
+    <button onclick="showNotes('band')">
+        6. Energy Band Theory
+    </button>
+
+    <div id="band" class="notes">
+        <h3>Energy Bands</h3>
+
+        <p>
+            In a solid, the closely spaced atomic energy levels
+            combine to form allowed energy bands separated by
+            forbidden energy gaps.
+        </p>
+
+        <h3>Important Bands</h3>
+
+        <ul>
+            <li>Valence band</li>
+            <li>Conduction band</li>
+            <li>Forbidden energy gap</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Conductors -->
+<div class="topic">
+    <button onclick="showNotes('conductors')">
+        7. Conductors, Semiconductors and Insulators
+    </button>
+
+    <div id="conductors" class="notes">
+        <h3>Classification Based on Band Structure</h3>
+
+        <p>
+            <b>Conductors:</b> Have partially filled bands or
+            overlapping valence and conduction bands.
+        </p>
+
+        <p>
+            <b>Semiconductors:</b> Have a relatively small
+            band gap.
+        </p>
+
+        <p>
+            <b>Insulators:</b> Have a relatively large
+            band gap.
+        </p>
+    </div>
+</div>
+
+
+<!-- Bloch -->
+<div class="topic">
+    <button onclick="showNotes('bloch')">
+        8. Bloch's Theorem
+    </button>
+
+    <div id="bloch" class="notes">
+        <h3>Bloch's Theorem</h3>
+
+        <p>
+            Bloch's theorem describes the wavefunctions of
+            electrons moving in a periodic crystal potential.
+        </p>
+
+        <p class="formula">
+            ψ<sub>k</sub>(r) = u<sub>k</sub>(r)e<sup>ikr</sup>
+        </p>
+
+        <p>
+            Here u<sub>k</sub>(r) has the periodicity of the
+            crystal lattice.
+        </p>
+    </div>
+</div>
+
+
+<!-- Kronig Penney -->
+<div class="topic">
+    <button onclick="showNotes('kronig')">
+        9. Kronig-Penney Model
+    </button>
+
+    <div id="kronig" class="notes">
+        <h3>Kronig-Penney Model</h3>
+
+        <p>
+            The Kronig-Penney model is a simplified one-dimensional
+            model used to explain the formation of allowed energy
+            bands and forbidden energy gaps in crystals.
+        </p>
+
+        <ul>
+            <li>Uses a periodic potential.</li>
+            <li>Shows allowed energy regions.</li>
+            <li>Shows forbidden energy gaps.</li>
+            <li>Helps explain electronic band structure.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Origin of Bands -->
+<div class="topic">
+    <button onclick="showNotes('origin')">
+        10. Origin of Energy Bands
+    </button>
+
+    <div id="origin" class="notes">
+        <h3>Formation of Energy Bands</h3>
+
+        <p>
+            When many identical atoms are brought close together
+            to form a solid, their discrete atomic energy levels
+            split into a very large number of closely spaced levels.
+        </p>
+
+        <p>
+            These closely spaced levels form energy bands.
+        </p>
+
+        <p class="formula">
+            Allowed Band → Energy states available
+        </p>
+
+        <p class="formula">
+            Forbidden Gap → Energy range with no allowed states
+        </p>
+    </div>
+</div>
+
+
+<!-- Band Gap -->
+<div class="topic">
+    <button onclick="showNotes('gap')">
+        11. Forbidden Energy Gap
+    </button>
+
+    <div id="gap" class="notes">
+        <h3>Energy Gap</h3>
+
+        <p>
+            The forbidden energy gap is the energy range between
+            the top of the valence band and the bottom of the
+            conduction band where no allowed electronic states
+            exist in the ideal band picture.
+        </p>
+
+        <p class="formula">
+            E<sub>g</sub> = E<sub>C</sub> − E<sub>V</sub>
+        </p>
+
+        <ul>
+            <li>E<sub>C</sub> = conduction-band edge</li>
+            <li>E<sub>V</sub> = valence-band edge</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Quick Revision -->
+<div class="topic">
+    <button onclick="showNotes('revision')">
+        12. Quick Revision
+    </button>
+
+    <div id="revision" class="notes">
+
+        <h3>Important Points</h3>
+
+        <p class="formula">
+            Fermi Energy:
+            E<sub>F</sub> = (ℏ²/2m)(3π²n)<sup>2/3</sup>
+        </p>
+
+        <p class="formula">
+            Density of States:
+            g(E) ∝ √E
+        </p>
+
+        <p class="formula">
+            Bloch Function:
+            ψ<sub>k</sub>(r) = u<sub>k</sub>(r)e<sup>ikr</sup>
+        </p>
+
+        <p class="formula">
+            Band Gap:
+            E<sub>g</sub> = E<sub>C</sub> − E<sub>V</sub>
+        </p>
+
+        <p>
+            Main topics: Free electron theory, Fermi level,
+            density of states, energy bands, Bloch's theorem
+            and Kronig-Penney model.
+        </p>
+
+    </div>
+</div>
+
+
+<script>
+
+function showNotes(id) {
+
+    let notes = document.getElementById(id);
+
+    if (notes.style.display === "block") {
+        notes.style.display = "none";
+    }
+    else {
+        notes.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

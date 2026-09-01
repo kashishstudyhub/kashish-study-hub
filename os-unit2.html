@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C Programming Unit 2 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e9e4f5;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin:0 0 10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.toc,
+.topic{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:8px 0;
+}
+
+.topic h2{
+    color:#5b4b8a;
+    border-bottom:2px solid #eee;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    color:#6d5aa0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #5b4b8a;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    margin:25px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .topic,
+    .toc{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header">
+
+<h2>📚 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1>💻 C Programming – Unit 2</h1>
+
+<p>Fundamentals, Operators & Control Flow</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="toc" id="topics">
+
+<h2>📑 Unit 2 Contents</h2>
+
+<a href="#datatypes">1. Data Types</a>
+<a href="#variables">2. Variables</a>
+<a href="#constants">3. Constants</a>
+<a href="#io">4. printf() and scanf()</a>
+<a href="#arithmetic">5. Arithmetic Operators</a>
+<a href="#relational">6. Relational Operators</a>
+<a href="#logical">7. Logical Operators</a>
+<a href="#increment">8. Increment and Decrement</a>
+<a href="#ifelse">9. if-else</a>
+<a href="#nested">10. Nested if</a>
+<a href="#for">11. for Loop</a>
+<a href="#while">12. while Loop</a>
+<a href="#dowhile">13. do-while Loop</a>
+<a href="#programs">14. Important Programs</a>
+<a href="#questions">15. Important Exam Questions</a>
+<a href="#revision">16. Quick Revision</a>
+
+</section>
+
+
+<!-- DATA TYPES -->
+
+<section class="topic" id="datatypes">
+
+<h2>1. Data Types in C</h2>
+
+<p>
+A data type tells the compiler what type of value a variable can
+store. It also determines the operations that can be performed on
+that data.
+</p>
+
+<table>
+
+<tr>
+<th>Data Type</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>int</td>
+<td>Integer values</td>
+<td>10, -5, 100</td>
+</tr>
+
+<tr>
+<td>char</td>
+<td>Single character</td>
+<td>'A', 'b'</td>
+</tr>
+
+<tr>
+<td>float</td>
+<td>Decimal values</td>
+<td>10.5</td>
+</tr>
+
+<tr>
+<td>double</td>
+<td>More precision for decimal values</td>
+<td>25.6789</td>
+</tr>
+
+</table>
+
+<h3>Examples</h3>
+
+<pre><code>int age = 20;
+
+char grade = 'A';
+
+float price = 25.50f;
+
+double value = 123.456789;</code></pre>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+A character is written in single quotes, such as <strong>'A'</strong>,
+while a string is written in double quotes, such as
+<strong>"Hello"</strong>.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- VARIABLES -->
+
+<section class="topic" id="variables">
+
+<h2>2. Variables</h2>
+
+<p>
+A variable is a named memory location used to store a value that can
+change during program execution.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>data_type variable_name;</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>int age;
+
+age = 20;</code></pre>
+
+<h3>Declaration and Initialization</h3>
+
+<pre><code>int marks = 85;
+
+float height = 5.5f;
+
+char grade = 'A';</code></pre>
+
+<h3>Rules for Variable Names</h3>
+
+<ul>
+<li>Must begin with a letter or underscore.</li>
+<li>Cannot contain spaces.</li>
+<li>Cannot be a C keyword.</li>
+<li>C is case-sensitive.</li>
+<li>Digits can be used after the first character.</li>
+</ul>
+
+</section>
+
+
+<!-- CONSTANTS -->
+
+<section class="topic" id="constants">
+
+<h2>3. Constants</h2>
+
+<p>
+A constant is a value that does not change during program execution.
+</p>
+
+<h3>Using const</h3>
+
+<pre><code>const float PI = 3.14159f;</code></pre>
+
+<p>
+The value of a const object should not be modified through that
+object.
+</p>
+
+</section>
+
+
+<!-- INPUT OUTPUT -->
+
+<section class="topic" id="io">
+
+<h2>4. printf() and scanf()</h2>
+
+<h3>printf()</h3>
+
+<p>
+The printf() function is used to display formatted output on the
+screen.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 20;
+
+    printf("Age = %d", age);
+
+    return 0;
+}</code></pre>
+
+<h3>Common Format Specifiers</h3>
+
+<table>
+
+<tr>
+<th>Specifier</th>
+<th>Used For</th>
+</tr>
+
+<tr>
+<td>%d</td>
+<td>int</td>
+</tr>
+
+<tr>
+<td>%f</td>
+<td>floating-point output</td>
+</tr>
+
+<tr>
+<td>%c</td>
+<td>char</td>
+</tr>
+
+<tr>
+<td>%s</td>
+<td>string</td>
+</tr>
+
+</table>
+
+<h3>scanf()</h3>
+
+<p>
+The scanf() function is commonly used to read formatted input.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+
+    printf("Enter age: ");
+    scanf("%d", &amp;age);
+
+    printf("Age = %d", age);
+
+    return 0;
+}</code></pre>
+
+<div class="important">
+
+<strong>Important:</strong>
+
+<p>
+For an ordinary scalar variable such as int, scanf() generally
+receives its address using the <strong>&amp;</strong> operator.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ARITHMETIC -->
+
+<section class="topic" id="arithmetic">
+
+<h2>5. Arithmetic Operators</h2>
+
+<p>
+Arithmetic operators are used to perform mathematical operations.
+</p>
+
+<table>
+
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>a + b</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>a - b</td>
+</tr>
+
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>a * b</td>
+</tr>
+
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>a / b</td>
+</tr>
+
+<tr>
+<td>%</td>
+<td>Remainder</td>
+<td>a % b</td>
+</tr>
+
+</table>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 10;
+    int b = 3;
+
+    printf("Addition = %d\n", a + b);
+    printf("Subtraction = %d\n", a - b);
+    printf("Multiplication = %d\n", a * b);
+    printf("Division = %d\n", a / b);
+    printf("Remainder = %d\n", a % b);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- RELATIONAL -->
+
+<section class="topic" id="relational">
+
+<h2>6. Relational Operators</h2>
+
+<p>
+Relational operators compare two values. The result of a comparison
+is used as a true/false condition.
+</p>
+
+<table>
+
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>==</td>
+<td>Equal to</td>
+</tr>
+
+<tr>
+<td>!=</td>
+<td>Not equal to</td>
+</tr>
+
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
+</tr>
+
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+</tr>
+
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal to</td>
+</tr>
+
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+</tr>
+
+</table>
+
+<h3>Example</h3>
+
+<pre><code>int a = 10;
+int b = 20;
+
+printf("%d", a &lt; b);</code></pre>
+
+</section>
+
+
+<!-- LOGICAL -->
+
+<section class="topic" id="logical">
+
+<h2>7. Logical Operators</h2>
+
+<p>
+Logical operators combine or invert conditions.
+</p>
+
+<table>
+
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>&amp;&amp;</td>
+<td>Logical AND</td>
+</tr>
+
+<tr>
+<td>||</td>
+<td>Logical OR</td>
+</tr>
+
+<tr>
+<td>!</td>
+<td>Logical NOT</td>
+</tr>
+
+</table>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 20;
+
+    if(age &gt;= 18 &amp;&amp; age &lt;= 60)
+    {
+        printf("Condition is true");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- INCREMENT -->
+
+<section class="topic" id="increment">
+
+<h2>8. Increment and Decrement Operators</h2>
+
+<p>
+The increment operator <strong>++</strong> increases a value by 1.
+The decrement operator <strong>--</strong> decreases a value by 1.
+</p>
+
+<h3>Increment</h3>
+
+<pre><code>int a = 5;
+
+a++;
+
+printf("%d", a);</code></pre>
+
+<h3>Decrement</h3>
+
+<pre><code>int a = 5;
+
+a--;
+
+printf("%d", a);</code></pre>
+
+<h3>Prefix and Postfix</h3>
+
+<pre><code>++a;   /* prefix */
+
+a++;   /* postfix */
+
+--a;   /* prefix */
+
+a--;   /* postfix */</code></pre>
+
+</section>
+
+
+<!-- IF ELSE -->
+
+<section class="topic" id="ifelse">
+
+<h2>9. if-else Condition</h2>
+
+<p>
+The if statement executes a block when its condition is true.
+The else block executes when the condition is false.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>if(condition)
+{
+    // statements
+}
+else
+{
+    // statements
+}</code></pre>
+
+<h3>Example: Even or Odd</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n % 2 == 0)
+    {
+        printf("Even number");
+    }
+    else
+    {
+        printf("Odd number");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- NESTED -->
+
+<section class="topic" id="nested">
+
+<h2>10. Nested if</h2>
+
+<p>
+An if statement placed inside another if statement is called a
+nested if.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n &gt; 0)
+    {
+        if(n % 2 == 0)
+        {
+            printf("Positive even number");
+        }
+        else
+        {
+            printf("Positive odd number");
+        }
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- FOR -->
+
+<section class="topic" id="for">
+
+<h2>11. for Loop</h2>
+
+<p>
+The for loop is useful when the number of iterations is known or
+can be controlled with an initialization, condition and update.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>for(initialization; condition; update)
+{
+    // statements
+}</code></pre>
+
+<h3>Example: Print 1 to 10</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 1; i &lt;= 10; i++)
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- WHILE -->
+
+<section class="topic" id="while">
+
+<h2>12. while Loop</h2>
+
+<p>
+The while loop repeatedly executes its body as long as its condition
+remains true.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>while(condition)
+{
+    // statements
+}</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i = 1;
+
+    while(i &lt;= 5)
+    {
+        printf("%d ", i);
+        i++;
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- DO WHILE -->
+
+<section class="topic" id="dowhile">
+
+<h2>13. do-while Loop</h2>
+
+<p>
+The do-while loop executes its body first and checks the condition
+afterwards. Therefore, its body executes at least once.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>do
+{
+    // statements
+}
+while(condition);</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i = 1;
+
+    do
+    {
+        printf("%d ", i);
+        i++;
+    }
+    while(i &lt;= 5);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="topic" id="programs">
+
+<h2>14. Important C Programs</h2>
+
+<h3>Program 1: Find Largest of Two Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    if(a &gt; b)
+    {
+        printf("Largest = %d", a);
+    }
+    else
+    {
+        printf("Largest = %d", b);
+    }
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Check Positive, Negative or Zero</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n &gt; 0)
+    {
+        printf("Positive");
+    }
+    else if(n &lt; 0)
+    {
+        printf("Negative");
+    }
+    else
+    {
+        printf("Zero");
+    }
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3: Sum of First N Natural Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+    int sum = 0;
+
+    printf("Enter n: ");
+    scanf("%d", &amp;n);
+
+    for(i = 1; i &lt;= n; i++)
+    {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 4: Multiplication Table</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    for(i = 1; i &lt;= 10; i++)
+    {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 5: Factorial Using Loop</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+    int factorial = 1;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    for(i = 1; i &lt;= n; i++)
+    {
+        factorial = factorial * i;
+    }
+
+    printf("Factorial = %d", factorial);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 6: Check Prime Number</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+    int prime = 1;
+
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    if(n &lt; 2)
+    {
+        prime = 0;
+    }
+    else
+    {
+        for(i = 2; i &lt; n; i++)
+        {
+            if(n % i == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+    }
+
+    if(prime)
+    {
+        printf("Prime number");
+    }
+    else
+    {
+        printf("Not a prime number");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="topic" id="questions">
+
+<h2>15. Important Exam Questions</h2>
+
+<h3>⭐ 2-Mark Questions</h3>
+
+<div class="question">
+1. What is a data type in C?
+</div>
+
+<div class="question">
+2. What is a variable?
+</div>
+
+<div class="question">
+3. What is the use of printf()?
+</div>
+
+<div class="question">
+4. What is the use of scanf()?
+</div>
+
+<div class="question">
+5. What are arithmetic operators?
+</div>
+
+<div class="question">
+6. What are relational operators?
+</div>
+
+<div class="question">
+7. What are logical operators?
+</div>
+
+<div class="question">
+8. What is the difference between ++ and --?
+</div>
+
+
+<h3>⭐⭐ 5-Mark Questions</h3>
+
+<div class="question">
+1. Explain different data types in C with examples.
+</div>
+
+<div class="question">
+2. Explain arithmetic, relational and logical operators.
+</div>
+
+<div class="question">
+3. Explain if-else statement with a suitable program.
+</div>
+
+<div class="question">
+4. Explain for, while and do-while loops.
+</div>
+
+<div class="question">
+5. Write a C program to find the largest of two numbers.
+</div>
+
+
+<h3>⭐⭐⭐ 10-Mark Questions</h3>
+
+<div class="question">
+1. Explain data types, variables and input/output functions in C
+with suitable examples.
+</div>
+
+<div class="question">
+2. Explain different types of operators in C with examples.
+</div>
+
+<div class="question">
+3. Explain decision-making statements and looping statements with
+suitable programs.
+</div>
+
+<div class="question">
+4. Write a C program to check whether a number is prime and explain
+the program.
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="topic" id="revision">
+
+<h2>16. Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li><strong>int:</strong> Used for integer values.</li>
+
+<li><strong>char:</strong> Used for a character.</li>
+
+<li><strong>float:</strong> Used for floating-point values.</li>
+
+<li><strong>Variable:</strong> Named object used to store a value that
+can change.</li>
+
+<li><strong>printf():</strong> Used for formatted output.</li>
+
+<li><strong>scanf():</strong> Used for formatted input.</li>
+
+<li><strong>Arithmetic:</strong> +, -, *, /, %</li>
+
+<li><strong>Relational:</strong> ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+
+<li><strong>Logical:</strong> &amp;&amp;, ||, !</li>
+
+<li><strong>Increment:</strong> ++</li>
+
+<li><strong>Decrement:</strong> --</li>
+
+<li><strong>if-else:</strong> Used for conditional execution.</li>
+
+<li><strong>for:</strong> Loop with initialization, condition and update.</li>
+
+<li><strong>while:</strong> Condition is checked before each iteration.</li>
+
+<li><strong>do-while:</strong> Body executes before the condition is checked.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<a class="back" href="index.html">
+⬅ Back to Home
+</a>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+C Programming notes, programs and exam preparation.
+</p>
+
+</footer>
+
+</body>
+</html>

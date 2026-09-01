@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C Programming Unit 5 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e9e4f5;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.toc,
+.topic{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:8px 0;
+}
+
+.topic h2{
+    color:#5b4b8a;
+    border-bottom:2px solid #eee;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    color:#6d5aa0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+}
+
+.example{
+    background:#f0f4ff;
+    border-left:5px solid #5b4b8a;
+    padding:18px;
+    margin:20px 0;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,
+td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #5b4b8a;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    margin:25px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .topic,
+    .toc{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<h2>📚 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>💻 C Programming – Unit 5</h1>
+
+<p>Structures, Union & File Handling</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- TABLE OF CONTENTS -->
+
+<section class="toc" id="topics">
+
+<h2>📑 Unit 5 Contents</h2>
+
+<a href="#structure">1. Structure in C</a>
+<a href="#declaration">2. Structure Declaration</a>
+<a href="#members">3. Accessing Structure Members</a>
+<a href="#initialization">4. Structure Initialization</a>
+<a href="#arraystructure">5. Array of Structures</a>
+<a href="#pointerstructure">6. Pointer to Structure</a>
+<a href="#structureprograms">7. Structure Programs</a>
+<a href="#union">8. Union in C</a>
+<a href="#structureunion">9. Structure vs Union</a>
+<a href="#file">10. File Handling in C</a>
+<a href="#modes">11. File Opening Modes</a>
+<a href="#fopen">12. fopen() and fclose()</a>
+<a href="#readwrite">13. Reading and Writing Files</a>
+<a href="#fileprograms">14. File Handling Programs</a>
+<a href="#questions">15. Important Exam Questions</a>
+<a href="#revision">16. Quick Revision</a>
+
+</section>
+
+
+<!-- STRUCTURE -->
+
+<section class="topic" id="structure">
+
+<h2>1. Structure in C</h2>
+
+<p>
+A structure is a user-defined data type that allows related
+variables of different data types to be grouped together under
+one name.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};</code></pre>
+
+<p>
+Here, one student record can contain an integer roll number,
+a character array for the name and a floating-point marks value.
+</p>
+
+<div class="important">
+
+<strong>Exam Point:</strong>
+
+<p>
+Unlike an array, whose elements normally have the same data type,
+a structure can contain members of different data types.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- DECLARATION -->
+
+<section class="topic" id="declaration">
+
+<h2>2. Structure Declaration</h2>
+
+<p>
+The general syntax for declaring a structure is:
+</p>
+
+<pre><code>struct structure_name
+{
+    data_type member1;
+    data_type member2;
+    data_type member3;
+};</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>struct Employee
+{
+    int id;
+    char name[50];
+    float salary;
+};</code></pre>
+
+<h3>Creating Structure Variables</h3>
+
+<pre><code>struct Employee e1;</code></pre>
+
+<p>
+Here, <strong>e1</strong> is a variable of type
+<strong>struct Employee</strong>.
+</p>
+
+</section>
+
+
+<!-- MEMBERS -->
+
+<section class="topic" id="members">
+
+<h2>3. Accessing Structure Members</h2>
+
+<p>
+The dot operator <strong>.</strong> is used to access a member
+of a structure variable.
+</p>
+
+<pre><code>e1.id = 101;
+
+printf("%d", e1.id);</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main()
+{
+    struct Student s;
+
+    s.roll = 1;
+    s.marks = 85.5;
+
+    printf("Roll = %d\n", s.roll);
+    printf("Marks = %.2f", s.marks);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- INITIALIZATION -->
+
+<section class="topic" id="initialization">
+
+<h2>4. Structure Initialization</h2>
+
+<p>
+A structure variable can be initialized when it is declared.
+</p>
+
+<pre><code>struct Student s = {1, "Kashish", 90.5};</code></pre>
+
+<h3>Complete Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main()
+{
+    struct Student s = {1, "Kashish", 90.5};
+
+    printf("Roll: %d\n", s.roll);
+    printf("Name: %s\n", s.name);
+    printf("Marks: %.2f", s.marks);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- ARRAY STRUCTURE -->
+
+<section class="topic" id="arraystructure">
+
+<h2>5. Array of Structures</h2>
+
+<p>
+An array of structures is used when we need to store records
+of multiple objects of the same structure type.
+</p>
+
+<h3>Declaration</h3>
+
+<pre><code>struct Student students[5];</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main()
+{
+    struct Student s[3];
+    int i;
+
+    for(i = 0; i &lt; 3; i++)
+    {
+        printf("Enter roll number: ");
+        scanf("%d", &amp;s[i].roll);
+
+        printf("Enter name: ");
+        scanf("%49s", s[i].name);
+
+        printf("Enter marks: ");
+        scanf("%f", &amp;s[i].marks);
+    }
+
+    printf("\nStudent Details\n");
+
+    for(i = 0; i &lt; 3; i++)
+    {
+        printf("\nRoll: %d", s[i].roll);
+        printf("\nName: %s", s[i].name);
+        printf("\nMarks: %.2f\n", s[i].marks);
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- POINTER STRUCTURE -->
+
+<section class="topic" id="pointerstructure">
+
+<h2>6. Pointer to Structure</h2>
+
+<p>
+A pointer to a structure stores the address of a structure variable.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>struct Student s;
+
+struct Student *ptr;
+
+ptr = &amp;s;</code></pre>
+
+<p>
+The arrow operator <strong>-&gt;</strong> is commonly used to access
+structure members through a pointer.
+</p>
+
+<pre><code>ptr-&gt;roll = 10;</code></pre>
+
+<h3>Complete Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    float marks;
+};
+
+int main()
+{
+    struct Student s;
+    struct Student *ptr = &amp;s;
+
+    ptr-&gt;roll = 10;
+    ptr-&gt;marks = 88.5;
+
+    printf("Roll = %d\n", ptr-&gt;roll);
+    printf("Marks = %.2f", ptr-&gt;marks);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- STRUCTURE PROGRAMS -->
+
+<section class="topic" id="structureprograms">
+
+<h2>7. Important Structure Programs</h2>
+
+<h3>Program 1: Student Details</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main()
+{
+    struct Student s;
+
+    printf("Enter roll number: ");
+    scanf("%d", &amp;s.roll);
+
+    printf("Enter name: ");
+    scanf("%49s", s.name);
+
+    printf("Enter marks: ");
+    scanf("%f", &amp;s.marks);
+
+    printf("\nStudent Details\n");
+    printf("Roll = %d\n", s.roll);
+    printf("Name = %s\n", s.name);
+    printf("Marks = %.2f\n", s.marks);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Employee Details</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Employee
+{
+    int id;
+    char name[50];
+    float salary;
+};
+
+int main()
+{
+    struct Employee e;
+
+    printf("Enter ID: ");
+    scanf("%d", &amp;e.id);
+
+    printf("Enter name: ");
+    scanf("%49s", e.name);
+
+    printf("Enter salary: ");
+    scanf("%f", &amp;e.salary);
+
+    printf("\nEmployee Details\n");
+    printf("ID = %d\n", e.id);
+    printf("Name = %s\n", e.name);
+    printf("Salary = %.2f\n", e.salary);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- UNION -->
+
+<section class="topic" id="union">
+
+<h2>8. Union in C</h2>
+
+<p>
+A union is a user-defined type similar to a structure, but its
+members share the same memory storage.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>union union_name
+{
+    data_type member1;
+    data_type member2;
+};</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>union Data
+{
+    int i;
+    float f;
+    char ch;
+};</code></pre>
+
+<div class="important">
+
+<strong>Important Difference:</strong>
+
+<p>
+In a union, the members share storage. Therefore, only one member's
+stored value should be treated as active at a time.
+</p>
+
+</div>
+
+<h3>Union Example Program</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+union Data
+{
+    int number;
+    float decimal;
+    char character;
+};
+
+int main()
+{
+    union Data data;
+
+    data.number = 100;
+
+    printf("Number = %d", data.number);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- STRUCTURE VS UNION -->
+
+<section class="topic" id="structureunion">
+
+<h2>9. Structure vs Union</h2>
+
+<table>
+
+<tr>
+<th>Structure</th>
+<th>Union</th>
+</tr>
+
+<tr>
+<td>Members have separate storage.</td>
+<td>Members share storage.</td>
+</tr>
+
+<tr>
+<td>Several members can hold values at the same time.</td>
+<td>Only one member's stored value should be treated as active at a time.</td>
+</tr>
+
+<tr>
+<td>Size is generally related to the combined storage requirements of its members plus alignment.</td>
+<td>Size is generally based on the largest member plus alignment.</td>
+</tr>
+
+<tr>
+<td>Useful for records containing multiple pieces of information.</td>
+<td>Useful when different representations share the same storage.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- FILE HANDLING -->
+
+<section class="topic" id="file">
+
+<h2>10. File Handling in C</h2>
+
+<p>
+File handling allows a C program to store data in external files
+and read data from them.
+</p>
+
+<h3>Why File Handling is Used</h3>
+
+<ul>
+<li>To store data permanently.</li>
+<li>To read previously stored information.</li>
+<li>To write program output to a file.</li>
+<li>To maintain records outside program memory.</li>
+</ul>
+
+<h3>FILE Pointer</h3>
+
+<pre><code>FILE *fp;</code></pre>
+
+<p>
+The FILE pointer is used by standard C file functions to work
+with an opened file.
+</p>
+
+</section>
+
+
+<!-- MODES -->
+
+<section class="topic" id="modes">
+
+<h2>11. File Opening Modes</h2>
+
+<table>
+
+<tr>
+<th>Mode</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>r</td>
+<td>Open an existing file for reading.</td>
+</tr>
+
+<tr>
+<td>w</td>
+<td>Open for writing; creates a file or truncates an existing file.</td>
+</tr>
+
+<tr>
+<td>a</td>
+<td>Open for appending; new data is written at the end.</td>
+</tr>
+
+<tr>
+<td>r+</td>
+<td>Open an existing file for reading and writing.</td>
+</tr>
+
+<tr>
+<td>w+</td>
+<td>Open for reading and writing; creates or truncates the file.</td>
+</tr>
+
+<tr>
+<td>a+</td>
+<td>Open for reading and appending.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- FOPEN FCLOSE -->
+
+<section class="topic" id="fopen">
+
+<h2>12. fopen() and fclose()</h2>
+
+<h3>fopen()</h3>
+
+<p>
+The <strong>fopen()</strong> function opens a file and returns a
+FILE pointer on success.
+</p>
+
+<pre><code>FILE *fp;
+
+fp = fopen("data.txt", "r");</code></pre>
+
+<h3>Checking Whether File Opened</h3>
+
+<pre><code>if(fp == NULL)
+{
+    printf("File could not be opened");
+}</code></pre>
+
+<h3>fclose()</h3>
+
+<p>
+The <strong>fclose()</strong> function closes an opened file.
+</p>
+
+<pre><code>fclose(fp);</code></pre>
+
+<div class="important">
+
+<strong>Good Practice:</strong>
+
+<p>
+After finishing file operations, close the file with
+<strong>fclose()</strong>.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- READ WRITE -->
+
+<section class="topic" id="readwrite">
+
+<h2>13. Reading and Writing Files</h2>
+
+<h3>Writing Using fprintf()</h3>
+
+<pre><code>FILE *fp;
+
+fp = fopen("data.txt", "w");
+
+if(fp != NULL)
+{
+    fprintf(fp, "Kashish Study Hub");
+    fclose(fp);
+}</code></pre>
+
+<h3>Reading Using fscanf()</h3>
+
+<pre><code>FILE *fp;
+char word[50];
+
+fp = fopen("data.txt", "r");
+
+if(fp != NULL)
+{
+    fscanf(fp, "%49s", word);
+    printf("%s", word);
+
+    fclose(fp);
+}</code></pre>
+
+<h3>Character Based File Functions</h3>
+
+<p>
+<strong>fputc()</strong> writes a character to a file and
+<strong>fgetc()</strong> reads a character from a file.
+</p>
+
+<pre><code>fputc('A', fp);
+
+char ch;
+ch = fgetc(fp);</code></pre>
+
+</section>
+
+
+<!-- FILE PROGRAMS -->
+
+<section class="topic" id="fileprograms">
+
+<h2>14. Important File Handling Programs</h2>
+
+<h3>Program 1: Write Data to a File</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    FILE *fp;
+
+    fp = fopen("data.txt", "w");
+
+    if(fp == NULL)
+    {
+        printf("Unable to open file");
+        return 1;
+    }
+
+    fprintf(fp, "Welcome to Kashish Study Hub.\n");
+    fprintf(fp, "C Programming Unit 5.");
+
+    fclose(fp);
+
+    printf("Data written successfully.");
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Read Data from a File</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    FILE *fp;
+    int ch;
+
+    fp = fopen("data.txt", "r");
+
+    if(fp == NULL)
+    {
+        printf("Unable to open file");
+        return 1;
+    }
+
+    while((ch = fgetc(fp)) != EOF)
+    {
+        putchar(ch);
+    }
+
+    fclose(fp);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3: Append Data to a File</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    FILE *fp;
+
+    fp = fopen("data.txt", "a");
+
+    if(fp == NULL)
+    {
+        printf("Unable to open file");
+        return 1;
+    }
+
+    fprintf(fp, "\nNew information added.");
+
+    fclose(fp);
+
+    printf("Data appended successfully.");
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="topic" id="questions">
+
+<h2>15. Important Exam Questions</h2>
+
+<h3>⭐ 2-Mark Questions</h3>
+
+<div class="question">
+1. What is a structure in C?
+</div>
+
+<div class="question">
+2. What is a union?
+</div>
+
+<div class="question">
+3. What is the difference between structure and union?
+</div>
+
+<div class="question">
+4. What is a FILE pointer?
+</div>
+
+<div class="question">
+5. What is the use of fopen()?
+</div>
+
+<div class="question">
+6. What is the use of fclose()?
+</div>
+
+<div class="question">
+7. What is the purpose of file opening mode "r"?
+</div>
+
+<div class="question">
+8. What is the purpose of file opening mode "w"?
+</div>
+
+
+<h3>⭐⭐ 5-Mark Questions</h3>
+
+<div class="question">
+1. Explain structure declaration and initialization with an example.
+</div>
+
+<div class="question">
+2. Explain array of structures with a suitable program.
+</div>
+
+<div class="question">
+3. Explain union and its characteristics.
+</div>
+
+<div class="question">
+4. Explain different file opening modes in C.
+</div>
+
+<div class="question">
+5. Explain fopen() and fclose() with examples.
+</div>
+
+
+<h3>⭐⭐⭐ 10-Mark Questions</h3>
+
+<div class="question">
+1. Explain structures in C with declaration, initialization and
+member access.
+</div>
+
+<div class="question">
+2. Explain structure and union and compare their differences.
+</div>
+
+<div class="question">
+3. Explain file handling in C and write a program to write and read
+data from a text file.
+</div>
+
+<div class="question">
+4. Explain different file opening modes with suitable examples.
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="topic" id="revision">
+
+<h2>16. Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li><strong>Structure:</strong> Groups related variables of possibly
+different data types.</li>
+
+<li><strong>struct:</strong> Keyword used to define a structure.</li>
+
+<li><strong>.</strong> Used to access a member through a structure variable.</li>
+
+<li><strong>-&gt;</strong> Used to access a member through a pointer to structure.</li>
+
+<li><strong>Union:</strong> Members share the same storage.</li>
+
+<li><strong>FILE *:</strong> File pointer used for file operations.</li>
+
+<li><strong>fopen():</strong> Opens a file.</li>
+
+<li><strong>fclose():</strong> Closes a file.</li>
+
+<li><strong>fprintf():</strong> Writes formatted data to a file.</li>
+
+<li><strong>fscanf():</strong> Reads formatted data from a file.</li>
+
+<li><strong>fgetc():</strong> Reads a character from a file.</li>
+
+<li><strong>fputc():</strong> Writes a character to a file.</li>
+
+<li><strong>EOF:</strong> Indicates end-of-file when returned by
+appropriate input functions.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<a class="back" href="index.html">
+⬅ Back to Home
+</a>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>
+C Programming notes, programs and exam preparation.
+</p>
+
+</footer>
+
+</body>
+</html>

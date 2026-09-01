@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 2 - Boiler Problems & Softening Methods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e65100;
+        }
+
+        .topic {
+            background-color: white;
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ef6c00;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #e65100;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #fff3e0;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #e65100;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>⚙️ Unit 2: Boiler Problems & Softening Methods</h1>
+
+
+    <!-- Scale -->
+    <div class="topic">
+        <button onclick="showNotes('scale')">
+            1. Scale Formation
+        </button>
+
+        <div id="scale" class="notes">
+            <h3>Scale</h3>
+
+            <p>
+                Scale is a hard and adherent deposit formed on
+                the inner walls of a boiler.
+            </p>
+
+            <p>
+                It is mainly caused by salts such as calcium
+                carbonate, calcium sulphate and magnesium hydroxide.
+            </p>
+
+            <h3>Disadvantages</h3>
+
+            <ul>
+                <li>Reduces heat transfer</li>
+                <li>Increases fuel consumption</li>
+                <li>May cause overheating of boiler metal</li>
+                <li>Reduces boiler efficiency</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Sludge -->
+    <div class="topic">
+        <button onclick="showNotes('sludge')">
+            2. Sludge Formation
+        </button>
+
+        <div id="sludge" class="notes">
+            <h3>Sludge</h3>
+
+            <p>
+                Sludge is a soft, loose and non-adherent deposit
+                formed inside a boiler.
+            </p>
+
+            <p>
+                It generally accumulates in comparatively cooler
+                parts of the boiler.
+            </p>
+
+            <h3>Prevention</h3>
+
+            <ul>
+                <li>Using properly treated water</li>
+                <li>Regular blow-down operation</li>
+                <li>External water treatment</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Foaming -->
+    <div class="topic">
+        <button onclick="showNotes('foaming')">
+            3. Foaming
+        </button>
+
+        <div id="foaming" class="notes">
+            <h3>Foaming</h3>
+
+            <p>
+                Foaming is the formation of a layer of stable
+                bubbles or foam on the surface of boiler water.
+            </p>
+
+            <p>
+                It is commonly associated with high alkalinity,
+                dissolved organic matter and certain impurities.
+            </p>
+
+            <h3>Prevention</h3>
+
+            <ul>
+                <li>Control of alkalinity</li>
+                <li>Removal of oily impurities</li>
+                <li>Proper blow-down</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Corrosion -->
+    <div class="topic">
+        <button onclick="showNotes('corrosion')">
+            4. Boiler Corrosion
+        </button>
+
+        <div id="corrosion" class="notes">
+            <h3>Boiler Corrosion</h3>
+
+            <p>
+                Boiler corrosion is the gradual destruction of
+                boiler metal due to chemical or electrochemical
+                reactions with water and dissolved substances.
+            </p>
+
+            <h3>Causes</h3>
+
+            <ul>
+                <li>Dissolved oxygen</li>
+                <li>Carbon dioxide</li>
+                <li>Acidic conditions</li>
+            </ul>
+
+            <h3>Control</h3>
+
+            <ul>
+                <li>Removal of dissolved gases</li>
+                <li>Use of suitable treatment chemicals</li>
+                <li>Proper water treatment</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Caustic Embrittlement -->
+    <div class="topic">
+        <button onclick="showNotes('embrittlement')">
+            5. Caustic Embrittlement
+        </button>
+
+        <div id="embrittlement" class="notes">
+            <h3>Caustic Embrittlement</h3>
+
+            <p>
+                Caustic embrittlement is a form of boiler damage
+                associated with concentrated alkaline conditions,
+                particularly sodium hydroxide, at stressed parts
+                of the boiler.
+            </p>
+
+            <h3>Prevention</h3>
+
+            <ul>
+                <li>Control excessive alkalinity</li>
+                <li>Use phosphate conditioning where appropriate</li>
+                <li>Maintain proper boiler-water chemistry</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Lime Soda -->
+    <div class="topic">
+        <button onclick="showNotes('lime')">
+            6. Lime-Soda Process
+        </button>
+
+        <div id="lime" class="notes">
+            <h3>Lime-Soda Process</h3>
+
+            <p>
+                In the lime-soda process, calculated quantities
+                of lime Ca(OH)₂ and soda ash Na₂CO₃ are added
+                to hard water.
+            </p>
+
+            <p>
+                Calcium and magnesium ions are converted into
+                insoluble precipitates that can be removed.
+            </p>
+
+            <h3>Advantages</h3>
+
+            <ul>
+                <li>Suitable for large-scale water treatment</li>
+                <li>Reduces hardness</li>
+                <li>Relatively economical</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Zeolite -->
+    <div class="topic">
+        <button onclick="showNotes('zeolite')">
+            7. Zeolite Process
+        </button>
+
+        <div id="zeolite" class="notes">
+            <h3>Zeolite Process</h3>
+
+            <p>
+                The zeolite process removes Ca²⁺ and Mg²⁺ ions
+                by exchanging them with Na⁺ ions present in
+                the zeolite.
+            </p>
+
+            <p class="formula">
+                Na₂Z + Ca²⁺ → CaZ + 2Na⁺
+            </p>
+
+            <h3>Regeneration</h3>
+
+            <p>
+                Exhausted zeolite can be regenerated using
+                concentrated sodium chloride solution.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Ion Exchange -->
+    <div class="topic">
+        <button onclick="showNotes('ionexchange')">
+            8. Ion-Exchange Process
+        </button>
+
+        <div id="ionexchange" class="notes">
+            <h3>Ion-Exchange Process</h3>
+
+            <p>
+                Ion exchange is used to remove dissolved ionic
+                impurities from water.
+            </p>
+
+            <p>
+                A cation exchanger replaces positive ions such
+                as Ca²⁺ and Mg²⁺ with H⁺ ions.
+            </p>
+
+            <p>
+                An anion exchanger replaces anions with OH⁻ ions.
+            </p>
+
+            <p>
+                H⁺ and OH⁻ combine to form H₂O, producing
+                demineralized water.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Numericals -->
+    <div class="topic">
+        <button onclick="showNotes('numericals')">
+            9. Numerical Problems
+        </button>
+
+        <div id="numericals" class="notes">
+            <h3>Water Softening Numericals</h3>
+
+            <p>
+                Important numerical problems are based on:
+            </p>
+
+            <ul>
+                <li>Lime requirement</li>
+                <li>Soda requirement</li>
+                <li>Hardness calculation</li>
+                <li>Zeolite requirement</li>
+                <li>Ion-exchange calculations</li>
+            </ul>
+
+            <p class="formula">
+                CaCO₃ equivalent =
+                Amount × 50 / Equivalent weight
+            </p>
+
+            <p>
+                Always convert different salts into their
+                CaCO₃ equivalents before performing the
+                required calculation.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            }
+            else {
+                notes.style.display = "block";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

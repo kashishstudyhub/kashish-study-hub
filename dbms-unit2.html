@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DBMS Unit 2 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:55px 20px;
+    background:#e9e4f5;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.container{
+    width:88%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    margin:25px 0;
+    padding:28px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+h2{
+    color:#5b4b8a;
+}
+
+h3{
+    color:#6d5aa0;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:8px 0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+.question{
+    padding:12px;
+    margin:10px 0;
+    background:#f5f5f5;
+    border-left:4px solid #5b4b8a;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+footer{
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>📚 Kashish Study Hub</h2>
+<br>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</header>
+
+<section class="hero">
+<h1>🗄️ DBMS – Unit 2</h1>
+<p>Database Concepts, Relational Model, Keys and SQL</p>
+</section>
+
+<div class="container">
+
+<!-- CONTENT -->
+
+<div class="card toc" id="topics">
+
+<h2>📑 Unit 2 Contents</h2>
+
+<a href="#database">1. Database</a>
+<a href="#dbms">2. DBMS</a>
+<a href="#model">3. Relational Model</a>
+<a href="#keys">4. Keys in DBMS</a>
+<a href="#constraints">5. Integrity Constraints</a>
+<a href="#sql">6. SQL</a>
+<a href="#ddl">7. DDL Commands</a>
+<a href="#dml">8. DML Commands</a>
+<a href="#dql">9. DQL Commands</a>
+<a href="#examples">10. SQL Examples</a>
+<a href="#questions">11. Important Exam Questions</a>
+
+</div>
+
+
+<!-- DATABASE -->
+
+<div class="card" id="database">
+
+<h2>1. Database</h2>
+
+<p>
+A database is an organized collection of related data that can be
+stored, accessed and managed efficiently.
+</p>
+
+<h3>Example</h3>
+
+<p>
+A college database may contain student information such as:
+</p>
+
+<ul>
+<li>Student ID</li>
+<li>Student Name</li>
+<li>Course</li>
+<li>Semester</li>
+<li>Marks</li>
+</ul>
+
+<div class="important">
+<strong>Exam Point:</strong>
+A database stores related information in an organized manner.
+</div>
+
+</div>
+
+
+<!-- DBMS -->
+
+<div class="card" id="dbms">
+
+<h2>2. DBMS</h2>
+
+<p>
+DBMS stands for <strong>Database Management System</strong>.
+It is software used to create, store, retrieve, update and manage
+data in a database.
+</p>
+
+<h3>Functions of DBMS</h3>
+
+<ul>
+<li>Data storage</li>
+<li>Data retrieval</li>
+<li>Data modification</li>
+<li>Data security</li>
+<li>Backup and recovery</li>
+<li>Data integrity</li>
+</ul>
+
+</div>
+
+
+<!-- RELATIONAL MODEL -->
+
+<div class="card" id="model">
+
+<h2>3. Relational Model</h2>
+
+<p>
+The relational model represents data using tables.
+A table consists of rows and columns.
+</p>
+
+<table>
+
+<tr>
+<th>Roll No</th>
+<th>Name</th>
+<th>Course</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>CSE</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Priya</td>
+<td>CSE</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Aman</td>
+<td>IT</td>
+</tr>
+
+</table>
+
+<h3>Important Terms</h3>
+
+<ul>
+<li><strong>Relation:</strong> Table</li>
+<li><strong>Tuple:</strong> Row</li>
+<li><strong>Attribute:</strong> Column</li>
+<li><strong>Domain:</strong> Set of valid values</li>
+</ul>
+
+</div>
+
+
+<!-- KEYS -->
+
+<div class="card" id="keys">
+
+<h2>4. Keys in DBMS</h2>
+
+<p>
+Keys are attributes or combinations of attributes used to identify
+records and establish relationships between tables.
+</p>
+
+<h3>Primary Key</h3>
+
+<p>
+A primary key uniquely identifies each record in a table.
+It cannot contain NULL values.
+</p>
+
+<pre>
+CREATE TABLE Student
+(
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Course VARCHAR(30)
+);
+</pre>
+
+<h3>Foreign Key</h3>
+
+<p>
+A foreign key is an attribute that refers to a key in another table.
+</p>
+
+<pre>
+CREATE TABLE Marks
+(
+    RollNo INT,
+    Marks INT,
+    FOREIGN KEY (RollNo)
+    REFERENCES Student(RollNo)
+);
+</pre>
+
+<h3>Other Important Keys</h3>
+
+<ul>
+<li>Candidate Key</li>
+<li>Super Key</li>
+<li>Alternate Key</li>
+<li>Composite Key</li>
+<li>Foreign Key</li>
+</ul>
+
+</div>
+
+
+<!-- CONSTRAINTS -->
+
+<div class="card" id="constraints">
+
+<h2>5. Integrity Constraints</h2>
+
+<p>
+Integrity constraints are rules that maintain the accuracy and
+consistency of data.
+</p>
+
+<ul>
+<li>NOT NULL</li>
+<li>UNIQUE</li>
+<li>PRIMARY KEY</li>
+<li>FOREIGN KEY</li>
+<li>CHECK</li>
+<li>DEFAULT</li>
+</ul>
+
+<pre>
+CREATE TABLE Student
+(
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Age INT CHECK(Age >= 17),
+    City VARCHAR(30) DEFAULT 'Bhopal'
+);
+</pre>
+
+</div>
+
+
+<!-- SQL -->
+
+<div class="card" id="sql">
+
+<h2>6. SQL</h2>
+
+<p>
+SQL stands for <strong>Structured Query Language</strong>.
+It is used to communicate with relational databases.
+</p>
+
+<h3>Major SQL Categories</h3>
+
+<ul>
+<li>DDL – Data Definition Language</li>
+<li>DML – Data Manipulation Language</li>
+<li>DQL – Data Query Language</li>
+<li>DCL – Data Control Language</li>
+<li>TCL – Transaction Control Language</li>
+</ul>
+
+</div>
+
+
+<!-- DDL -->
+
+<div class="card" id="ddl">
+
+<h2>7. DDL Commands</h2>
+
+<p>
+DDL stands for Data Definition Language. It is used to define or
+modify the structure of database objects.
+</p>
+
+<h3>CREATE</h3>
+
+<pre>
+CREATE TABLE Student
+(
+    RollNo INT,
+    Name VARCHAR(50),
+    Marks INT
+);
+</pre>
+
+<h3>ALTER</h3>
+
+<pre>
+ALTER TABLE Student
+ADD City VARCHAR(30);
+</pre>
+
+<h3>DROP</h3>
+
+<pre>
+DROP TABLE Student;
+</pre>
+
+</div>
+
+
+<!-- DML -->
+
+<div class="card" id="dml">
+
+<h2>8. DML Commands</h2>
+
+<p>
+DML stands for Data Manipulation Language. It is used to insert,
+update and delete data.
+</p>
+
+<h3>INSERT</h3>
+
+<pre>
+INSERT INTO Student
+VALUES (101, 'Rahul', 85);
+</pre>
+
+<h3>UPDATE</h3>
+
+<pre>
+UPDATE Student
+SET Marks = 90
+WHERE RollNo = 101;
+</pre>
+
+<h3>DELETE</h3>
+
+<pre>
+DELETE FROM Student
+WHERE RollNo = 101;
+</pre>
+
+</div>
+
+
+<!-- DQL -->
+
+<div class="card" id="dql">
+
+<h2>9. DQL Commands</h2>
+
+<p>
+DQL is mainly used to retrieve data from a database.
+The most commonly used command is SELECT.
+</p>
+
+<pre>
+SELECT * FROM Student;
+</pre>
+
+<h3>Select Specific Columns</h3>
+
+<pre>
+SELECT Name, Marks
+FROM Student;
+</pre>
+
+<h3>WHERE Clause</h3>
+
+<pre>
+SELECT *
+FROM Student
+WHERE Marks > 80;
+</pre>
+
+</div>
+
+
+<!-- EXAMPLES -->
+
+<div class="card" id="examples">
+
+<h2>10. SQL Examples</h2>
+
+<h3>Example 1: Create Database</h3>
+
+<pre>
+CREATE DATABASE College;
+</pre>
+
+<h3>Example 2: Create Table</h3>
+
+<pre>
+CREATE TABLE Student
+(
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Marks INT
+);
+</pre>
+
+<h3>Example 3: Insert Data</h3>
+
+<pre>
+INSERT INTO Student
+VALUES
+(101, 'Rahul', 85);
+
+INSERT INTO Student
+VALUES
+(102, 'Priya', 92);
+</pre>
+
+<h3>Example 4: Display Data</h3>
+
+<pre>
+SELECT * FROM Student;
+</pre>
+
+<h3>Example 5: Find Students with Marks Greater Than 80</h3>
+
+<pre>
+SELECT *
+FROM Student
+WHERE Marks > 80;
+</pre>
+
+</div>
+
+
+<!-- QUESTIONS -->
+
+<div class="card" id="questions">
+
+<h2>11. ⭐ Important Exam Questions</h2>
+
+<div class="question">
+1. What is DBMS? Explain its advantages.
+</div>
+
+<div class="question">
+2. Explain the relational model.
+</div>
+
+<div class="question">
+3. What is a primary key?
+</div>
+
+<div class="question">
+4. Explain different types of keys in DBMS.
+</div>
+
+<div class="question">
+5. What is a foreign key?
+</div>
+
+<div class="question">
+6. What are integrity constraints?
+</div>
+
+<div class="question">
+7. What is SQL?
+</div>
+
+<div class="question">
+8. Explain DDL and DML commands with examples.
+</div>
+
+<div class="question">
+9. Explain SELECT command with WHERE clause.
+</div>
+
+<div class="question">
+10. Write SQL queries to create, insert, update and delete records.
+</div>
+
+</div>
+
+
+<a href="index.html" class="back">
+⬅ Back to Home
+</a>
+
+</div>
+
+<footer>
+<p>© 2026 Kashish Study Hub</p>
+<p>DBMS Notes • SQL • Exam Preparation</p>
+</footer>
+
+</body>
+</html>

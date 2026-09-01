@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 1 - Calculus I</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        .topic {
+            background-color: white;
+            margin: 15px auto;
+            padding: 15px;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #388E3C;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #f1f8e9;
+            border-radius: 7px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Unit 1: Calculus-I</h1>
+
+    <div class="topic">
+        <button onclick="showNotes('rolle')">
+            Rolle's Theorem
+        </button>
+
+        <div id="rolle" class="notes">
+            <h3>Rolle's Theorem</h3>
+            <p>
+                If a function f(x) is continuous on [a,b],
+                differentiable on (a,b), and f(a) = f(b),
+                then there exists at least one point c in (a,b)
+                such that f'(c) = 0.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('lagrange')">
+            Lagrange's Mean Value Theorem
+        </button>
+
+        <div id="lagrange" class="notes">
+            <h3>Lagrange's Mean Value Theorem</h3>
+            <p>
+                If f(x) is continuous on [a,b] and differentiable
+                on (a,b), then there exists c in (a,b) such that:
+            </p>
+
+            <p>
+                f'(c) = [f(b) - f(a)] / (b - a)
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('cauchy')">
+            Cauchy's Mean Value Theorem
+        </button>
+
+        <div id="cauchy" class="notes">
+            <h3>Cauchy's Mean Value Theorem</h3>
+            <p>
+                If f(x) and g(x) are continuous on [a,b]
+                and differentiable on (a,b), then:
+            </p>
+
+            <p>
+                f'(c) / g'(c) =
+                [f(b)-f(a)] / [g(b)-g(a)]
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('taylor')">
+            Taylor's Series
+        </button>
+
+        <div id="taylor" class="notes">
+            <h3>Taylor's Series</h3>
+
+            <p>
+                f(x) = f(a) + (x-a)f'(a)
+                + (x-a)²/2! f''(a) + ...
+            </p>
+
+            <p>
+                Taylor series is used to expand a function
+                around a particular point.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('maclaurin')">
+            Maclaurin's Series
+        </button>
+
+        <div id="maclaurin" class="notes">
+            <h3>Maclaurin's Series</h3>
+
+            <p>
+                Maclaurin series is a special case of Taylor series
+                where a = 0.
+            </p>
+
+            <p>
+                f(x) = f(0) + xf'(0)
+                + x²/2! f''(0) + ...
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('indeterminate')">
+            Indeterminate Forms
+        </button>
+
+        <div id="indeterminate" class="notes">
+            <h3>Indeterminate Forms</h3>
+
+            <p>
+                Common indeterminate forms are:
+            </p>
+
+            <p>
+                0/0, ∞/∞, 0 × ∞, ∞ - ∞,
+                0⁰, 1∞, ∞⁰
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('lhopital')">
+            L'Hôpital's Rule
+        </button>
+
+        <div id="lhopital" class="notes">
+            <h3>L'Hôpital's Rule</h3>
+
+            <p>
+                For limits of the form 0/0 or ∞/∞,
+                differentiation of numerator and denominator
+                can be used.
+            </p>
+
+            <p>
+                lim f(x)/g(x) = lim f'(x)/g'(x)
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('limits')">
+            Evaluation of Limits
+        </button>
+
+        <div id="limits" class="notes">
+            <h3>Evaluation of Limits</h3>
+
+            <p>
+                A limit describes the value approached by a function
+                as x approaches a particular value.
+            </p>
+
+            <p>
+                Example:
+                lim (x² - 1)/(x - 1), x → 1
+            </p>
+
+            <p>
+                Factorization can be used to evaluate such limits.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            } else {
+                notes.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

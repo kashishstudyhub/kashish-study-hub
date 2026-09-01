@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 7 - Periodic Properties</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0;
+        }
+
+        .topic {
+            background-color: white;
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1976d2;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #1565c0;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .important {
+            background-color: #fff3e0;
+            padding: 12px;
+            border-left: 5px solid #fb8c00;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>⚛️ Unit 7: Periodic Properties</h1>
+
+
+    <!-- Introduction -->
+    <div class="topic">
+        <button onclick="showNotes('intro')">
+            1. Introduction to Periodic Properties
+        </button>
+
+        <div id="intro" class="notes">
+            <h3>Periodic Properties</h3>
+
+            <p>
+                Periodic properties are the properties of elements
+                that show regular variations with atomic number
+                in the periodic table.
+            </p>
+
+            <p>
+                Important periodic properties include atomic size,
+                ionization energy, electron affinity and
+                electronegativity.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Atomic Size -->
+    <div class="topic">
+        <button onclick="showNotes('atomic')">
+            2. Atomic Size
+        </button>
+
+        <div id="atomic" class="notes">
+            <h3>Atomic Size</h3>
+
+            <p>
+                Atomic size is related to the distance between
+                the nucleus and the outermost region of the
+                electron cloud.
+            </p>
+
+            <h3>Trend</h3>
+
+            <ul>
+                <li>
+                    Across a period: atomic size generally decreases.
+                </li>
+
+                <li>
+                    Down a group: atomic size generally increases.
+                </li>
+            </ul>
+
+            <p>
+                The increase down a group is mainly due to the
+                addition of new electron shells.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Ionic Size -->
+    <div class="topic">
+        <button onclick="showNotes('ionic')">
+            3. Ionic Size
+        </button>
+
+        <div id="ionic" class="notes">
+            <h3>Ionic Size</h3>
+
+            <p>
+                Ionic size refers to the size of an ion.
+            </p>
+
+            <ul>
+                <li>Cations are generally smaller than their parent atoms.</li>
+                <li>Anions are generally larger than their parent atoms.</li>
+            </ul>
+
+            <p>
+                In an isoelectronic series, ionic size generally
+                decreases as nuclear charge increases.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Ionization Energy -->
+    <div class="topic">
+        <button onclick="showNotes('ionization')">
+            4. Ionization Energy
+        </button>
+
+        <div id="ionization" class="notes">
+            <h3>Ionization Energy</h3>
+
+            <p>
+                Ionization energy is the minimum energy required
+                to remove an electron from an isolated gaseous
+                atom in its ground state.
+            </p>
+
+            <h3>Trend</h3>
+
+            <ul>
+                <li>
+                    Across a period: generally increases.
+                </li>
+
+                <li>
+                    Down a group: generally decreases.
+                </li>
+            </ul>
+
+            <div class="important">
+                Successive ionization energies are generally
+                greater than the preceding ones.
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Electron Affinity -->
+    <div class="topic">
+        <button onclick="showNotes('electron')">
+            5. Electron Affinity
+        </button>
+
+        <div id="electron" class="notes">
+            <h3>Electron Affinity</h3>
+
+            <p>
+                Electron affinity describes the energy change
+                associated with adding an electron to an isolated
+                gaseous atom.
+            </p>
+
+            <h3>General Trend</h3>
+
+            <ul>
+                <li>
+                    It generally becomes more favorable across
+                    a period.
+                </li>
+
+                <li>
+                    Trends down a group are less uniform.
+                </li>
+            </ul>
+
+            <p>
+                Halogens generally have highly favorable electron
+                gain because they are one electron short of a
+                noble-gas configuration.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Electronegativity -->
+    <div class="topic">
+        <button onclick="showNotes('electronegativity')">
+            6. Electronegativity
+        </button>
+
+        <div id="electronegativity" class="notes">
+            <h3>Electronegativity</h3>
+
+            <p>
+                Electronegativity is the tendency of an atom
+                in a molecule to attract the shared electrons
+                toward itself.
+            </p>
+
+            <h3>Trend</h3>
+
+            <ul>
+                <li>
+                    Across a period: generally increases.
+                </li>
+
+                <li>
+                    Down a group: generally decreases.
+                </li>
+            </ul>
+
+            <p class="formula">
+                Fluorine has the highest electronegativity
+                on the Pauling scale.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Effective Nuclear Charge -->
+    <div class="topic">
+        <button onclick="showNotes('nuclear')">
+            7. Effective Nuclear Charge
+        </button>
+
+        <div id="nuclear" class="notes">
+            <h3>Effective Nuclear Charge (Zeff)</h3>
+
+            <p>
+                Effective nuclear charge is the net positive
+                charge experienced by an electron after considering
+                the shielding effect of other electrons.
+            </p>
+
+            <p class="formula">
+                Zeff ≈ Z − S
+            </p>
+
+            <ul>
+                <li>Z = Nuclear charge</li>
+                <li>S = Shielding constant</li>
+            </ul>
+
+            <p>
+                Effective nuclear charge generally increases
+                across a period.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Shielding -->
+    <div class="topic">
+        <button onclick="showNotes('shielding')">
+            8. Shielding Effect
+        </button>
+
+        <div id="shielding" class="notes">
+            <h3>Shielding Effect</h3>
+
+            <p>
+                Shielding effect occurs because inner-shell
+                electrons partially reduce the attraction between
+                the nucleus and outer electrons.
+            </p>
+
+            <p>
+                Shielding generally increases as the number of
+                occupied electron shells increases down a group.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Oxidation States -->
+    <div class="topic">
+        <button onclick="showNotes('oxidation')">
+            9. Oxidation States
+        </button>
+
+        <div id="oxidation" class="notes">
+            <h3>Oxidation State</h3>
+
+            <p>
+                Oxidation state is the apparent charge assigned
+                to an atom in a compound according to standard
+                electron-assignment rules.
+            </p>
+
+            <h3>Examples</h3>
+
+            <ul>
+                <li>Na in NaCl = +1</li>
+                <li>Cl in NaCl = −1</li>
+                <li>O in H₂O = −2</li>
+                <li>H in H₂O = +1</li>
+            </ul>
+
+            <p>
+                Transition elements often show multiple oxidation
+                states.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Periodic Trends -->
+    <div class="topic">
+        <button onclick="showNotes('trends')">
+            10. Summary of Periodic Trends
+        </button>
+
+        <div id="trends" class="notes">
+            <h3>Periodic Trends</h3>
+
+            <ul>
+                <li>
+                    <b>Atomic size:</b>
+                    decreases across a period and increases down a group.
+                </li>
+
+                <li>
+                    <b>Ionization energy:</b>
+                    generally increases across a period and decreases
+                    down a group.
+                </li>
+
+                <li>
+                    <b>Electronegativity:</b>
+                    generally increases across a period and decreases
+                    down a group.
+                </li>
+
+                <li>
+                    <b>Shielding effect:</b>
+                    generally increases down a group.
+                </li>
+
+                <li>
+                    <b>Effective nuclear charge:</b>
+                    generally increases across a period.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Comparison -->
+    <div class="topic">
+        <button onclick="showNotes('comparison')">
+            11. Important Comparison
+        </button>
+
+        <div id="comparison" class="notes">
+            <h3>Quick Revision</h3>
+
+            <p class="formula">
+                Across a Period → Atomic Size ↓
+            </p>
+
+            <p class="formula">
+                Across a Period → Ionization Energy ↑
+            </p>
+
+            <p class="formula">
+                Across a Period → Electronegativity ↑
+            </p>
+
+            <p class="formula">
+                Down a Group → Atomic Size ↑
+            </p>
+
+            <p class="formula">
+                Down a Group → Ionization Energy ↓
+            </p>
+
+            <p class="formula">
+                Down a Group → Electronegativity ↓
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            } else {
+                notes.style.display = "block";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

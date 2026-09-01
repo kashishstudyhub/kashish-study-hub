@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Engineering Graphics - Unit 3</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f5f7;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    width:95%;
+    max-width:1100px;
+    margin:20px auto;
+}
+
+.header{
+    background:white;
+    text-align:center;
+    padding:30px 20px;
+    border:2px solid #222;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.header h1{
+    margin:0;
+    font-size:32px;
+}
+
+.header h2{
+    margin:8px 0;
+}
+
+.topic{
+    background:white;
+    border:1px solid #aaa;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.topic h2{
+    border-bottom:3px solid #333;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    margin-top:25px;
+}
+
+li{
+    margin:8px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #777;
+    padding:12px;
+    vertical-align:top;
+}
+
+th{
+    font-weight:bold;
+}
+
+.formula{
+    border:2px solid #333;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+    margin:20px 0;
+}
+
+.steps{
+    border-left:5px solid #333;
+    padding:10px 20px;
+    margin:20px 0;
+}
+
+.note{
+    border:1px dashed #555;
+    padding:15px;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+.diagram{
+    background:white;
+    border:2px solid #777;
+    border-radius:12px;
+    padding:15px;
+    margin:25px 0;
+    text-align:center;
+    overflow-x:auto;
+}
+
+.diagram svg{
+    width:100%;
+    max-width:850px;
+    height:auto;
+}
+
+.important{
+    border:2px solid #333;
+    border-radius:10px;
+    padding:18px;
+    margin-top:20px;
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:96%;
+    }
+
+    .topic{
+        padding:16px;
+    }
+
+    .header h1{
+        font-size:25px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    .formula{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+
+<!-- ==================================================
+HEADER
+================================================== -->
+
+<div class="header">
+
+<h1>📐 ENGINEERING GRAPHICS</h1>
+
+<h2>UNIT 3</h2>
+
+<p><strong>Projections of Planes & Solids</strong></p>
+
+<p>Complete Detailed Notes | RGPV Engineering Graphics</p>
+
+</div>
+
+
+<!-- ==================================================
+1 INTRODUCTION
+================================================== -->
+
+<div class="topic">
+
+<h2>1. Introduction to Projections of Planes and Solids</h2>
+
+<p>
+In engineering graphics, many objects are not represented only
+by points and straight lines. Objects have surfaces and volumes.
+Therefore, projection of planes and solids is required to represent
+their exact shape and position.
+</p>
+
+<h3>Plane</h3>
+
+<p>
+A plane is a flat two-dimensional surface having length and
+breadth but negligible thickness.
+</p>
+
+<h3>Examples of Plane Figures</h3>
+
+<ul>
+<li>Triangle</li>
+<li>Square</li>
+<li>Rectangle</li>
+<li>Circle</li>
+<li>Pentagon</li>
+<li>Hexagon</li>
+<li>Other polygons</li>
+</ul>
+
+<h3>Solid</h3>
+
+<p>
+A solid is a three-dimensional object having length, breadth and
+height.
+</p>
+
+<h3>Examples of Solids</h3>
+
+<ul>
+<li>Prism</li>
+<li>Pyramid</li>
+<li>Cylinder</li>
+<li>Cone</li>
+<li>Cube</li>
+<li>Other polyhedrons</li>
+</ul>
+
+</div>
+
+
+<!-- ==================================================
+2 REFERENCE PLANES
+================================================== -->
+
+<div class="topic">
+
+<h2>2. Reference Planes</h2>
+
+<h3>Horizontal Plane (HP)</h3>
+
+<p>
+The horizontal plane is used for obtaining the top view of an
+object.
+</p>
+
+<h3>Vertical Plane (VP)</h3>
+
+<p>
+The vertical plane is used for obtaining the front view.
+</p>
+
+<h3>Profile Plane</h3>
+
+<p>
+The profile plane is used mainly for obtaining side views.
+</p>
+
+
+<div class="diagram">
+
+<h3>HP and VP</h3>
+
+<svg viewBox="0 0 850 450">
+
+<line x1="100" y1="225"
+x2="750" y2="225"
+stroke="black"
+stroke-width="4"/>
+
+<rect x="150" y="70"
+width="550"
+height="155"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<rect x="150" y="225"
+width="550"
+height="155"
+fill="none"
+stroke="black"
+stroke-width="3"/>
+
+<text x="405" y="150"
+font-size="28">VP</text>
+
+<text x="405" y="315"
+font-size="28">HP</text>
+
+<text x="680" y="215"
+font-size="24">XY</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+3 PROJECTION OF PLANES
+================================================== -->
+
+<div class="topic">
+
+<h2>3. Projection of Planes</h2>
+
+<p>
+Projection of a plane means obtaining its front view and top view
+when the plane is placed in a particular position with respect to
+HP and VP.
+</p>
+
+<h3>Common Plane Figures</h3>
+
+<ul>
+
+<li>Triangle</li>
+<li>Square</li>
+<li>Rectangle</li>
+<li>Circle</li>
+<li>Pentagon</li>
+<li>Hexagon</li>
+
+</ul>
+
+<h3>Important Positions of Plane</h3>
+
+<ol>
+
+<li>Plane parallel to HP.</li>
+
+<li>Plane parallel to VP.</li>
+
+<li>Plane perpendicular to HP.</li>
+
+<li>Plane perpendicular to VP.</li>
+
+<li>Plane inclined to HP.</li>
+
+<li>Plane inclined to VP.</li>
+
+<li>Plane inclined to both HP and VP.</li>
+
+</ol>
+
+</div>
+
+
+<!-- ==================================================
+4 PLANE PARALLEL HP
+================================================== -->
+
+<div class="topic">
+
+<h2>4. Plane Parallel to HP</h2>
+
+<p>
+When a plane is parallel to HP, its true shape is visible in the
+top view.
+</p>
+
+<h3>Characteristics</h3>
+
+<ul>
+
+<li>Top view shows the true shape.</li>
+
+<li>Front view appears as a straight line.</li>
+
+<li>The plane is parallel to HP.</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Plane Parallel to HP</h3>
+
+<svg viewBox="0 0 850 450">
+
+<line x1="100" y1="230"
+x2="750" y2="230"
+stroke="black"
+stroke-width="4"/>
+
+<polygon points="270,320 420,280 580,320 420,370"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="270" y1="320"
+x2="270" y2="230"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="580" y1="320"
+x2="580" y2="230"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<text x="340" y="410"
+font-size="24">True Shape - Top View</text>
+
+<text x="680" y="220"
+font-size="22">XY</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+5 PLANE PARALLEL VP
+================================================== -->
+
+<div class="topic">
+
+<h2>5. Plane Parallel to VP</h2>
+
+<p>
+When a plane is parallel to VP, its true shape is visible in the
+front view.
+</p>
+
+<h3>Characteristics</h3>
+
+<ul>
+
+<li>Front view shows true shape.</li>
+
+<li>Top view appears as a straight line.</li>
+
+<li>Plane is parallel to VP.</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Plane Parallel to VP</h3>
+
+<svg viewBox="0 0 850 450">
+
+<line x1="100" y1="230"
+x2="750" y2="230"
+stroke="black"
+stroke-width="4"/>
+
+<polygon points="270,130 420,80 580,130 420,180"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="270" y1="130"
+x2="270" y2="230"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="580" y1="130"
+x2="580" y2="230"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<text x="340" y="65"
+font-size="24">True Shape - Front View</text>
+
+<text x="680" y="220"
+font-size="22">XY</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+6 INCLINED PLANE
+================================================== -->
+
+<div class="topic">
+
+<h2>6. Plane Inclined to HP</h2>
+
+<p>
+A plane may be inclined to HP at a specified angle while remaining
+parallel to VP.
+</p>
+
+<h3>General Method</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the initial position of the plane.</li>
+
+<li>Draw its projections.</li>
+
+<li>Keep the required edge or surface as reference.</li>
+
+<li>Rotate the plane through the specified angle.</li>
+
+<li>Project the new position.</li>
+
+<li>Obtain the final top and front views.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Inclined Plane</h3>
+
+<svg viewBox="0 0 850 480">
+
+<line x1="100" y1="260"
+x2="750" y2="260"
+stroke="black"
+stroke-width="4"/>
+
+<polygon points="260,180 540,120 620,220 340,280"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="340" y1="280"
+x2="340" y2="260"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="620" y1="220"
+x2="620" y2="260"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<text x="370" y="100"
+font-size="25">Inclined Plane</text>
+
+<text x="680" y="250"
+font-size="22">XY</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+7 CIRCLE
+================================================== -->
+
+<div class="topic">
+
+<h2>7. Projection of a Circle</h2>
+
+<p>
+A circle is a plane figure. Its projection depends on its position
+with respect to HP and VP.
+</p>
+
+<table>
+
+<tr>
+<th>Position of Circle</th>
+<th>Projection</th>
+</tr>
+
+<tr>
+<td>Circle parallel to HP</td>
+<td>True circle in top view</td>
+</tr>
+
+<tr>
+<td>Circle parallel to VP</td>
+<td>True circle in front view</td>
+</tr>
+
+<tr>
+<td>Circle inclined to HP</td>
+<td>Ellipse-like projection</td>
+</tr>
+
+<tr>
+<td>Circle inclined to VP</td>
+<td>Ellipse-like projection</td>
+</tr>
+
+</table>
+
+
+<div class="diagram">
+
+<h3>Circle Projection</h3>
+
+<svg viewBox="0 0 850 430">
+
+<circle cx="300"
+cy="210"
+r="100"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<ellipse cx="600"
+cy="210"
+rx="100"
+ry="45"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<text x="230" y="350"
+font-size="23">True Circle</text>
+
+<text x="530" y="350"
+font-size="23">Inclined Projection</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+8 POLYGON
+================================================== -->
+
+<div class="topic">
+
+<h2>8. Projection of Polygonal Planes</h2>
+
+<p>
+Polygonal planes such as triangles, squares, pentagons and hexagons
+can be projected by locating their vertices and joining the
+corresponding projected points.
+</p>
+
+<h3>General Procedure</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the reference line XY.</li>
+
+<li>Draw the plane in its initial position.</li>
+
+<li>Project all vertices.</li>
+
+<li>Join corresponding projected points.</li>
+
+<li>Apply the given inclination.</li>
+
+<li>Project the final position.</li>
+
+<li>Darken the visible boundaries.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Polygonal Plane</h3>
+
+<svg viewBox="0 0 850 450">
+
+<polygon points="425,70 560,150 510,310 340,310 290,150"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<circle cx="425" cy="70" r="5"/>
+<circle cx="560" cy="150" r="5"/>
+<circle cx="510" cy="310" r="5"/>
+<circle cx="340" cy="310" r="5"/>
+<circle cx="290" cy="150" r="5"/>
+
+<text x="400" y="40"
+font-size="25">Pentagonal Plane</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+9 INTRODUCTION SOLIDS
+================================================== -->
+
+<div class="topic">
+
+<h2>9. Projections of Solids</h2>
+
+<p>
+A solid is a three-dimensional object. Its projection is obtained
+by projecting all important edges, vertices and surfaces onto HP
+and VP.
+</p>
+
+<h3>Classification of Solids</h3>
+
+<h4>A. Polyhedrons</h4>
+
+<p>
+Solids bounded by plane surfaces are called polyhedrons.
+</p>
+
+<ul>
+
+<li>Prism</li>
+<li>Pyramid</li>
+<li>Cube</li>
+<li>Tetrahedron</li>
+
+</ul>
+
+<h4>B. Solids of Revolution</h4>
+
+<p>
+Solids generated by rotating a plane figure about an axis are
+called solids of revolution.
+</p>
+
+<ul>
+
+<li>Cylinder</li>
+<li>Cone</li>
+<li>Sphere</li>
+
+</ul>
+
+</div>
+
+
+<!-- ==================================================
+10 PRISM
+================================================== -->
+
+<div class="topic">
+
+<h2>10. Prism</h2>
+
+<h3>Definition</h3>
+
+<p>
+A prism is a solid having two equal and parallel polygonal bases
+connected by rectangular lateral faces.
+</p>
+
+<h3>Types</h3>
+
+<ul>
+
+<li>Triangular prism</li>
+<li>Square prism</li>
+<li>Pentagonal prism</li>
+<li>Hexagonal prism</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Prism</h3>
+
+<svg viewBox="0 0 850 500">
+
+<polygon points="250,320 400,250 550,320 400,390"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<polygon points="250,150 400,80 550,150 400,220"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="250" y1="150"
+x2="250" y2="320"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="400" y1="80"
+x2="400" y2="250"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="550" y1="150"
+x2="550" y2="320"
+stroke="black"
+stroke-width="4"/>
+
+<text x="350" y="450"
+font-size="28">Prism</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+11 PYRAMID
+================================================== -->
+
+<div class="topic">
+
+<h2>11. Pyramid</h2>
+
+<h3>Definition</h3>
+
+<p>
+A pyramid is a solid having a polygonal base and triangular faces
+meeting at one common point called the apex.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+
+<li>Triangular pyramid</li>
+<li>Square pyramid</li>
+<li>Pentagonal pyramid</li>
+<li>Hexagonal pyramid</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Square Pyramid</h3>
+
+<svg viewBox="0 0 850 500">
+
+<polygon points="250,350 500,350 600,270 350,270"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="250" y1="350"
+x2="425" y2="100"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="500" y1="350"
+x2="425" y2="100"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="600" y1="270"
+x2="425" y2="100"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="350" y1="270"
+x2="425" y2="100"
+stroke="black"
+stroke-width="4"/>
+
+<text x="350" y="430"
+font-size="28">Square Pyramid</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+12 CYLINDER
+================================================== -->
+
+<div class="topic">
+
+<h2>12. Cylinder</h2>
+
+<h3>Definition</h3>
+
+<p>
+A cylinder is a solid generated by revolving a rectangle about one
+of its sides.
+</p>
+
+<h3>Main Parts</h3>
+
+<ul>
+
+<li>Two circular bases</li>
+<li>Axis</li>
+<li>Curved surface</li>
+<li>Height</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Cylinder</h3>
+
+<svg viewBox="0 0 850 500">
+
+<ellipse cx="425"
+cy="120"
+rx="150"
+ry="50"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="275" y1="120"
+x2="275" y2="360"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="575" y1="120"
+x2="575" y2="360"
+stroke="black"
+stroke-width="4"/>
+
+<ellipse cx="425"
+cy="360"
+rx="150"
+ry="50"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="425" y1="80"
+x2="425" y2="400"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<text x="360" y="450"
+font-size="28">Cylinder</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+13 CONE
+================================================== -->
+
+<div class="topic">
+
+<h2>13. Cone</h2>
+
+<h3>Definition</h3>
+
+<p>
+A cone is a solid having a circular base and a curved surface
+meeting at one point called the apex.
+</p>
+
+<h3>Main Parts</h3>
+
+<ul>
+
+<li>Circular base</li>
+<li>Apex</li>
+<li>Axis</li>
+<li>Height</li>
+<li>Slant height</li>
+
+</ul>
+
+
+<div class="formula">
+
+Slant Height² = Radius² + Height²
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Cone</h3>
+
+<svg viewBox="0 0 850 500">
+
+<ellipse cx="425"
+cy="360"
+rx="170"
+ry="55"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="255" y1="360"
+x2="425" y2="90"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="595" y1="360"
+x2="425" y2="90"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="425" y1="90"
+x2="425" y2="360"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<text x="380" y="440"
+font-size="28">Cone</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+14 SOLIDS POSITION
+================================================== -->
+
+<div class="topic">
+
+<h2>14. Positions of Solids</h2>
+
+<p>
+For projection problems, a solid may be placed in different
+positions with respect to HP and VP.
+</p>
+
+<table>
+
+<tr>
+
+<th>Position</th>
+
+<th>Description</th>
+
+</tr>
+
+<tr>
+
+<td>Axis perpendicular to HP</td>
+
+<td>
+Axis is normal to HP. Base appears in true shape in top view.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Axis perpendicular to VP</td>
+
+<td>
+Axis is normal to VP. Base may be represented in true shape in
+front view.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Axis parallel to HP</td>
+
+<td>
+Axis lies parallel to HP.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Axis parallel to VP</td>
+
+<td>
+Axis lies parallel to VP.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Axis inclined to HP</td>
+
+<td>
+Solid is tilted with respect to HP.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Axis inclined to VP</td>
+
+<td>
+Solid is tilted with respect to VP.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Axis inclined to both</td>
+
+<td>
+Solid has inclination with both reference planes.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- ==================================================
+15 SOLID AXIS PERP HP
+================================================== -->
+
+<div class="topic">
+
+<h2>15. Solid with Axis Perpendicular to HP</h2>
+
+<p>
+When the axis of a solid is perpendicular to HP, the base lies
+parallel to HP.
+</p>
+
+<h3>Result</h3>
+
+<ul>
+
+<li>Top view shows the true shape of the base.</li>
+
+<li>Front view shows the height of the solid.</li>
+
+<li>Axis appears perpendicular to XY in front view.</li>
+
+</ul>
+
+
+<div class="diagram">
+
+<h3>Cylinder with Axis Perpendicular to HP</h3>
+
+<svg viewBox="0 0 850 500">
+
+<line x1="100" y1="250"
+x2="750" y2="250"
+stroke="black"
+stroke-width="4"/>
+
+<circle cx="425"
+cy="350"
+r="110"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="315" y1="140"
+x2="315" y2="250"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="535" y1="140"
+x2="535" y2="250"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<line x1="315" y1="140"
+x2="535" y2="140"
+stroke="black"
+stroke-width="4"/>
+
+<text x="360" y="410"
+font-size="23">Top View</text>
+
+<text x="680" y="240"
+font-size="22">XY</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+16 SOLID INCLINED HP
+================================================== -->
+
+<div class="topic">
+
+<h2>16. Solid with Axis Inclined to HP</h2>
+
+<p>
+In this case the axis of the solid is inclined to HP at a given
+angle.
+</p>
+
+<h3>General Method</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the solid in the simple position.</li>
+
+<li>Obtain its initial projections.</li>
+
+<li>Keep the required reference point fixed.</li>
+
+<li>Rotate the solid through the given angle.</li>
+
+<li>Project all important points.</li>
+
+<li>Join the corresponding points.</li>
+
+<li>Complete the final front and top views.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Inclined Solid</h3>
+
+<svg viewBox="0 0 850 500">
+
+<line x1="100" y1="380"
+x2="750" y2="380"
+stroke="black"
+stroke-width="4"/>
+
+<ellipse cx="570"
+cy="320"
+rx="80"
+ry="30"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="490" y1="320"
+x2="280" y2="150"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="650" y1="320"
+x2="440" y2="150"
+stroke="black"
+stroke-width="4"/>
+
+<ellipse cx="360"
+cy="150"
+rx="80"
+ry="30"
+fill="none"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="360" y1="150"
+x2="570" y2="320"
+stroke="black"
+stroke-dasharray="8,6"/>
+
+<text x="350" y="450"
+font-size="25">Axis Inclined to HP</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+17 AUXILIARY VIEW
+================================================== -->
+
+<div class="topic">
+
+<h2>17. Auxiliary View</h2>
+
+<h3>Definition</h3>
+
+<p>
+An auxiliary view is an additional view obtained on an auxiliary
+plane which is inclined to the principal reference planes.
+</p>
+
+<h3>Purpose of Auxiliary View</h3>
+
+<ul>
+
+<li>To obtain the true shape of an inclined surface.</li>
+
+<li>To determine the true length of inclined edges.</li>
+
+<li>To represent inclined surfaces accurately.</li>
+
+<li>To simplify complex projection problems.</li>
+
+</ul>
+
+
+<h3>General Procedure</h3>
+
+<div class="steps">
+
+<ol>
+
+<li>Draw the normal front and top views.</li>
+
+<li>Identify the inclined surface.</li>
+
+<li>Draw an auxiliary reference line parallel to the surface.</li>
+
+<li>Project points perpendicular to the auxiliary reference line.</li>
+
+<li>Join the projected points.</li>
+
+<li>The resulting view gives the required auxiliary view.</li>
+
+</ol>
+
+</div>
+
+
+<div class="diagram">
+
+<h3>Auxiliary Projection</h3>
+
+<svg viewBox="0 0 850 500">
+
+<line x1="100" y1="300"
+x2="550" y2="300"
+stroke="black"
+stroke-width="4"/>
+
+<line x1="550" y1="300"
+x2="
+</div>
+</body>
+</html>

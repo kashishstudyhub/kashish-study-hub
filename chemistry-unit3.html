@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 3 - Lubricants and Lubrication</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f9f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+        }
+
+        .topic {
+            background-color: white;
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #388e3c;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #1b5e20;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            color: #2e7d32;
+        }
+
+        .formula {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🛢️ Unit 3: Lubricants and Lubrication</h1>
+
+
+    <!-- Introduction -->
+    <div class="topic">
+        <button onclick="showNotes('intro')">
+            1. Lubricants and Lubrication
+        </button>
+
+        <div id="intro" class="notes">
+            <h3>Lubrication</h3>
+
+            <p>
+                Lubrication is the process of reducing friction
+                and wear between two surfaces in relative motion
+                by introducing a suitable lubricant between them.
+            </p>
+
+            <h3>Lubricant</h3>
+
+            <p>
+                A lubricant is a substance used to reduce friction,
+                wear and heat between moving surfaces.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Functions -->
+    <div class="topic">
+        <button onclick="showNotes('functions')">
+            2. Functions of Lubricants
+        </button>
+
+        <div id="functions" class="notes">
+            <h3>Functions</h3>
+
+            <ul>
+                <li>Reduces friction</li>
+                <li>Reduces wear and tear</li>
+                <li>Removes heat</li>
+                <li>Prevents corrosion</li>
+                <li>Provides sealing</li>
+                <li>Removes contaminants in some systems</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Classification -->
+    <div class="topic">
+        <button onclick="showNotes('classification')">
+            3. Classification of Lubricants
+        </button>
+
+        <div id="classification" class="notes">
+            <h3>Classification</h3>
+
+            <p>Lubricants are commonly classified as:</p>
+
+            <ul>
+                <li>Liquid lubricants</li>
+                <li>Semisolid lubricants</li>
+                <li>Solid lubricants</li>
+            </ul>
+
+            <p>
+                Examples include lubricating oils, greases,
+                graphite and molybdenum disulfide.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Mechanisms -->
+    <div class="topic">
+        <button onclick="showNotes('mechanism')">
+            4. Mechanisms of Lubrication
+        </button>
+
+        <div id="mechanism" class="notes">
+            <h3>Mechanisms of Lubrication</h3>
+
+            <ul>
+                <li>Hydrodynamic lubrication</li>
+                <li>Boundary lubrication</li>
+                <li>Extreme-pressure lubrication</li>
+            </ul>
+
+            <h3>Hydrodynamic Lubrication</h3>
+
+            <p>
+                A continuous lubricant film separates the moving
+                surfaces and prevents direct metal-to-metal contact.
+            </p>
+
+            <h3>Boundary Lubrication</h3>
+
+            <p>
+                A thin adsorbed or chemically formed film protects
+                surfaces when a full fluid film cannot be maintained.
+            </p>
+
+            <h3>Extreme-Pressure Lubrication</h3>
+
+            <p>
+                Special additives form protective films under
+                very high loads and temperatures.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Viscosity -->
+    <div class="topic">
+        <button onclick="showNotes('viscosity')">
+            5. Viscosity
+        </button>
+
+        <div id="viscosity" class="notes">
+            <h3>Viscosity</h3>
+
+            <p>
+                Viscosity is the resistance offered by a fluid
+                to the relative motion between its layers.
+            </p>
+
+            <p>
+                It is an important property used to select
+                lubricating oils.
+            </p>
+
+            <h3>Viscosity Index</h3>
+
+            <p>
+                Viscosity index indicates how much the viscosity
+                of an oil changes with temperature.
+            </p>
+
+            <p>
+                A higher viscosity index generally indicates
+                a smaller change in viscosity with temperature.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Flash Point -->
+    <div class="topic">
+        <button onclick="showNotes('flash')">
+            6. Flash Point and Fire Point
+        </button>
+
+        <div id="flash" class="notes">
+            <h3>Flash Point</h3>
+
+            <p>
+                Flash point is the lowest temperature at which
+                an oil gives off enough vapour to ignite momentarily
+                when exposed to a test flame.
+            </p>
+
+            <h3>Fire Point</h3>
+
+            <p>
+                Fire point is the lowest temperature at which
+                the vapour of the oil continues to burn after
+                ignition under specified test conditions.
+            </p>
+
+            <p>
+                Generally, the fire point is higher than the
+                flash point.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Cloud Pour -->
+    <div class="topic">
+        <button onclick="showNotes('cloudpour')">
+            7. Cloud Point and Pour Point
+        </button>
+
+        <div id="cloudpour" class="notes">
+            <h3>Cloud Point</h3>
+
+            <p>
+                Cloud point is the temperature at which wax
+                crystals first become visible and the oil
+                begins to appear cloudy on cooling.
+            </p>
+
+            <h3>Pour Point</h3>
+
+            <p>
+                Pour point is the lowest temperature at which
+                an oil can flow under specified test conditions.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Acid Number -->
+    <div class="topic">
+        <button onclick="showNotes('acid')">
+            8. Acid Number
+        </button>
+
+        <div id="acid" class="notes">
+            <h3>Acid Number</h3>
+
+            <p>
+                Acid number is the number of milligrams of KOH
+                required to neutralize the acidic constituents
+                present in one gram of oil.
+            </p>
+
+            <p class="formula">
+                Acid Number =
+                mg of KOH required / weight of oil in grams
+            </p>
+
+            <p>
+                A high acid number can indicate the presence
+                of acidic substances in the oil.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Saponification -->
+    <div class="topic">
+        <button onclick="showNotes('saponification')">
+            9. Saponification Number
+        </button>
+
+        <div id="saponification" class="notes">
+            <h3>Saponification Number</h3>
+
+            <p>
+                Saponification number is the number of milligrams
+                of KOH required to saponify the esters and
+                neutralize the free acids present in one gram
+                of oil.
+            </p>
+
+            <p class="formula">
+                Saponification Number =
+                mg of KOH / gram of oil
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Numerical -->
+    <div class="topic">
+        <button onclick="showNotes('numericals')">
+            10. Numerical Problems
+        </button>
+
+        <div id="numericals" class="notes">
+            <h3>Important Numericals</h3>
+
+            <ul>
+                <li>Viscosity calculations</li>
+                <li>Viscosity index problems</li>
+                <li>Acid number calculations</li>
+                <li>Saponification number calculations</li>
+                <li>Flash and fire point related questions</li>
+            </ul>
+
+            <p>
+                Numerical problems are generally solved by
+                substituting the given experimental values
+                into the appropriate formula.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            } else {
+                notes.style.display = "block";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C Programming Unit 3 | Kashish Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#5b4b8a;
+    color:white;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+.hero{
+    background:#e9e4f5;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin:0 0 10px;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.toc,.topic{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 12px #ddd;
+}
+
+.toc a{
+    display:block;
+    color:#5b4b8a;
+    text-decoration:none;
+    margin:8px 0;
+}
+
+.topic h2{
+    color:#5b4b8a;
+    border-bottom:2px solid #eee;
+    padding-bottom:8px;
+}
+
+.topic h3{
+    color:#6d5aa0;
+}
+
+.important{
+    background:#fff4cf;
+    border-left:5px solid #e0a800;
+    padding:18px;
+    margin:20px 0;
+}
+
+pre{
+    background:#202124;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+}
+
+th{
+    background:#e9e4f5;
+}
+
+.question{
+    background:#fafafa;
+    border-left:4px solid #5b4b8a;
+    padding:15px;
+    margin:10px 0;
+}
+
+.back{
+    display:inline-block;
+    background:#5b4b8a;
+    color:white;
+    padding:10px 18px;
+    border-radius:7px;
+    text-decoration:none;
+    margin:25px 0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header">
+
+<h2>📚 Kashish Study Hub</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#topics">Topics</a>
+<a href="#questions">Questions</a>
+</div>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1>💻 C Programming – Unit 3</h1>
+
+<p>Arrays & Strings – Detailed Notes</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CONTENT -->
+
+<section class="toc" id="topics">
+
+<h2>📑 Unit 3 Contents</h2>
+
+<a href="#array">1. Array – Introduction</a>
+<a href="#oneD">2. One-Dimensional Array</a>
+<a href="#oneDprogram">3. 1D Array Programs</a>
+<a href="#twoD">4. Two-Dimensional Array</a>
+<a href="#matrix">5. Matrix Programs</a>
+<a href="#character">6. Character Array</a>
+<a href="#string">7. Strings in C</a>
+<a href="#stringio">8. String Input and Output</a>
+<a href="#stringfunctions">9. String Handling Functions</a>
+<a href="#stringprograms">10. Important String Programs</a>
+<a href="#questions">11. Important Exam Questions</a>
+<a href="#revision">12. Quick Revision</a>
+
+</section>
+
+
+<!-- ARRAY -->
+
+<section class="topic" id="array">
+
+<h2>1. Array – Introduction</h2>
+
+<p>
+An array is a collection of elements of the same data type stored
+under a single name. Each element is accessed using an index.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>int marks[5];</code></pre>
+
+<p>
+The array can store five integer values. In C, array indexing starts
+from <strong>0</strong>.
+</p>
+
+<div class="important">
+
+<strong>Important Exam Point:</strong>
+
+<p>
+For an array of size 5, valid indexes are:
+<strong>0, 1, 2, 3 and 4.</strong>
+</p>
+
+</div>
+
+<h3>Advantages of Arrays</h3>
+
+<ul>
+<li>Stores multiple values under one name.</li>
+<li>Makes data processing easier.</li>
+<li>Useful for storing lists of numbers or characters.</li>
+<li>Can be processed using loops.</li>
+</ul>
+
+</section>
+
+
+<!-- 1D -->
+
+<section class="topic" id="oneD">
+
+<h2>2. One-Dimensional Array</h2>
+
+<p>
+A one-dimensional array stores elements in a single sequence.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>data_type array_name[size];</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>int marks[5];</code></pre>
+
+<h3>Initialization</h3>
+
+<pre><code>int marks[5] = {70,80,65,90,75};</code></pre>
+
+<h3>Accessing an Element</h3>
+
+<pre><code>printf("%d", marks[0]);</code></pre>
+
+<p>
+The above statement displays the first element.
+</p>
+
+<h3>Traversing an Array</h3>
+
+<pre><code>int i;
+
+for(i=0; i&lt;5; i++)
+{
+    printf("%d ", marks[i]);
+}</code></pre>
+
+</section>
+
+
+<!-- 1D PROGRAMS -->
+
+<section class="topic" id="oneDprogram">
+
+<h2>3. Important 1D Array Programs</h2>
+
+<h3>Program 1 – Input and Display Array</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5];
+    int i;
+
+    printf("Enter 5 elements:\n");
+
+    for(i=0; i&lt;5; i++)
+    {
+        scanf("%d",&amp;a[i]);
+    }
+
+    printf("Array elements:\n");
+
+    for(i=0; i&lt;5; i++)
+    {
+        printf("%d ",a[i]);
+    }
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2 – Sum of Array Elements</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5];
+    int i;
+    int sum=0;
+
+    for(i=0; i&lt;5; i++)
+    {
+        scanf("%d",&amp;a[i]);
+        sum=sum+a[i];
+    }
+
+    printf("Sum = %d",sum);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3 – Largest Element</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5];
+    int i;
+    int largest;
+
+    for(i=0; i&lt;5; i++)
+    {
+        scanf("%d",&amp;a[i]);
+    }
+
+    largest=a[0];
+
+    for(i=1; i&lt;5; i++)
+    {
+        if(a[i]&gt;largest)
+        {
+            largest=a[i];
+        }
+    }
+
+    printf("Largest = %d",largest);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 4 – Smallest Element</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5];
+    int i;
+    int smallest;
+
+    for(i=0; i&lt;5; i++)
+    {
+        scanf("%d",&amp;a[i]);
+    }
+
+    smallest=a[0];
+
+    for(i=1; i&lt;5; i++)
+    {
+        if(a[i]&lt;smallest)
+        {
+            smallest=a[i];
+        }
+    }
+
+    printf("Smallest = %d",smallest);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- 2D -->
+
+<section class="topic" id="twoD">
+
+<h2>4. Two-Dimensional Array</h2>
+
+<p>
+A two-dimensional array stores elements in rows and columns.
+It is commonly used to represent matrices.
+</p>
+
+<h3>Syntax</h3>
+
+<pre><code>data_type array_name[rows][columns];</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>int matrix[2][2] =
+{
+    {1,2},
+    {3,4}
+};</code></pre>
+
+<p>
+Here there are 2 rows and 2 columns.
+</p>
+
+<h3>Accessing an Element</h3>
+
+<pre><code>printf("%d",matrix[0][1]);</code></pre>
+
+</section>
+
+
+<!-- MATRIX -->
+
+<section class="topic" id="matrix">
+
+<h2>5. Matrix Programs</h2>
+
+<h3>Program – Display 2 × 2 Matrix</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[2][2];
+    int i,j;
+
+    printf("Enter matrix elements:\n");
+
+    for(i=0; i&lt;2; i++)
+    {
+        for(j=0; j&lt;2; j++)
+        {
+            scanf("%d",&amp;a[i][j]);
+        }
+    }
+
+    printf("Matrix:\n");
+
+    for(i=0; i&lt;2; i++)
+    {
+        for(j=0; j&lt;2; j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program – Matrix Addition</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[2][2],b[2][2],c[2][2];
+    int i,j;
+
+    printf("Enter first matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            scanf("%d",&amp;a[i][j]);
+        }
+    }
+
+    printf("Enter second matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            scanf("%d",&amp;b[i][j]);
+        }
+    }
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            c[i][j]=a[i][j]+b[i][j];
+        }
+    }
+
+    printf("Result:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("%d ",c[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- CHARACTER ARRAY -->
+
+<section class="topic" id="character">
+
+<h2>6. Character Array</h2>
+
+<p>
+A character array is an array whose elements have the data type
+<strong>char</strong>.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>char name[20];</code></pre>
+
+<h3>Initialization</h3>
+
+<pre><code>char name[]="Kashish";</code></pre>
+
+<p>
+Character arrays are commonly used to store strings.
+</p>
+
+</section>
+
+
+<!-- STRING -->
+
+<section class="topic" id="string">
+
+<h2>7. Strings in C</h2>
+
+<p>
+A string in C is a sequence of characters terminated by the null
+character <strong>'\0'</strong>.
+</p>
+
+<h3>Example</h3>
+
+<pre><code>char name[]="Kashish";</code></pre>
+
+<p>
+The terminating null character indicates the end of the string.
+</p>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+<p>
+<strong>'0'</strong> and <strong>'\0'</strong> are different.
+The first is the character zero; the second is the null character
+used to terminate a C string.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- STRING IO -->
+
+<section class="topic" id="stringio">
+
+<h2>8. String Input and Output</h2>
+
+<h3>Using scanf()</h3>
+
+<pre><code>char name[30];
+
+scanf("%29s",name);
+
+printf("%s",name);</code></pre>
+
+<p>
+A basic <strong>%s</strong> conversion with scanf() reads characters
+until whitespace is encountered.
+</p>
+
+<h3>Using fgets()</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    char name[50];
+
+    printf("Enter your name: ");
+
+    fgets(name,sizeof name,stdin);
+
+    printf("Name: %s",name);
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- STRING FUNCTIONS -->
+
+<section class="topic" id="stringfunctions">
+
+<h2>9. String Handling Functions</h2>
+
+<p>
+Common string handling functions are declared in
+<strong>&lt;string.h&gt;</strong>.
+</p>
+
+<table>
+
+<tr>
+<th>Function</th>
+<th>Use</th>
+</tr>
+
+<tr>
+<td>strlen()</td>
+<td>Finds the length of a string.</td>
+</tr>
+
+<tr>
+<td>strcpy()</td>
+<td>Copies one string to another.</td>
+</tr>
+
+<tr>
+<td>strcat()</td>
+<td>Appends one string to another.</td>
+</tr>
+
+<tr>
+<td>strcmp()</td>
+<td>Compares two strings.</td>
+</tr>
+
+</table>
+
+
+<h3>strlen()</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char name[]="Kashish";
+
+    printf("Length = %zu",strlen(name));
+
+    return 0;
+}</code></pre>
+
+
+<h3>strcpy()</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char source[]="Hello";
+    char destination[20];
+
+    strcpy(destination,source);
+
+    printf("%s",destination);
+
+    return 0;
+}</code></pre>
+
+
+<h3>strcat()</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char first[30]="Hello ";
+    char second[]="World";
+
+    strcat(first,second);
+
+    printf("%s",first);
+
+    return 0;
+}</code></pre>
+
+
+<h3>strcmp()</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char a[]="apple";
+    char b[]="apple";
+
+    if(strcmp(a,b)==0)
+    {
+        printf("Strings are equal");
+    }
+    else
+    {
+        printf("Strings are different");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- STRING PROGRAMS -->
+
+<section class="topic" id="stringprograms">
+
+<h2>10. Important String Programs</h2>
+
+<h3>Program – Find String Length</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char str[100];
+
+    printf("Enter a string: ");
+
+    fgets(str,sizeof str,stdin);
+
+    printf("Length = %zu",strlen(str));
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program – Compare Two Strings</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char a[50];
+    char b[50];
+
+    printf("Enter first string: ");
+    scanf("%49s",a);
+
+    printf("Enter second string: ");
+    scanf("%49s",b);
+
+    if(strcmp(a,b)==0)
+    {
+        printf("Strings are equal");
+    }
+    else
+    {
+        printf("Strings are different");
+    }
+
+    return 0;
+}</code></pre>
+
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section class="topic" id="questions">
+
+<h2>11. Important Exam Questions</h2>
+
+<h3>⭐ 2 Marks</h3>
+
+<div class="question">
+1. What is an array?
+</div>
+
+<div class="question">
+2. What is the first index of an array in C?
+</div>
+
+<div class="question">
+3. What is a one-dimensional array?
+</div>
+
+<div class="question">
+4. What is a two-dimensional array?
+</div>
+
+<div class="question">
+5. What is a string?
+</div>
+
+<div class="question">
+6. What is the use of '\0'?
+</div>
+
+<div class="question">
+7. What is strlen()?
+</div>
+
+
+<h3>⭐⭐ 5 Marks</h3>
+
+<div class="question">
+1. Explain one-dimensional arrays with example.
+</div>
+
+<div class="question">
+2. Explain two-dimensional arrays with example.
+</div>
+
+<div class="question">
+3. Explain character arrays and strings.
+</div>
+
+<div class="question">
+4. Explain strlen(), strcpy(), strcat() and strcmp().
+</div>
+
+<div class="question">
+5. Write a program to find the largest element of an array.
+</div>
+
+
+<h3>⭐⭐⭐ 10 Marks</h3>
+
+<div class="question">
+1. Explain 1D and 2D arrays with suitable programs.
+</div>
+
+<div class="question">
+2. Explain strings and string handling functions in C.
+</div>
+
+<div class="question">
+3. Write and explain a C program for matrix addition.
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="topic" id="revision">
+
+<h2>12. Quick Revision</h2>
+
+<div class="important">
+
+<ul>
+
+<li><strong>Array:</strong> Collection of elements of the same data type.</li>
+
+<li><strong>Index:</strong> Position used to access an array element.</li>
+
+<li><strong>First index:</strong> 0.</li>
+
+<li><strong>1D Array:</strong> Data arranged in one sequence.</li>
+
+<li><strong>2D Array:</strong> Data arranged in rows and columns.</li>
+
+<li><strong>String:</strong> Character sequence terminated by '\0'.</li>
+
+<li><strong>strlen():</strong> Finds string length.</li>
+
+<li><strong>strcpy():</strong> Copies a string.</li>
+
+<li><strong>strcat():</strong> Joins/appends strings.</li>
+
+<li><strong>strcmp():</strong> Compares strings.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<a class="back" href="index.html">
+⬅ Back to Home
+</a>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Kashish Study Hub</p>
+
+<p>C Programming Notes • Programs • Exam Preparation</p>
+
+</footer>
+
+</body>
+</html>

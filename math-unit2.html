@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 2 - Calculus II</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        .topic {
+            background-color: white;
+            margin: 15px auto;
+            padding: 15px;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background-color: #2196F3;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1976D2;
+        }
+
+        .notes {
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #e3f2fd;
+            border-radius: 7px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Unit 2: Calculus-II & Multivariable Calculus</h1>
+
+    <div class="topic">
+        <button onclick="showNotes('integral')">
+            Definite Integrals as Limits of Sums
+        </button>
+
+        <div id="integral" class="notes">
+            <h3>Definite Integrals as Limits of Sums</h3>
+
+            <p>
+                A definite integral can be defined as the limit
+                of a sum:
+            </p>
+
+            <p>
+                ∫ₐᵇ f(x) dx =
+                lim(n→∞) Σ f(xᵢ) Δx
+            </p>
+
+            <p>
+                It is used to calculate area under a curve
+                between two limits.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('beta')">
+            Beta Function
+        </button>
+
+        <div id="beta" class="notes">
+            <h3>Beta Function</h3>
+
+            <p>
+                The Beta function is defined as:
+            </p>
+
+            <p>
+                B(m,n) = ∫₀¹ xᵐ⁻¹(1-x)ⁿ⁻¹ dx
+            </p>
+
+            <p>
+                Relation with Gamma function:
+            </p>
+
+            <p>
+                B(m,n) = Γ(m)Γ(n) / Γ(m+n)
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('gamma')">
+            Gamma Function
+        </button>
+
+        <div id="gamma" class="notes">
+            <h3>Gamma Function</h3>
+
+            <p>
+                Gamma function is defined as:
+            </p>
+
+            <p>
+                Γ(n) = ∫₀∞ e⁻ˣ xⁿ⁻¹ dx
+            </p>
+
+            <p>
+                For positive integers:
+            </p>
+
+            <p>
+                Γ(n) = (n - 1)!
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('area')">
+            Area Under Curves
+        </button>
+
+        <div id="area" class="notes">
+            <h3>Area Under Curves</h3>
+
+            <p>
+                The area between a curve y = f(x) and the
+                x-axis from x = a to x = b is:
+            </p>
+
+            <p>
+                Area = ∫ₐᵇ f(x) dx
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('volume')">
+            Volume of Solids
+        </button>
+
+        <div id="volume" class="notes">
+            <h3>Volume of Solids</h3>
+
+            <p>
+                Integration can be used to calculate the
+                volume of solids.
+            </p>
+
+            <p>
+                Volume = π ∫ₐᵇ y² dx
+            </p>
+
+            <p>
+                This formula is commonly used for solids
+                formed by revolution.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('partial')">
+            Partial Differentiation
+        </button>
+
+        <div id="partial" class="notes">
+            <h3>Partial Differentiation</h3>
+
+            <p>
+                When a function has two or more independent
+                variables, differentiation with respect to one
+                variable while keeping others constant is called
+                partial differentiation.
+            </p>
+
+            <p>
+                If z = f(x,y), then:
+            </p>
+
+            <p>
+                ∂z/∂x and ∂z/∂y
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('euler')">
+            Euler's Theorem
+        </button>
+
+        <div id="euler" class="notes">
+            <h3>Euler's Theorem</h3>
+
+            <p>
+                If z is a homogeneous function of degree n,
+                then:
+            </p>
+
+            <p>
+                x(∂z/∂x) + y(∂z/∂y) = nz
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('total')">
+            Total Derivatives
+        </button>
+
+        <div id="total" class="notes">
+            <h3>Total Derivatives</h3>
+
+            <p>
+                If z = f(x,y), where x and y depend on t, then:
+            </p>
+
+            <p>
+                dz/dt =
+                (∂z/∂x)(dx/dt) +
+                (∂z/∂y)(dy/dt)
+            </p>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <button onclick="showNotes('lagrange')">
+            Lagrange's Multipliers
+        </button>
+
+        <div id="lagrange" class="notes">
+            <h3>Lagrange's Multipliers</h3>
+
+            <p>
+                Lagrange's multiplier method is used to find
+                maximum or minimum values of a function subject
+                to a constraint.
+            </p>
+
+            <p>
+                For f(x,y) subject to g(x,y) = 0:
+            </p>
+
+            <p>
+                ∇f = λ∇g
+            </p>
+
+            <p>
+                This method is useful for constrained
+                maxima and minima problems.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function showNotes(id) {
+
+            let notes = document.getElementById(id);
+
+            if (notes.style.display === "block") {
+                notes.style.display = "none";
+            } else {
+                notes.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
